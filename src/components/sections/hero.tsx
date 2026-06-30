@@ -41,8 +41,9 @@ export function Hero() {
           that works <em>smarter.</em>
         </Reveal>
         <Reveal as="p" className="hero-sub" delay={0.2}>
-          An invitation for Nedbank to anchor Sandton Gate — a R3-billion, 5-Star Green-rated precinct, five minutes
-          from the Sandton CBD, developed, built and managed by a single partner with 40 years behind it.
+          An invitation for Nedbank to anchor Sandton Gate. Every other landlord hands you keys — Abcon hands you a
+          group of 15+ companies that develops, builds, powers, secures, manages, houses and co-invests in your
+          building. One partner. The whole value chain.
         </Reveal>
         <Reveal className="hero-meta" delay={0.3}>
           {heroMeta.map((item) => (

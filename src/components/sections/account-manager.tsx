@@ -37,7 +37,7 @@ export function AccountManager() {
         <Reveal className="am-card">
           <div className="am-photo">
             {am.image ? (
-              <Image className="am-avatar" src={am.image} alt={am.name} width={128} height={128} />
+              <Image className="am-avatar" src={am.image} alt={am.name} width={128} height={128} loading="eager" />
             ) : (
               <AvatarPlaceholder />
             )}

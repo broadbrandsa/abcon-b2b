@@ -3,7 +3,10 @@
 import { useState } from "react";
 
 import { Reveal } from "@/components/sections/reveal";
+import { companies } from "@/content/ecosystem";
 import { fitPanels } from "@/content/proposal";
+
+const companyById = new Map(companies.map((c) => [c.id, c]));
 
 export function DecisionFit() {
   const [active, setActive] = useState(fitPanels[0].id);
@@ -38,6 +41,23 @@ export function DecisionFit() {
               <div className="who">{panel.who}</div>
               <h3>{panel.heading}</h3>
               <p>{panel.intro}</p>
+              <div className="fit-companies">
+                <span className="fit-companies-label">From the group</span>
+                <div className="fit-chips">
+                  {panel.companies.map((id) => {
+                    const c = companyById.get(id);
+                    if (!c) return null;
+                    return (
+                      <span className="fit-chip" key={id} title={c.benefit}>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          {c.icon}
+                        </svg>
+                        {c.name}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
             <ul>
               {panel.points.map((point) => (

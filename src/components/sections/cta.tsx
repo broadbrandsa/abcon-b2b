@@ -35,6 +35,7 @@ export function Cta() {
               Download the full proposal
             </Button>
           </div>
+          <p className="cta-oneline">One group. One relationship. One number to call.</p>
           <div className="contact">
             <div>
               <b>{meta.developer}</b>

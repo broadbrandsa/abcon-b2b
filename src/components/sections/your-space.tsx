@@ -20,6 +20,8 @@ export function YourSpace() {
 
   const area = Math.round(headcount * AREA_PER_PERSON);
   const parking = Math.round(headcount * BAYS_PER_PERSON);
+  const solarKwp = Math.round(area * 0.05);
+  const residents = Math.min(136, Math.round(headcount * 0.3));
 
   // Recommend the smallest option whose area can house the requirement.
   let recIndex = spaceOptions.findIndex((o) => area <= o.maxArea);
@@ -120,6 +122,24 @@ export function YourSpace() {
                   </div>
                 );
               })}
+            </div>
+
+            <div className="calc-eco">
+              <div className="calc-eco-title">What the group brings with it</div>
+              <ul>
+                <li>
+                  <span className="dot" />
+                  <b>~{fmt(solarKwp)} kWp</b> rooftop solar — <em>Blume Energy</em>
+                </li>
+                <li>
+                  <span className="dot" />
+                  <b>Fully managed</b> building & precinct — <em>Strive &amp; Ignite</em>
+                </li>
+                <li>
+                  <span className="dot" />
+                  <b>Up to {fmt(residents)}</b> staff could live on-site — <em>Craft Homes</em>
+                </li>
+              </ul>
             </div>
           </Reveal>
         </div>

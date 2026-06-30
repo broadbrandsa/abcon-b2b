@@ -29,23 +29,23 @@ export const accountManager = {
   phone: "011 510 9724",
   mobile: "082 555 0143",
   email: "lerato.mokoena@abcondev.co.za",
-  image: null as string | null,
+  image: "/images/account-manager.jpg" as string | null,
   note: "Your dedicated point of contact for the Sandton Gate proposal — for viewings, fit-out options and commercial terms.",
 };
 
 export const navLinks = [
-  { href: "#why", label: "Why Abcon" },
+  { href: "#ecosystem", label: "The Group" },
   { href: "#building", label: "The Precinct" },
   { href: "#space", label: "Your Space" },
-  { href: "#life", label: "Lifestyle" },
+  { href: "#gallery", label: "Gallery" },
   { href: "#proof", label: "Track Record" },
 ] as const;
 
 export const heroMeta = [
-  { value: "10 000m²", label: "New P-grade offices" },
+  { value: "1 partner", label: "The whole value chain" },
+  { value: "15+", label: "Group companies" },
   { value: "5-Star", label: "Green Star rating" },
   { value: "5 min", label: "To Sandton CBD" },
-  { value: "40 yrs", label: "Of development" },
 ] as const;
 
 export const whyCards = [
@@ -95,7 +95,7 @@ export const buildingFeatures = [
   {
     k: "24/7",
     title: "Resilient & secure",
-    body: "Backup power, backup water, round-the-clock security and access-controlled basement parking.",
+    body: "Backup power by Blume Energy, backup water, and round-the-clock security built to Trakka's global standard.",
   },
   {
     k: "2",
@@ -111,6 +111,8 @@ export type FitPanel = {
   heading: string;
   intro: string;
   points: { lead: string; rest: string }[];
+  /** Group company ids (from ecosystem) that sell hardest to this persona. */
+  companies: string[];
 };
 
 export const fitPanels: FitPanel[] = [
@@ -126,6 +128,7 @@ export const fitPanels: FitPanel[] = [
       { lead: "One management partner", rest: " — Strive handles maintenance, services and precinct management directly." },
       { lead: "Secure by design", rest: " — access-controlled basement parking and round-the-clock security." },
     ],
+    companies: ["strive", "ignite"],
   },
   {
     id: "cfo",
@@ -139,6 +142,7 @@ export const fitPanels: FitPanel[] = [
       { lead: "Lower running costs", rest: " — on-site solar and green-rated efficiency reduce energy spend." },
       { lead: "Develop-to-suit", rest: " — fit-out aligned to budget on an open-book or fixed-price basis." },
     ],
+    companies: ["blume", "valgro"],
   },
   {
     id: "brand",
@@ -152,6 +156,7 @@ export const fitPanels: FitPanel[] = [
       { lead: "Staff wellbeing", rest: " — gym, dining, salon and walkable green space on the doorstep." },
       { lead: "Live-work-play", rest: " — 136 residences and curated retail within the precinct." },
     ],
+    companies: ["craft", "oilgro"],
   },
   {
     id: "esg",
@@ -165,6 +170,7 @@ export const fitPanels: FitPanel[] = [
       { lead: "Real renewables", rest: " — backed by Abcon's 30MW+ of developed solar assets." },
       { lead: "Social impact", rest: " — Abcon Group Foundation supports skills & enterprise development." },
     ],
+    companies: ["rise", "foundation"],
   },
 ];
 
@@ -321,11 +327,14 @@ export const proofItems = [
   { name: "S&J Industrial Estate", body: "250+ hectare estate in Germiston, in partnership with Redefine." },
   { name: "Motorcity & dealerships", body: "100+ motor dealerships developed across the country." },
   { name: "Sandton Gate", body: "The R3-billion precinct co-developed with Tiber that you're considering." },
+  { name: "Blume & Rise Energy", body: "30MW+ of solar developed — real renewable generation, not greenwashing." },
+  { name: "Valgro", body: "100 tons of food produced per week through the group's agribusiness." },
+  { name: "Trakka", body: "Security technology developed in South Africa and deployed globally." },
 ] as const;
 
-export const proofStats = [
-  { value: "40+", label: "Years developing" },
-  { value: "R3bn", label: "Sandton Gate precinct" },
-  { value: "30MW+", label: "Solar developed" },
-  { value: "100k m²", label: "Single-tenant builds" },
-] as const;
+export const proofStats: { to: number; prefix?: string; suffix?: string; label: string }[] = [
+  { to: 40, suffix: "+", label: "Years developing" },
+  { to: 30, suffix: "MW+", label: "Solar developed" },
+  { to: 15, suffix: "+", label: "Group companies" },
+  { to: 100, suffix: " t/wk", label: "Food produced" },
+];

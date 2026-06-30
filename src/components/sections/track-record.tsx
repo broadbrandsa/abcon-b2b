@@ -1,3 +1,4 @@
+import { CountUp } from "@/components/sections/count-up";
 import { Reveal } from "@/components/sections/reveal";
 import { proofItems, proofStats } from "@/content/proposal";
 
@@ -21,7 +22,9 @@ export function TrackRecord() {
         <div className="proof-stats">
           {proofStats.map((stat, i) => (
             <Reveal className="s" key={stat.label} delay={i * 0.05}>
-              <b>{stat.value}</b>
+              <b>
+                <CountUp to={stat.to} prefix={stat.prefix} suffix={stat.suffix} />
+              </b>
               <span>{stat.label}</span>
             </Reveal>
           ))}
