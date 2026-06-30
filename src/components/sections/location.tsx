@@ -74,6 +74,18 @@ export function Location() {
             </a>
           </Reveal>
         </div>
+
+        <Reveal className="streetview">
+          <span className="streetview-label">Street view · Sandton Gate</span>
+          <iframe
+            title="Google Street View of Sandton Gate"
+            src="https://www.google.com/maps/embed?pb=!4v1782818922449!6m8!1m7!1spfJkSRVO-J_nU3BTryoNYw!2m2!1d-26.09551037483215!2d28.02987077905036!3f45.21044610030914!4f12.082617020764417!5f0.7820865974627469"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </Reveal>
       </div>
     </section>
   );
