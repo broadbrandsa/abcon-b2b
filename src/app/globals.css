@@ -2173,3 +2173,144 @@ body {
   margin: 30px auto 0;
   max-width: 38ch;
 }
+
+/* =====================================================================
+   HERO VIDEO + DEPTH + POLISH PASS (ui-ux elevation)
+   ===================================================================== */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.55;
+  animation: heroVideoIn 1.6s ease forwards;
+}
+@keyframes heroVideoIn {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(120% 90% at 80% 8%, rgba(20, 133, 95, 0.42), transparent 55%),
+    radial-gradient(90% 80% at 10% 95%, rgba(200, 168, 106, 0.18), transparent 60%),
+    linear-gradient(180deg, rgba(6, 20, 15, 0.5) 0%, rgba(6, 20, 15, 0.32) 38%, rgba(6, 20, 15, 0.86) 100%);
+}
+.sg-hero .hero-grid {
+  z-index: 1;
+}
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+.sg-hero h1 {
+  text-shadow: 0 2px 30px rgba(6, 20, 15, 0.35);
+}
+.hero-sub {
+  text-shadow: 0 1px 16px rgba(6, 20, 15, 0.4);
+}
+
+/* ---- micro-interactions ---- */
+.navlinks a:not(.nav-cta) {
+  position: relative;
+}
+.navlinks a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 1.5px;
+  width: 100%;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.navlinks a:not(.nav-cta):hover::after {
+  transform: scaleX(1);
+}
+.btn:active,
+.nav-cta:active {
+  transform: translateY(0) scale(0.97);
+}
+.eco-chip:active,
+.byh-toggle:active,
+.tab:active,
+.gal-arrow:active,
+.eco-node:active,
+.floor:active {
+  transform: scale(0.97);
+}
+.gal-arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* ---- accessible focus ---- */
+.sg a:focus-visible,
+.sg button:focus-visible,
+.sg input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---- depth grain on dark feature sections ---- */
+#building,
+#partner .partner-bleed,
+#proof {
+  position: relative;
+}
+#building::after,
+#partner .partner-bleed::after,
+#proof::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+#building > .wrap,
+#proof > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* =====================================================================
+   REDUCED MOTION — honour user preference (accessibility)
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-video {
+    display: none;
+  }
+}

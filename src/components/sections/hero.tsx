@@ -1,34 +1,14 @@
+import { HeroVideo } from "@/components/sections/hero-video";
 import { Reveal } from "@/components/sections/reveal";
 import { heroMeta } from "@/content/proposal";
 
 export function Hero() {
   return (
     <header className="sg-hero">
+      <HeroVideo />
+      <div className="hero-overlay" />
       <div className="hero-grid" />
-      <svg
-        className="skyline"
-        viewBox="0 0 1440 400"
-        preserveAspectRatio="xMidYMax slice"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <g fill="rgba(255,255,255,0.05)">
-          <rect x="60" y="180" width="90" height="220" />
-          <rect x="170" y="120" width="70" height="280" />
-          <rect x="260" y="220" width="110" height="180" />
-          <rect x="390" y="90" width="80" height="310" />
-          <rect x="490" y="160" width="64" height="240" />
-          <rect x="980" y="150" width="90" height="250" />
-          <rect x="1090" y="100" width="70" height="300" />
-          <rect x="1180" y="200" width="120" height="200" />
-          <rect x="1320" y="140" width="80" height="260" />
-        </g>
-        <g fill="rgba(20,133,95,0.18)">
-          <rect x="600" y="60" width="110" height="340" />
-          <rect x="730" y="30" width="130" height="370" />
-          <rect x="880" y="110" width="80" height="290" />
-        </g>
-      </svg>
+      <div className="hero-grain" />
 
       <div className="wrap hero-inner">
         <Reveal className="prepared">
