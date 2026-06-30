@@ -15,7 +15,7 @@ export function ThePrecinct() {
         </Reveal>
         <div className="bld-layout">
           <Reveal className="bld-visual">
-            <span className="photo-note">Drop hero render / photography here</span>
+            <span className="photo-note">Image slot · Sandton Gate hero render / precinct aerial</span>
             <div className="bld-towers">
               <div className="tower" style={{ height: "62%" }} />
               <div className="tower" style={{ height: "84%" }} />

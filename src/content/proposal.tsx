@@ -36,9 +36,9 @@ export const accountManager = {
 export const navLinks = [
   { href: "#ecosystem", label: "The Group" },
   { href: "#building", label: "The Precinct" },
-  { href: "#space", label: "Your Space" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#proof", label: "Track Record" },
+  { href: "#invest", label: "Investment" },
+  { href: "#compare", label: "Why Sandton Gate" },
 ] as const;
 
 export const heroMeta = [
