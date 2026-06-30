@@ -2,59 +2,66 @@
 
 import { useState } from "react";
 
-import { CountUp } from "@/components/sections/count-up";
 import { Reveal } from "@/components/sections/reveal";
-import { categories, companies, orbitCompanies, type CategoryId } from "@/content/ecosystem";
+import { offerings, offeringsClosing } from "@/content/ecosystem";
 import { cn } from "@/lib/utils";
 
 const CX = 50;
 const CY = 50;
-const R = 41;
+const NODE_R = 40;
+const END_R = 23; // line ends just outside the central building
 
-function nodePosition(index: number, total: number) {
+const shortLabels: Record<string, string> = {
+  build: "Build & fit-out",
+  power: "Power",
+  run: "Managed",
+  workplace: "Lifestyle",
+  cost: "Lower cost",
+  secure: "Security",
+};
+
+function pos(index: number, total: number, radius: number) {
   const angle = (index / total) * 2 * Math.PI - Math.PI / 2;
-  return { x: CX + R * Math.cos(angle), y: CY + R * Math.sin(angle) };
+  return { x: CX + radius * Math.cos(angle), y: CY + radius * Math.sin(angle) };
 }
 
 export function Ecosystem() {
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [filter, setFilter] = useState<CategoryId | "all">("all");
-
-  const active = orbitCompanies.find((c) => c.id === activeId) ?? null;
-  const positions = orbitCompanies.map((_, idx) => nodePosition(idx, orbitCompanies.length));
-  const shown = filter === "all" ? companies : companies.filter((c) => c.category === filter);
+  const active = offerings.find((o) => o.id === activeId) ?? null;
+  const total = offerings.length;
 
   return (
     <section id="ecosystem">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">The Abcon ecosystem</span>
+          <span className="eyebrow">More than a lease</span>
           <h2>
-            Every other landlord hands you keys.
-            <br />
-            Abcon hands you a <em>group.</em>
+            Everything your office needs — <em>under one roof.</em>
           </h2>
           <p>
-            One owner that develops, builds, powers, secures, manages, houses and co-invests. Every company below is a
-            capability that already lives inside your building.
+            A lease gets you a shell. Sandton Gate gives Nedbank a fully-run workplace: built, powered, managed and
+            secured by one accountable partner. Here&apos;s what flows into your building.
           </p>
         </Reveal>
 
-        {/* ---- interactive orbit ---- */}
-        <Reveal className="eco-map" aria-hidden="false">
+        {/* capabilities flowing into the building */}
+        <Reveal className="eco-map flow-map">
           <svg className="eco-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            {orbitCompanies.map((c, idx) => (
-              <line
-                key={c.id}
-                className={cn("eco-line", activeId === c.id && "active")}
-                x1={positions[idx].x}
-                y1={positions[idx].y}
-                x2={CX}
-                y2={CY}
-                pathLength={1}
-                vectorEffect="non-scaling-stroke"
-              />
-            ))}
+            {offerings.map((o, idx) => {
+              const node = pos(idx, total, NODE_R);
+              const end = pos(idx, total, END_R);
+              return (
+                <line
+                  key={o.id}
+                  className={cn("flow-line", activeId === o.id && "active")}
+                  x1={node.x}
+                  y1={node.y}
+                  x2={end.x}
+                  y2={end.y}
+                  vectorEffect="non-scaling-stroke"
+                />
+              );
+            })}
           </svg>
 
           <div className="eco-core" data-active={!!active}>
@@ -63,101 +70,65 @@ export function Ecosystem() {
             </svg>
             {active ? (
               <>
-                <div className="eco-core-name">{active.name}</div>
-                <div className="eco-core-benefit">{active.benefit}</div>
+                <div className="eco-core-name">{active.title}</div>
+                <div className="eco-core-benefit">Delivered in-house by {active.credit}</div>
               </>
             ) : (
               <>
-                <div className="eco-core-name">Sandton Gate</div>
-                <div className="eco-core-benefit">Hover a company to see what flows into your building.</div>
+                <div className="eco-core-name">Your building</div>
+                <div className="eco-core-benefit">Everything below flows in — owned and run by one partner.</div>
               </>
             )}
           </div>
 
-          {orbitCompanies.map((c, idx) => (
-            <button
-              key={c.id}
-              type="button"
-              className={cn("eco-node", activeId === c.id && "active")}
-              style={{ left: `${positions[idx].x}%`, top: `${positions[idx].y}%` }}
-              onMouseEnter={() => setActiveId(c.id)}
-              onFocus={() => setActiveId(c.id)}
-              onClick={() => setActiveId(c.id)}
-              aria-label={`${c.name}: ${c.benefit}`}
-            >
-              <span className="eco-node-dot">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  {c.icon}
-                </svg>
-              </span>
-              <span className="eco-node-label">{c.name}</span>
-            </button>
-          ))}
+          {offerings.map((o, idx) => {
+            const node = pos(idx, total, NODE_R);
+            return (
+              <button
+                key={o.id}
+                type="button"
+                className={cn("eco-node flow-node", activeId === o.id && "active")}
+                style={{ left: `${node.x}%`, top: `${node.y}%` }}
+                onMouseEnter={() => setActiveId(o.id)}
+                onFocus={() => setActiveId(o.id)}
+                onClick={() => setActiveId(o.id)}
+                aria-label={`${o.title} — delivered by ${o.credit}`}
+              >
+                <span className="eco-node-dot">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    {o.icon}
+                  </svg>
+                </span>
+                <span className="eco-node-label">{shortLabels[o.id]}</span>
+              </button>
+            );
+          })}
         </Reveal>
 
-        {/* ---- filterable detail grid ---- */}
-        <Reveal className="eco-filters" role="tablist" aria-label="Filter ecosystem by capability">
-          <button
-            type="button"
-            className={cn("eco-chip", filter === "all" && "on")}
-            aria-pressed={filter === "all"}
-            onClick={() => setFilter("all")}
-          >
-            All
-          </button>
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              type="button"
-              className={cn("eco-chip", filter === cat.id && "on")}
-              aria-pressed={filter === cat.id}
-              onClick={() => setFilter(cat.id)}
+        {/* benefit-led detail cards */}
+        <div className="offer-grid">
+          {offerings.map((o) => (
+            <Reveal
+              key={o.id}
+              className={cn("offer-card", activeId === o.id && "lit")}
+              onMouseEnter={() => setActiveId(o.id)}
+              onMouseLeave={() => setActiveId(null)}
             >
-              {cat.label}
-            </button>
-          ))}
-        </Reveal>
-
-        <div className="eco-grid">
-          {shown.map((c) => (
-            <div className="eco-card" key={c.id}>
-              <span className="eco-card-ico">
+              <span className="offer-ico">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  {c.icon}
+                  {o.icon}
                 </svg>
               </span>
-              <div className="eco-card-name">{c.name}</div>
-              <div className="eco-card-does">{c.does}</div>
-              <p className="eco-card-benefit">{c.benefit}</p>
-            </div>
+              <h3 className="offer-title">{o.title}</h3>
+              <p className="offer-how">{o.how}</p>
+              <div className="offer-credit">Delivered in-house by {o.credit}</div>
+            </Reveal>
           ))}
         </div>
 
-        {/* ---- animated ecosystem stats ---- */}
-        <div className="eco-stats">
-          <div className="eco-stat">
-            <b>
-              <CountUp to={15} suffix="+" />
-            </b>
-            <span>Group companies</span>
-          </div>
-          <div className="eco-stat">
-            <b>
-              <CountUp to={40} suffix=" yrs" />
-            </b>
-            <span>One accountable owner</span>
-          </div>
-          <div className="eco-stat">
-            <b>
-              <CountUp to={30} suffix="MW+" />
-            </b>
-            <span>Renewable energy developed</span>
-          </div>
-          <div className="eco-stat">
-            <b>1</b>
-            <span>Point of contact</span>
-          </div>
-        </div>
+        <Reveal className="eco-closing">
+          <p>{offeringsClosing}</p>
+        </Reveal>
       </div>
     </section>
   );

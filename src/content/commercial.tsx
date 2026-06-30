@@ -126,15 +126,17 @@ export const processSteps = [
 ];
 
 /* ---------- Competitive set ---------- */
-export const compColumns = ["Sandton Gate", "Waterfall", "Rosebank", "Stay put / refurbish"];
+export const compColumns = ["Sandton Gate", "Waterfall", "Rosebank", "Current Sandton campus"];
 
 export const compRows: { criterion: string; values: string[]; best: number[] }[] = [
-  { criterion: "Proximity to Sandton CBD", values: ["5 min", "~15 min", "~12 min", "n/a"], best: [0] },
-  { criterion: "Public transport (Gautrain/BRT)", values: ["Gautrain + BRT", "Limited / bus", "Gautrain", "Varies"], best: [0] },
-  { criterion: "Green rating", values: ["5-Star Green", "4–5 Star", "4-Star", "Likely none"], best: [0] },
-  { criterion: "Backup power & water", values: ["Full N+1 + water", "Partial", "Partial", "Retrofit cost"], best: [0] },
-  { criterion: "Amenities / lifestyle", values: ["Gym · retail · residences", "Mall nearby", "Mall + Gautrain", "Existing only"], best: [0] },
-  { criterion: "Single-owner accountability", values: ["Yes — one group", "Multiple landlords", "Multiple landlords", "Internal"], best: [0] },
-  { criterion: "Develop-to-suit flexibility", values: ["Yes — in-house", "Limited", "Limited", "Disruptive"], best: [0] },
+  { criterion: "Stays in your Sandton node", values: ["Yes — 5 min away", "No", "No", "Yes (in situ)"], best: [0, 3] },
+  { criterion: "Building spec", values: ["New 2027 build", "Newer stock", "Newer stock", "Opened 2003 / 2011"], best: [0] },
+  { criterion: "Proximity to Sandton CBD", values: ["5 min", "~15 min", "~12 min", "In Sandton"], best: [0] },
+  { criterion: "Public transport (Gautrain/BRT)", values: ["Gautrain + BRT", "Limited / bus", "Gautrain", "Gautrain"], best: [0] },
+  { criterion: "Green rating", values: ["5-Star Green", "4–5 Star", "4-Star", "Pre-current standards"], best: [0] },
+  { criterion: "Backup power & water", values: ["Full N+1 + water", "Partial", "Partial", "Retrofit required"], best: [0] },
+  { criterion: "Amenities / lifestyle", values: ["Gym · retail · residences", "Mall nearby", "Mall + Gautrain", "Established campus"], best: [0] },
+  { criterion: "Single-owner accountability", values: ["Yes — one group", "Multiple landlords", "Multiple landlords", "Self-managed"], best: [0] },
+  { criterion: "Develop-to-suit flexibility", values: ["Yes — in-house", "Limited", "Limited", "Constrained by age"], best: [0] },
   { criterion: "Existing Nedbank partnership", values: ["Yes — POD & Reso", "No", "No", "—"], best: [0] },
 ];

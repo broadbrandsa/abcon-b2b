@@ -17,14 +17,16 @@ import { SiteNav } from "@/components/sections/site-nav";
 import { Team } from "@/components/sections/team";
 import { ThePrecinct } from "@/components/sections/the-precinct";
 import { TrackRecord } from "@/components/sections/track-record";
+import { WhyClient } from "@/components/sections/why-client";
 
 export default function Home() {
   return (
     <div className="sg">
       <SiteNav />
       <Hero />
-      <Ecosystem />
+      <WhyClient />
       <Partnership />
+      <Ecosystem />
       <ThePrecinct />
       <Performance />
       <DecisionFit />

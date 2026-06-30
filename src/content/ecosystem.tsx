@@ -173,6 +173,61 @@ export const companies: Company[] = [
 /** Companies that orbit the building in the ecosystem map (operating capabilities; funds shown separately). */
 export const orbitCompanies = companies.filter((c) => !["reso", "pod", "vula"].includes(c.id));
 
+/**
+ * Benefit-led office offerings — what Nedbank RECEIVES in their building.
+ * Headline = tenant outcome; how = how it works; credit = the in-house team
+ * that delivers it (named only as a small credit, not the headline).
+ */
+export type Offering = { id: string; title: string; how: string; credit: string; icon: ReactNode };
+
+export const offerings: Offering[] = [
+  {
+    id: "build",
+    title: "A space built entirely around how you work",
+    how: "Develop-to-suit floors designed, built and fitted to Nedbank's brand and headcount — then reconfigured as you grow, by the same team.",
+    credit: "Abcon Developments + Grit",
+    icon: i("M3 21h18M6 21V8l6-4 6 4v13M9 12h2M13 12h2M9 16h2M13 16h2"),
+  },
+  {
+    id: "power",
+    title: "Power that stays on — and costs less",
+    how: "On-site solar, battery storage and smart metering, funded with no capex — keeping you operational through grid failure and advancing your carbon-neutral-facilities goal.",
+    credit: "Blume Energy",
+    icon: i("M13 2 4 14h7l-1 8 9-12h-7z"),
+  },
+  {
+    id: "run",
+    title: "One team runs your building and the precinct",
+    how: "Facilities, maintenance, utilities, security coordination and precinct experience under a single accountable manager.",
+    credit: "Strive + Ignite",
+    icon: i("M4 7h16M4 12h16M4 17h10M18 15l2 2-4 4-2-2z"),
+  },
+  {
+    id: "workplace",
+    title: "A workplace people want to come to",
+    how: "Gym, dining, a piazza, river-edge green space, on-site homes for staff and Gautrain/BRT on the doorstep.",
+    credit: "The precinct + Craft Homes / The Terrace",
+    icon: i("M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"),
+  },
+  {
+    id: "cost",
+    title: "A lower net occupancy cost",
+    how: "Alternative-revenue, signage and branding value worked on your side of the ledger to help offset occupancy cost.",
+    credit: "Valgro",
+    icon: i("M4 19h16M7 16l4-5 3 3 5-7"),
+  },
+  {
+    id: "secure",
+    title: "Bank-grade security and resilience",
+    how: "24/7 access control, backup water and power, backed by a global security-technology pedigree.",
+    credit: "Trakka heritage",
+    icon: i("M12 3 4 6v6c0 5 4 8 8 9 4-1 8-4 8-9V6z"),
+  },
+];
+
+export const offeringsClosing =
+  "Every one of these is owned and delivered in-house by Abcon. A typical landlord rents you a shell and outsources the rest — leaving you to manage the contractors. Abcon gives Nedbank one integrated, accountable partner across build, power, management, security and service. No other Sandton landlord can match that.";
+
 /** Existing Abcon × Nedbank ventures — the "we already build together" proof. */
 export const partnerships = [
   {
@@ -188,10 +243,10 @@ export const partnerships = [
     body: "Residential delivered at scale, with Nedbank funding Craft Homes.",
   },
   {
-    year: "2026",
+    year: "2027",
     fund: "Sandton Gate HQ",
     partners: "Abcon · Nedbank",
-    body: "The natural next chapter — your headquarters inside the precinct.",
+    body: "The next chapter — Nedbank's headquarters inside the precinct you already co-invest in.",
     highlight: true,
   },
 ] as const;

@@ -3281,3 +3281,220 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+/* =====================================================================
+   ECOSYSTEM REWORK — capabilities flow IN + benefit cards + closing
+   ===================================================================== */
+.flow-line {
+  stroke: var(--emerald);
+  stroke-width: 1.4;
+  opacity: 0.16;
+  stroke-dasharray: 4 7;
+  animation: flowIn 1.5s linear infinite;
+}
+@keyframes flowIn {
+  to {
+    stroke-dashoffset: -11;
+  }
+}
+.flow-line.active {
+  opacity: 1;
+  stroke: var(--emerald-bright);
+  stroke-width: 2.4;
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+.offer-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 26px 24px;
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s,
+    border-color 0.35s;
+}
+.offer-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--emerald), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+.offer-card:hover,
+.offer-card.lit {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border-color: transparent;
+}
+.offer-card:hover::before,
+.offer-card.lit::before {
+  transform: scaleX(1);
+}
+.offer-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+.offer-ico svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--emerald);
+  fill: none;
+  stroke-width: 1.6;
+}
+.offer-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.offer-how {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.offer-credit {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  font-weight: 600;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.eco-closing {
+  margin-top: 42px;
+  background:
+    radial-gradient(120% 140% at 80% 0%, rgba(20, 133, 95, 0.4), transparent 60%),
+    linear-gradient(160deg, #06140f, #0c2b21);
+  color: var(--cream);
+  border-radius: var(--r);
+  padding: 44px;
+  box-shadow: var(--shadow);
+}
+.eco-closing p {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(19px, 2.3vw, 26px);
+  line-height: 1.42;
+  max-width: 64ch;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 860px) {
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================================
+   WHY CLIENT — commitment → delivery cards
+   ===================================================================== */
+#why-client {
+  background: var(--paper);
+}
+.wc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.wc-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 26px 24px;
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s;
+}
+.wc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+.wc-ico {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+.wc-ico svg {
+  width: 21px;
+  height: 21px;
+  stroke: var(--emerald);
+  fill: none;
+  stroke-width: 1.6;
+}
+.wc-commitment {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.wc-card h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.wc-delivery {
+  font-size: 14px;
+  color: var(--muted);
+}
+@media (max-width: 860px) {
+  .wc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Google Maps link (location) ---- */
+.maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  background: var(--forest);
+  color: #fff;
+  border-radius: 100px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    transform 0.25s,
+    background 0.25s;
+}
+.maps-link:hover {
+  background: var(--emerald-bright);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.maps-link svg {
+  width: 17px;
+  height: 17px;
+  stroke: var(--gold-soft);
+  fill: none;
+  stroke-width: 1.7;
+}

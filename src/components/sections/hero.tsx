@@ -1,5 +1,6 @@
 import { HeroVideo } from "@/components/sections/hero-video";
 import { Reveal } from "@/components/sections/reveal";
+import { client } from "@/content/client";
 import { heroMeta } from "@/content/proposal";
 
 export function Hero() {
@@ -13,17 +14,16 @@ export function Hero() {
       <div className="wrap hero-inner">
         <Reveal className="prepared">
           <span className="pulse" />
-          Private proposal · Prepared exclusively for Nedbank
+          {client.preparedFor}
         </Reveal>
         <Reveal as="h1" delay={0.1}>
-          A headquarters
+          {client.hero.lead} <em>{client.hero.em}</em>
+          {client.hero.tail}
           <br />
-          that works <em>smarter.</em>
+          {client.hero.line2}
         </Reveal>
         <Reveal as="p" className="hero-sub" delay={0.2}>
-          An invitation for Nedbank to anchor Sandton Gate. Every other landlord hands you keys — Abcon hands you a
-          group of 15+ companies that develops, builds, powers, secures, manages, houses and co-invests in your
-          building. One partner. The whole value chain.
+          {client.hero.sub}
         </Reveal>
         <Reveal className="hero-meta" delay={0.3}>
           {heroMeta.map((item) => (

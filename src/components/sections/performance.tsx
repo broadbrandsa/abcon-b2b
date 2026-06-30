@@ -7,10 +7,11 @@ export function Performance() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">How the building performs</span>
-          <h2>Engineered to keep Nedbank running.</h2>
+          <h2>Engineered for your 2035 carbon-neutral goal.</h2>
           <p>
-            A 5-Star Green Star design with real resilience built in — power, water and efficiency you can put in front
-            of a board. Figures indicative, subject to confirmation.
+            A 5-Star Green Star, solar-powered design that lowers Nedbank&apos;s operational footprint at source —
+            contributing directly to your carbon-neutral-facilities-by-2035 and net-zero-by-2050 targets — with the
+            resilience to keep the bank running. Figures indicative, subject to confirmation.
           </p>
         </Reveal>
 

@@ -34,9 +34,9 @@ export const accountManager = {
 };
 
 export const navLinks = [
-  { href: "#ecosystem", label: "The Group" },
+  { href: "#why-client", label: "Why Nedbank" },
+  { href: "#ecosystem", label: "The Offering" },
   { href: "#building", label: "The Precinct" },
-  { href: "#gallery", label: "Gallery" },
   { href: "#invest", label: "Investment" },
   { href: "#compare", label: "Why Sandton Gate" },
 ] as const;
@@ -148,29 +148,29 @@ export const fitPanels: FitPanel[] = [
     id: "brand",
     tab: "Brand / People",
     who: "For brand & people",
-    heading: "An address that helps you hire.",
+    heading: "A green workplace that wins the talent war.",
     intro:
-      "A 2 500m² Planet Fitness, restaurants, a piazza, river-edge green space and on-site residences make this a place talent wants to come to — five minutes from the heart of Sandton.",
+      "A 5-Star Green, amenity-rich precinct five minutes from 135 Rivonia — Planet Fitness, dining, a piazza, river-edge green space and on-site homes — that lives Nedbank's 'see money differently' purpose and gives people a reason to come in.",
     points: [
-      { lead: "Prestige address", rest: " — anchor a landmark precinct in Africa's business capital." },
-      { lead: "Staff wellbeing", rest: " — gym, dining, salon and walkable green space on the doorstep." },
-      { lead: "Live-work-play", rest: " — 136 residences and curated retail within the precinct." },
+      { lead: "Values made visible", rest: " — a sustainable HQ that signals what Nedbank stands for." },
+      { lead: "Staff wellbeing", rest: " — gym, dining and walkable green space on the doorstep." },
+      { lead: "Live-work-play", rest: " — Craft Homes & The Terrace residences within the precinct." },
     ],
-    companies: ["craft", "oilgro"],
+    companies: ["craft", "terrace"],
   },
   {
     id: "esg",
     tab: "ESG / Risk",
     who: "For ESG & risk",
-    heading: "A sustainability story you can report on.",
+    heading: "ESG outcomes you can take to the board.",
     intro:
-      "A 5-Star Green Star rating, real renewable generation and an active social-impact foundation give Nedbank measurable ESG and transformation outcomes to take to its board.",
+      "Sandton Gate maps onto Nedbank's public commitments: a 5-Star Green building and ~1.2 MWp of on-site solar advance your carbon-neutral-facilities-by-2035 and net-zero-by-2050 targets, while the Level-1 Vula fund and Abcon Group Foundation support your transformation scorecard.",
     points: [
-      { lead: "5-Star Green Star", rest: " — independently rated sustainable design." },
-      { lead: "Real renewables", rest: " — backed by Abcon's 30MW+ of developed solar assets." },
-      { lead: "Social impact", rest: " — Abcon Group Foundation supports skills & enterprise development." },
+      { lead: "Carbon-neutral by 2035", rest: " — a solar-powered, 5-Star design lowers operational emissions at source." },
+      { lead: "Net-zero aligned", rest: " — a green-rated precinct supports your 2050 commitment, not just offsets." },
+      { lead: "Transformation", rest: " — the Level-1 Vula fund and Abcon Group Foundation strengthen your B-BBEE & ESG scorecard." },
     ],
-    companies: ["rise", "foundation"],
+    companies: ["rise", "vula", "foundation"],
   },
 ];
 
