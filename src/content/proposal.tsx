@@ -168,6 +168,69 @@ export const floors: {
   { level: "Building A", size: 13000, sizeLabel: "13 000", status: "soon", statusLabel: "By arrangement" },
 ];
 
+export type SpaceOption = {
+  id: string;
+  name: string;
+  building: string;
+  sizeLabel: string;
+  /** Usable area in m² this option tops out at — drives the live fit logic. */
+  maxArea: number;
+  blurb: string;
+};
+
+/**
+ * Tiered space options for the calculator, smallest → largest. As the team
+ * size changes, the calculator recommends the smallest option whose area can
+ * accommodate the requirement (at ~13m²/person). Sizes are illustrative.
+ */
+export const spaceOptions: SpaceOption[] = [
+  {
+    id: "flexi",
+    name: "Flexi Suite",
+    building: "Building A · Ground floor",
+    sizeLabel: "≈ 300 m²",
+    maxArea: 300,
+    blurb:
+      "Semi-serviced, plug-and-play suite with shared reception and meeting rooms — ideal for a satellite or project team.",
+  },
+  {
+    id: "floor",
+    name: "Single Full Floor",
+    building: "Building A · Floors 1–4",
+    sizeLabel: "≈ 1 000 m²",
+    maxArea: 1000,
+    blurb:
+      "A dedicated full floor with your own access control, branding, tea points and meeting rooms.",
+  },
+  {
+    id: "stack",
+    name: "Two Combined Floors",
+    building: "Building C · stacked floors",
+    sizeLabel: "2 floors · ≈ 2 600 m²",
+    maxArea: 2600,
+    blurb:
+      "Adjoining floors linked by an internal stair — a connected home for a full department.",
+  },
+  {
+    id: "building",
+    name: "Building A — entire",
+    building: "Standalone building",
+    sizeLabel: "≈ 13 000 m²",
+    maxArea: 13000,
+    blurb:
+      "Your own building within the precinct: signage rights, a private lobby and dedicated parking.",
+  },
+  {
+    id: "hq",
+    name: "Phase 2 HQ Towers",
+    building: "Two new P-grade towers",
+    sizeLabel: "≈ 20 000 m²",
+    maxArea: 20000,
+    blurb:
+      "Purpose-built, develop-to-suit headquarters campus across two towers — customised to Nedbank's exact brief.",
+  },
+];
+
 export const amenities: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "2 500m² Planet Fitness",
