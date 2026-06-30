@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { AbconLogo } from "@/components/brand/abcon-logo";
+import { NedbankLogo } from "@/components/brand/nedbank-logo";
 import { navLinks } from "@/content/proposal";
 import { cn } from "@/lib/utils";
 
@@ -33,14 +35,9 @@ export function SiteNav() {
       <div className="progress" ref={progressRef} />
       <nav className={cn("sg-nav", scrolled && "scrolled")}>
         <div className="lockup">
-          <span className="wordmark light" style={{ color: "#fff" }}>
-            ABCON
-          </span>
+          <AbconLogo />
           <span className="x">×</span>
-          <span className="ned" style={{ color: "#fff" }}>
-            <span className="dot" />
-            Nedbank
-          </span>
+          <NedbankLogo />
         </div>
         <div className="navlinks">
           {navLinks.map((link) => (

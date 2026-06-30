@@ -16,6 +16,23 @@ export const meta = {
   web: "abcondev.co.za",
 } as const;
 
+/**
+ * Account manager shown in the contact card near the foot of the page.
+ * `image` is an optional path under /public (e.g. "/images/account-manager.jpg");
+ * when null, a styled portrait placeholder is rendered. Illustrative details.
+ */
+export const accountManager = {
+  name: "Lerato Mokoena",
+  role: "Senior Leasing Manager",
+  company: "Abcon Developments",
+  initials: "LM",
+  phone: "011 510 9724",
+  mobile: "082 555 0143",
+  email: "lerato.mokoena@abcondev.co.za",
+  image: null as string | null,
+  note: "Your dedicated point of contact for the Sandton Gate proposal — for viewings, fit-out options and commercial terms.",
+};
+
 export const navLinks = [
   { href: "#why", label: "Why Abcon" },
   { href: "#building", label: "The Precinct" },

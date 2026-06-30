@@ -1,15 +1,15 @@
+import { AbconLogo } from "@/components/brand/abcon-logo";
+import { NedbankLogo } from "@/components/brand/nedbank-logo";
+
 export function SiteFooter() {
   return (
     <footer className="sg-footer">
       <div className="wrap">
         <div className="foot">
           <div className="lockup">
-            <span className="wordmark">ABCON</span>
+            <AbconLogo />
             <span className="x">×</span>
-            <span className="ned">
-              <span className="dot" />
-              Nedbank
-            </span>
+            <NedbankLogo />
           </div>
           <div>Sandton Gate · Confidential proposal · Prepared for Nedbank</div>
         </div>

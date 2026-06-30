@@ -1,3 +1,4 @@
+import { AccountManager } from "@/components/sections/account-manager";
 import { Cta } from "@/components/sections/cta";
 import { DecisionFit } from "@/components/sections/decision-fit";
 import { Hero } from "@/components/sections/hero";
@@ -23,6 +24,7 @@ export default function Home() {
       <Location />
       <TrackRecord />
       <Cta />
+      <AccountManager />
       <SiteFooter />
     </div>
   );
