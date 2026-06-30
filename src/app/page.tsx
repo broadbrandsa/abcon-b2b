@@ -1,7 +1,7 @@
-import { AccountManager } from "@/components/sections/account-manager";
 import { Cta } from "@/components/sections/cta";
 import { DecisionFit } from "@/components/sections/decision-fit";
 import { Ecosystem } from "@/components/sections/ecosystem";
+import { Enquiry } from "@/components/sections/enquiry";
 import { Hero } from "@/components/sections/hero";
 import { Lifestyle } from "@/components/sections/lifestyle";
 import { Location } from "@/components/sections/location";
@@ -28,7 +28,7 @@ export default function Home() {
       <Location />
       <TrackRecord />
       <Cta />
-      <AccountManager />
+      <Enquiry />
       <SiteFooter />
     </div>
   );

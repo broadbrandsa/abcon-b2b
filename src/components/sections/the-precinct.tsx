@@ -1,4 +1,3 @@
-import { BuildYourHq } from "@/components/sections/build-your-hq";
 import { Reveal } from "@/components/sections/reveal";
 import { buildingFeatures } from "@/content/proposal";
 
@@ -15,7 +14,15 @@ export function ThePrecinct() {
           </p>
         </Reveal>
         <div className="bld-layout">
-          <BuildYourHq />
+          <Reveal className="bld-visual">
+            <span className="photo-note">Drop hero render / photography here</span>
+            <div className="bld-towers">
+              <div className="tower" style={{ height: "62%" }} />
+              <div className="tower" style={{ height: "84%" }} />
+              <div className="tower" style={{ height: "50%" }} />
+            </div>
+            <span className="tag">Phase 2 · Two new office towers</span>
+          </Reveal>
           <Reveal as="ul" className="bld-feats" delay={0.1}>
             {buildingFeatures.map((feat) => (
               <li key={feat.title}>
