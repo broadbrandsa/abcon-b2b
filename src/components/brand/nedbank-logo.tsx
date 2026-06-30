@@ -1,25 +1,22 @@
+import Image from "next/image";
+
 import { cn } from "@/lib/utils";
 
 /**
- * Nedbank lockup: a green tile mark with an "N" device plus the Nedbank
- * wordmark. The tile stays brand-green on every background; the wordmark
- * inherits `currentColor`. Swap for an official vector asset when available.
+ * Official Nedbank logo, seated in a white chip so the green artwork stays
+ * legible on the dark hero nav and footer. Asset: /images/nedbank-logo.webp
  */
-export function NedbankLogo({ className }: { className?: string }) {
+export function NedbankLogo({ className, priority }: { className?: string; priority?: boolean }) {
   return (
-    <span className={cn("ned", className)} aria-label="Nedbank">
-      <svg className="ned-mark" viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="5.5" fill="var(--emerald)" />
-        <path
-          d="M7 17 V7.5 L17 16.5 V7"
-          fill="none"
-          stroke="#fff"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span className="ned-word">Nedbank</span>
+    <span className={cn("logo-chip nedbank", className)}>
+      <Image
+        className="logo-img"
+        src="/images/nedbank-logo.webp"
+        alt="Nedbank"
+        width={1264}
+        height={1186}
+        priority={priority}
+      />
     </span>
   );
 }

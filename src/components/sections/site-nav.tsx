@@ -35,9 +35,9 @@ export function SiteNav() {
       <div className="progress" ref={progressRef} />
       <nav className={cn("sg-nav", scrolled && "scrolled")}>
         <div className="lockup">
-          <AbconLogo />
+          <AbconLogo priority />
           <span className="x">×</span>
-          <NedbankLogo />
+          <NedbankLogo priority />
         </div>
         <div className="navlinks">
           {navLinks.map((link) => (
