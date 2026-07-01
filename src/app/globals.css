@@ -3533,3 +3533,138 @@ body {
   border-radius: 100px;
   box-shadow: 0 4px 14px -6px rgba(8, 26, 20, 0.4);
 }
+
+/* =====================================================================
+   OFFERING FLOW — robust "capabilities flow into the building" layout
+   ===================================================================== */
+.flow {
+  display: grid;
+  grid-template-columns: 1fr minmax(190px, 230px) 1fr;
+  gap: 22px;
+  align-items: center;
+  margin: 18px 0 46px;
+}
+.flow-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.flow-core {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 30%, rgba(20, 133, 95, 0.22), var(--forest) 72%);
+  color: var(--cream);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 26px;
+  transition: box-shadow 0.3s;
+}
+.flow-core[data-active="true"] {
+  box-shadow:
+    0 0 0 3px rgba(20, 133, 95, 0.3),
+    var(--shadow);
+}
+.flow-core-icon {
+  width: 34px;
+  height: 34px;
+  stroke: var(--gold-soft);
+  fill: none;
+  stroke-width: 1.6;
+  margin-bottom: 10px;
+}
+.flow-core-name {
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: #fff;
+  line-height: 1.15;
+}
+.flow-core-benefit {
+  font-size: 12.5px;
+  color: rgba(246, 243, 236, 0.72);
+  margin-top: 8px;
+  line-height: 1.35;
+}
+.flow-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-family: var(--sans);
+  text-align: left;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+}
+.flow-chip:hover,
+.flow-chip.active {
+  transform: translateY(-2px);
+  border-color: var(--emerald);
+  box-shadow: 0 12px 26px -16px rgba(8, 26, 20, 0.55);
+}
+.fc-ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.fc-ico svg {
+  width: 19px;
+  height: 19px;
+  stroke: var(--emerald);
+  fill: none;
+  stroke-width: 1.7;
+}
+.fc-label {
+  flex: 1;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.fc-arrow {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2;
+  flex: none;
+}
+.flow-col.right .flow-chip {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.flow-col.right .fc-arrow {
+  transform: rotate(180deg);
+}
+@media (max-width: 860px) {
+  .flow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .flow-core {
+    aspect-ratio: auto;
+    border-radius: var(--r);
+    order: -1;
+  }
+  .flow-col.right .flow-chip {
+    flex-direction: row;
+    text-align: left;
+  }
+  .fc-arrow {
+    display: none;
+  }
+}
