@@ -3025,7 +3025,8 @@ body {
 }
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 460px));
+  justify-content: center;
   gap: 20px;
 }
 .team-card {

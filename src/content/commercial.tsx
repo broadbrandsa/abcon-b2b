@@ -105,15 +105,6 @@ export const team = [
     image: "/images/account-manager.jpg" as string | null,
     initials: "LM",
   },
-  {
-    name: "Sipho Ndlovu",
-    role: "Development & Fit-out Lead",
-    company: "Grit",
-    phone: "011 510 9730",
-    email: "sipho.ndlovu@abcondev.co.za",
-    image: null as string | null,
-    initials: "SN",
-  },
 ];
 
 /* ---------- From yes to keys ---------- */
