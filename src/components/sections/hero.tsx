@@ -17,10 +17,9 @@ export function Hero() {
           {client.preparedFor}
         </Reveal>
         <Reveal as="h1" delay={0.1}>
-          {client.hero.lead} <em>{client.hero.em}</em>
-          {client.hero.tail}
+          {client.hero.line1}
           <br />
-          {client.hero.line2}
+          <em>{client.hero.em}</em> {client.hero.line2}
         </Reveal>
         <Reveal as="p" className="hero-sub" delay={0.2}>
           {client.hero.sub}

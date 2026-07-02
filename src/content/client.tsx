@@ -20,11 +20,10 @@ export const client = {
   minutesAway: "5",
 
   hero: {
-    lead: "Nedbank set the standard for the",
-    em: "green office",
-    tail: " in South Africa.",
-    line2: "Now occupy one built to it.",
-    sub: "An invitation for Nedbank to anchor Sandton Gate — a 5-Star Green precinct five minutes from your 135 Rivonia campus. Every other landlord hands you keys; Abcon hands you one accountable partner across build, power, management and security.",
+    line1: "More than a lease.",
+    em: "A fully-run workplace",
+    line2: "built for Nedbank.",
+    sub: "An invitation for Nedbank to anchor Sandton Gate. A lease gets you a shell; Abcon gives you a workplace that's built, powered, managed and secured for you — five minutes from your 135 Rivonia campus, so your team just moves in.",
   },
 
   // Public targets reused across the page (performance, tabs, etc.).
