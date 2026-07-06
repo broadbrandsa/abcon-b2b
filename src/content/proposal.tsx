@@ -36,9 +36,9 @@ export const accountManager = {
 export const navLinks = [
   { href: "#why-client", label: "Why Nedbank" },
   { href: "#ecosystem", label: "The Offering" },
-  { href: "#building", label: "The Precinct" },
+  { href: "#scoreboard", label: "Payoff" },
+  { href: "#compare", label: "Stay vs Move" },
   { href: "#invest", label: "Investment" },
-  { href: "#compare", label: "Why Sandton Gate" },
 ] as const;
 
 export const heroMeta = [

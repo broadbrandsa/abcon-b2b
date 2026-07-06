@@ -29,6 +29,8 @@ export function Investment() {
   const bays = Math.round((area / 100) * BAYS_PER_100M2);
   const monthly = area * tier.rate + bays * BAY_RATE;
   const annual = monthly * 12;
+  // Whole-of-lease across a 5-year term at 7% annual escalation.
+  const wholeLease = annual * ((Math.pow(1.07, 5) - 1) / 0.07);
 
   return (
     <section id="invest">
@@ -110,6 +112,10 @@ export function Investment() {
               </div>
             </div>
             <p className="calc-tinynote">Incl. {rand(bays * BAY_RATE)} parking ({fmt(bays)} bays × R{fmt(BAY_RATE)}). Excl. VAT &amp; consumption.</p>
+            <div className="invest-term">
+              Over a 5-year lease at 7% escalation: <b>{randCompact(wholeLease)}</b> whole-of-lease. Escalation applies
+              across the full term, not just month one.
+            </div>
           </Reveal>
 
           {/* lease terms */}
