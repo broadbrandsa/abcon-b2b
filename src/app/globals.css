@@ -4415,3 +4415,17 @@ body {
 .invest-term b {
   color: #fff;
 }
+
+/* ---- brand reveal: real render ---- */
+.br-figure {
+  position: relative;
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+.br-render {
+  width: 100%;
+  height: auto;
+  display: block;
+}
