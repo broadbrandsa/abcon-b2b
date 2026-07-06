@@ -38,6 +38,18 @@ export function ThePrecinct() {
           </Reveal>
         </div>
 
+        <Reveal className="streetview">
+          <span className="streetview-label">Aerial flythrough</span>
+          <iframe
+            title="Sandton Gate drone flythrough"
+            src="https://www.youtube.com/embed/AZZ08MEVcd4"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </Reveal>
+
         <div className="perf-stats" style={{ marginTop: 56 }}>
           {precinctStats.map((s, i) => (
             <Reveal className="perf-stat" key={s.l} delay={i * 0.05}>
