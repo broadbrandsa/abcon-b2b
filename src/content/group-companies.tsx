@@ -44,7 +44,24 @@ export type CompanyCategory = {
   companies: GroupCompany[];
 };
 
-const logo = (slug: string) => `/images/companies/${slug}.svg`;
+// Real logo files where we have them; the rest fall back to a placeholder SVG.
+const REAL_LOGOS: Record<string, string> = {
+  "abcon-developments": "abcon-logo-1.png",
+  "craft-homes": "craft-logo.png",
+  strive: "strive-logo.png",
+  ignite: "ignite-logo.png",
+  valgro: "valgro-logo-1.png",
+  "blume-energy": "blume-logo-1.png",
+  "rise-energy": "rise-logo.png",
+  "pod-fund": "pod-logo.png",
+  "reso-fund": "reso-logo.png",
+  "vula-fund": "vula-logo.png",
+  aih: "AIH-logo.png",
+  tadvest: "tadvest-logo.png",
+  "abcon-foundation": "agf-logo.png",
+};
+
+const logo = (slug: string) => `/images/companies/${REAL_LOGOS[slug] ?? `${slug}.svg`}`;
 
 export const companyCategories: CompanyCategory[] = [
   {
