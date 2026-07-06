@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import { ImageSlot } from "@/components/sections/image-slot";
 import { Reveal } from "@/components/sections/reveal";
 import { Button } from "@/components/ui/button";
 import { team } from "@/content/commercial";
@@ -61,23 +60,18 @@ export function Team() {
           ))}
         </div>
 
-        <div className="team-lead">
-          <Reveal className="team-video">
-            <ImageSlot label={`A short message from ${lead.name.split(" ")[0]}`} caption="60-second personal video slot" />
-          </Reveal>
-          <Reveal className="team-invite" delay={0.08}>
-            <div>
-              <h3>Come see it for yourself.</h3>
-              <p>A private hard-hat tour of Phase 2 — then dinner at the piazza. No slides, just the building.</p>
-            </div>
-            <Button
-              asChild
-              className="h-auto shrink-0 rounded-full bg-[var(--gold)] px-7 py-4 text-[15px] font-semibold text-[var(--forest)] shadow-none transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--gold-soft)]"
-            >
-              <a href={tourMailto}>Book a hard-hat tour</a>
-            </Button>
-          </Reveal>
-        </div>
+        <Reveal className="team-invite">
+          <div>
+            <h3>Come see it for yourself.</h3>
+            <p>A private hard-hat tour of Phase 2 — then dinner at the piazza. No slides, just the building.</p>
+          </div>
+          <Button
+            asChild
+            className="h-auto shrink-0 rounded-full bg-[var(--gold)] px-7 py-4 text-[15px] font-semibold text-[var(--forest)] shadow-none transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--gold-soft)]"
+          >
+            <a href={tourMailto}>Book a hard-hat tour</a>
+          </Button>
+        </Reveal>
       </div>
     </section>
   );
