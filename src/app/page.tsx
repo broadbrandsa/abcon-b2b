@@ -13,7 +13,6 @@ import { Investment } from "@/components/sections/investment";
 import { Lifestyle } from "@/components/sections/lifestyle";
 import { Location } from "@/components/sections/location";
 import { OfficeGallery } from "@/components/sections/office-gallery";
-import { Partnership } from "@/components/sections/partnership";
 import { Performance } from "@/components/sections/performance";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { Scoreboard } from "@/components/sections/scoreboard";
@@ -32,7 +31,6 @@ export default function Home() {
       <Hero />
       <BrandReveal />
       <WhyClient />
-      <Partnership />
       <Ecosystem />
       <ThePrecinct />
       <Performance />
