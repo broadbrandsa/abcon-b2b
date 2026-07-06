@@ -1,4 +1,3 @@
-import { BrandReveal } from "@/components/sections/brand-reveal";
 import { Committee } from "@/components/sections/committee";
 import { Cta } from "@/components/sections/cta";
 import { Diligence } from "@/components/sections/diligence";
@@ -28,7 +27,6 @@ export default function Home() {
 
       {/* ACT 1 — THE INVITATION */}
       <Hero />
-      <BrandReveal />
       <WhyClient />
 
       {/* ACT 2 — THE BUILDING, BY THEME */}
