@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 import { Reveal } from "@/components/sections/reveal";
-import { officeGallery } from "@/content/ecosystem";
 import { floors, spaceOptions } from "@/content/proposal";
 import { developToSuit, floorPlateSpecs } from "@/content/themes";
 import { cn } from "@/lib/utils";
@@ -22,13 +20,10 @@ const options = [...spaceOptions].reverse();
 export function FloorSpace() {
   const [index, setIndex] = useState(4); // default to the largest floor plate
   const [fitout, setFitout] = useState(true);
-  const [gal, setGal] = useState(0);
 
   const floor = floors[index];
   const capacity = Math.floor(floor.size / 13);
   const desks = Math.min(capacity, BANKS.length * BANKS[0].cols * DESK_ROWS);
-  const galCount = officeGallery.length;
-  const goGal = (next: number) => setGal((next + galCount) % galCount);
   let drawn = 0;
 
   return (
@@ -166,45 +161,6 @@ export function FloorSpace() {
               </button>
               <p className="plate-disc">Layout is illustrative and subject to design development.</p>
             </div>
-          </div>
-        </Reveal>
-
-        {/* interior gallery */}
-        <Reveal className="gal">
-          <div className="gal-viewport">
-            <div className="gal-track" style={{ transform: `translateX(-${gal * 100}%)` }}>
-              {officeGallery.map((item, i) => (
-                <figure className="gal-slide" key={item.src} aria-hidden={i !== gal}>
-                  <div className="gal-frame">
-                    <Image src={item.src} alt={item.caption} fill sizes="(max-width: 860px) 100vw, 1100px" className="gal-img" />
-                  </div>
-                  <figcaption className="gal-cap">
-                    <span className="gal-cap-num">
-                      {String(i + 1).padStart(2, "0")} / {String(galCount).padStart(2, "0")}
-                    </span>
-                    {item.caption}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-            <button type="button" className="gal-arrow prev" onClick={() => goGal(gal - 1)} aria-label="Previous image">
-              ‹
-            </button>
-            <button type="button" className="gal-arrow next" onClick={() => goGal(gal + 1)} aria-label="Next image">
-              ›
-            </button>
-          </div>
-          <div className="gal-dots" aria-label="Gallery navigation">
-            {officeGallery.map((item, i) => (
-              <button
-                key={item.src}
-                type="button"
-                className={cn("gal-dot", i === gal && "on")}
-                aria-label={`Go to ${item.caption}`}
-                aria-current={i === gal}
-                onClick={() => setGal(i)}
-              />
-            ))}
           </div>
         </Reveal>
       </div>
