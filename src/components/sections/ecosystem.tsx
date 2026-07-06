@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { Reveal } from "@/components/sections/reveal";
 import { offerings, offeringsClosing, type Offering } from "@/content/ecosystem";
+import { conciergeSteps } from "@/content/upgrade";
 import { cn } from "@/lib/utils";
 
 const shortLabels: Record<string, string> = {
@@ -125,6 +126,30 @@ export function Ecosystem() {
         <Reveal className="eco-closing">
           <p>{offeringsClosing}</p>
         </Reveal>
+
+        <Reveal className="sec-subhead">
+          <h3>And we&apos;ll handle the whole move.</h3>
+          <p>
+            One partner owns design, build, fit-out, the physical relocation, change management and day-one operations —
+            phased so the bank keeps running. No hand-offs, no finger-pointing.
+          </p>
+        </Reveal>
+
+        <div className="concierge-flow">
+          {conciergeSteps.map((step, i) => (
+            <Reveal className="concierge-step" key={step.title} delay={(i % 4) * 0.05}>
+              <span className="cs-num">{String(i + 1).padStart(2, "0")}</span>
+              <span className="cs-ico">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  {step.icon}
+                </svg>
+              </span>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+              <div className="cs-by">{step.by}</div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

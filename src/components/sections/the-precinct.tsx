@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/sections/reveal";
-import { buildingFeatures } from "@/content/proposal";
+import { precinctComposition, precinctStats } from "@/content/themes";
 
 export function ThePrecinct() {
   return (
@@ -9,10 +9,13 @@ export function ThePrecinct() {
           <span className="eyebrow">The Precinct</span>
           <h2>Sandton Gate — Sandton, but smarter.</h2>
           <p>
-            A world-class mixed-use precinct on the banks of the Braamfontein Spruit, co-developed with Tiber. Premium
-            offices, curated retail and luxury residences woven into a green, walkable environment.
+            A R3-billion, world-class mixed-use precinct co-developed with Tiber, on the banks of the revitalised
+            Braamfontein Spruit. Designed around <em>people, nature and movement</em> — pedestrian walkways, green
+            edges and a genuine sense of place, five minutes from the Sandton CBD and central to Rosebank, Randburg,
+            Bryanston, Hyde Park and Fourways.
           </p>
         </Reveal>
+
         <div className="bld-layout">
           <Reveal className="bld-visual">
             <span className="photo-note">Image slot · Sandton Gate hero render / precinct aerial</span>
@@ -24,17 +27,29 @@ export function ThePrecinct() {
             <span className="tag">Phase 2 · Two new office towers</span>
           </Reveal>
           <Reveal as="ul" className="bld-feats" delay={0.1}>
-            {buildingFeatures.map((feat) => (
-              <li key={feat.title}>
-                <span className="k">{feat.k}</span>
+            {precinctComposition.map((c) => (
+              <li key={c.k}>
+                <span className="k">{c.k}</span>
                 <span className="v">
-                  <b>{feat.title}</b>
-                  <span>{feat.body}</span>
+                  <span>{c.v}</span>
                 </span>
               </li>
             ))}
           </Reveal>
         </div>
+
+        <div className="perf-stats" style={{ marginTop: 56 }}>
+          {precinctStats.map((s, i) => (
+            <Reveal className="perf-stat" key={s.l} delay={i * 0.05}>
+              <b>{s.v}</b>
+              <span>{s.l}</span>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal as="p" className="sg-disclaimer">
+          Indicative composition and figures, subject to confirmation.
+        </Reveal>
       </div>
     </section>
   );

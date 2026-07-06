@@ -35,10 +35,12 @@ export const accountManager = {
 
 export const navLinks = [
   { href: "#why-client", label: "Why Nedbank" },
-  { href: "#ecosystem", label: "The Offering" },
-  { href: "#scoreboard", label: "Payoff" },
-  { href: "#compare", label: "Stay vs Move" },
+  { href: "#building", label: "The Precinct" },
+  { href: "#plans", label: "Floor Plans" },
+  { href: "#sustainability", label: "Sustainability" },
+  { href: "#compare", label: "Why Move Now" },
   { href: "#invest", label: "Investment" },
+  { href: "/about", label: "About Abcon" },
 ] as const;
 
 export const heroMeta = [
@@ -328,7 +330,7 @@ export const proofItems = [
   { name: "Motorcity & dealerships", body: "100+ motor dealerships developed across the country." },
   { name: "Sandton Gate", body: "The R3-billion precinct co-developed with Tiber that you're considering." },
   { name: "Blume & Rise Energy", body: "30MW+ of solar developed — real renewable generation, not greenwashing." },
-  { name: "Valgro", body: "100 tons of food produced per week through the group's agribusiness." },
+  { name: "Country Mushrooms", body: "One of South Africa's largest fresh-mushroom producers (~100 tons/week) — group scale beyond property." },
   { name: "Trakka", body: "Security technology developed in South Africa and deployed globally." },
 ] as const;
 
@@ -336,5 +338,5 @@ export const proofStats: { to: number; prefix?: string; suffix?: string; label: 
   { to: 40, suffix: "+", label: "Years developing" },
   { to: 30, suffix: "MW+", label: "Solar developed" },
   { to: 15, suffix: "+", label: "Group companies" },
-  { to: 100, suffix: " t/wk", label: "Food produced" },
+  { to: 100, suffix: "k m²", label: "Single-tenant builds" },
 ];

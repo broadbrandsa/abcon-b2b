@@ -1,42 +1,82 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 import { Reveal } from "@/components/sections/reveal";
-import { floors } from "@/content/proposal";
+import { officeGallery } from "@/content/ecosystem";
+import { floors, spaceOptions } from "@/content/proposal";
+import { developToSuit, floorPlateSpecs } from "@/content/themes";
 import { cn } from "@/lib/utils";
 
 const fmt = (n: number) => n.toLocaleString("en-ZA").replace(/,/g, " ");
-
-// Two desk banks either side of the service core.
 const BANKS = [
   { x: 40, cols: 4 },
   { x: 250, cols: 4 },
 ];
 const DESK_ROWS = 5;
 
-export function FloorPlates() {
-  const [index, setIndex] = useState(0);
+// Lead with the big offers; suites read as a flexible entry point, not leftovers.
+const options = [...spaceOptions].reverse();
+
+export function FloorSpace() {
+  const [index, setIndex] = useState(4); // default to the largest floor plate
   const [fitout, setFitout] = useState(true);
+  const [gal, setGal] = useState(0);
 
   const floor = floors[index];
   const capacity = Math.floor(floor.size / 13);
   const desks = Math.min(capacity, BANKS.length * BANKS[0].cols * DESK_ROWS);
-
+  const galCount = officeGallery.length;
+  const goGal = (next: number) => setGal((next + galCount) % galCount);
   let drawn = 0;
 
   return (
     <section id="plans">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">Floor plates</span>
-          <h2>See your floor — and your fit-out.</h2>
+          <span className="eyebrow">Floor plans &amp; your space</span>
+          <h2>Room to move — and room to grow.</h2>
           <p>
-            Select a floor to view an indicative plate and toggle a sample Nedbank fit-out. Architectural drawings will
-            replace these schematics in the formal proposal.
+            Efficient P-grade plates, developed to your brief. From a full HQ campus to a flexible entry suite — sized,
+            fitted and reconfigured by the same team as you grow.
           </p>
         </Reveal>
 
+        {/* space options — big first */}
+        <div className="space-options">
+          {options.map((o, i) => (
+            <Reveal className={cn("space-opt", i === 0 && "flag")} key={o.id} delay={(i % 3) * 0.05}>
+              {i === 0 && <span className="space-opt-tag">Recommended for HQ</span>}
+              <div className="space-opt-name">{o.name}</div>
+              <div className="space-opt-size">{o.sizeLabel}</div>
+              <div className="space-opt-where">{o.building}</div>
+              <p className="space-opt-blurb">{o.blurb}</p>
+            </Reveal>
+          ))}
+        </div>
+
+        {/* specs + develop-to-suit */}
+        <div className="fp-specs">
+          <Reveal className="fp-card">
+            <h3>Efficient floor plates</h3>
+            <ul>
+              {floorPlateSpecs.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal className="fp-card" delay={0.05}>
+            <h3>Develop-to-suit</h3>
+            <ul>
+              {developToSuit.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+
+        {/* interactive plate viewer */}
         <Reveal className="plates">
           <div className="plate-tabs" role="tablist" aria-label="Select a floor">
             {floors.map((f, i) => (
@@ -49,19 +89,19 @@ export function FloorPlates() {
                 onClick={() => setIndex(i)}
               >
                 <span className="pt-lvl">{f.level}</span>
-                <span className="pt-sz">
-                  {f.sizeLabel} m²
-                </span>
+                <span className="pt-sz">{f.sizeLabel} m²</span>
               </button>
             ))}
           </div>
 
           <div className="plate-stage">
-            <div className="plate-figure" role="img" aria-label={`Indicative floor plate for ${floor.level}, ${floor.sizeLabel} square metres${fitout ? ", with sample Nedbank fit-out" : ""}`}>
+            <div
+              className="plate-figure"
+              role="img"
+              aria-label={`Indicative floor plate for ${floor.level}, ${floor.sizeLabel} square metres${fitout ? ", with sample Nedbank fit-out" : ""}`}
+            >
               <svg viewBox="0 0 400 280" className="plate-svg">
-                {/* slab */}
                 <rect x="20" y="20" width="360" height="240" rx="10" className="pl-slab" />
-                {/* glazing ticks */}
                 <g className="pl-glaze">
                   {Array.from({ length: 16 }).map((_, k) => (
                     <line key={`t${k}`} x1={36 + k * 21.7} y1="20" x2={36 + k * 21.7} y2="30" />
@@ -70,20 +110,16 @@ export function FloorPlates() {
                     <line key={`b${k}`} x1={36 + k * 21.7} y1="260" x2={36 + k * 21.7} y2="250" />
                   ))}
                 </g>
-                {/* service core */}
                 <rect x="166" y="104" width="68" height="72" rx="6" className="pl-core" />
                 <text x="200" y="144" className="pl-core-label" textAnchor="middle">
                   CORE
                 </text>
-
                 {fitout && (
                   <g className="pl-fitout">
-                    {/* meeting rooms */}
                     <rect x="34" y="32" width="58" height="34" rx="4" className="pl-room" />
                     <rect x="308" y="32" width="58" height="34" rx="4" className="pl-room" />
                     <rect x="34" y="214" width="58" height="34" rx="4" className="pl-room" />
                     <rect x="308" y="214" width="58" height="34" rx="4" className="pl-room" />
-                    {/* desks */}
                     {BANKS.map((bank) =>
                       Array.from({ length: DESK_ROWS }).map((_, r) =>
                         Array.from({ length: bank.cols }).map((__, c) => {
@@ -130,6 +166,45 @@ export function FloorPlates() {
               </button>
               <p className="plate-disc">Layout is illustrative and subject to design development.</p>
             </div>
+          </div>
+        </Reveal>
+
+        {/* interior gallery */}
+        <Reveal className="gal">
+          <div className="gal-viewport">
+            <div className="gal-track" style={{ transform: `translateX(-${gal * 100}%)` }}>
+              {officeGallery.map((item, i) => (
+                <figure className="gal-slide" key={item.src} aria-hidden={i !== gal}>
+                  <div className="gal-frame">
+                    <Image src={item.src} alt={item.caption} fill sizes="(max-width: 860px) 100vw, 1100px" className="gal-img" />
+                  </div>
+                  <figcaption className="gal-cap">
+                    <span className="gal-cap-num">
+                      {String(i + 1).padStart(2, "0")} / {String(galCount).padStart(2, "0")}
+                    </span>
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <button type="button" className="gal-arrow prev" onClick={() => goGal(gal - 1)} aria-label="Previous image">
+              ‹
+            </button>
+            <button type="button" className="gal-arrow next" onClick={() => goGal(gal + 1)} aria-label="Next image">
+              ›
+            </button>
+          </div>
+          <div className="gal-dots" aria-label="Gallery navigation">
+            {officeGallery.map((item, i) => (
+              <button
+                key={item.src}
+                type="button"
+                className={cn("gal-dot", i === gal && "on")}
+                aria-label={`Go to ${item.caption}`}
+                aria-current={i === gal}
+                onClick={() => setGal(i)}
+              />
+            ))}
           </div>
         </Reveal>
       </div>

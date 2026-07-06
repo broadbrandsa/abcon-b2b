@@ -1,13 +1,13 @@
 import { Reveal } from "@/components/sections/reveal";
-import { distances } from "@/content/proposal";
+import { distances, parkingAccess, transport } from "@/content/themes";
 
 export function Location() {
   return (
     <section id="place">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">Location</span>
-          <h2>Central to everything that matters.</h2>
+          <span className="eyebrow">Location &amp; access</span>
+          <h2>Central to everything — and five minutes from you.</h2>
           <p>25 Minerva Avenue, Glenadrienne — between Sandton, Rosebank, Randburg, Bryanston and Hyde Park.</p>
         </Reveal>
         <div className="loc-grid">
@@ -16,20 +16,8 @@ export function Location() {
               <g stroke="var(--line)" strokeWidth="1" fill="none">
                 <path d="M40 120 H360 M40 200 H360 M40 280 H360 M120 40 V360 M200 40 V360 M280 40 V360" />
               </g>
-              <path
-                d="M200 200 C240 160 300 150 340 120"
-                stroke="var(--gold)"
-                strokeWidth="2.5"
-                fill="none"
-                strokeDasharray="6 6"
-              />
-              <path
-                d="M200 200 C160 240 110 250 70 290"
-                stroke="var(--emerald)"
-                strokeWidth="2.5"
-                fill="none"
-                strokeDasharray="6 6"
-              />
+              <path d="M200 200 C240 160 300 150 340 120" stroke="var(--gold)" strokeWidth="2.5" fill="none" strokeDasharray="6 6" />
+              <path d="M200 200 C160 240 110 250 70 290" stroke="var(--emerald)" strokeWidth="2.5" fill="none" strokeDasharray="6 6" />
               <circle cx="200" cy="200" r="13" fill="var(--emerald)" />
               <circle cx="200" cy="200" r="22" fill="none" stroke="var(--emerald)" strokeWidth="1.5" opacity=".4" />
               <text x="200" y="234" fontFamily="Manrope" fontSize="11" fill="var(--ink)" textAnchor="middle" fontWeight="700">
@@ -72,6 +60,25 @@ export function Location() {
               </svg>
               View on Google Maps
             </a>
+          </Reveal>
+        </div>
+
+        <div className="loc-lists">
+          <Reveal className="loc-card">
+            <h3>Getting here</h3>
+            <ul>
+              {transport.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal className="loc-card" delay={0.05}>
+            <h3>Parking &amp; access</h3>
+            <ul>
+              {parkingAccess.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
           </Reveal>
         </div>
 

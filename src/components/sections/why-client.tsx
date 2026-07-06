@@ -1,16 +1,19 @@
 import { Reveal } from "@/components/sections/reveal";
 import { client } from "@/content/client";
+import { partnerships } from "@/content/ecosystem";
+import { cn } from "@/lib/utils";
 
 export function WhyClient() {
   return (
     <section id="why-client">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">Why {client.name} chooses Abcon</span>
-          <h2>Built around your commitments — not just your headcount.</h2>
+          <span className="eyebrow">Why {client.name} + Abcon</span>
+          <h2>One accountable partner — across the whole property lifecycle.</h2>
           <p>
-            {client.name}&apos;s public strategy and Sandton Gate point the same way. Here&apos;s how the building and
-            the Abcon group advance each commitment {client.name} has already made.
+            Most landlords do one thing. Abcon develops, builds, powers, secures and manages its own buildings, and
+            co-invests in them — so {client.name} deals with one group that owns the outcome. And {client.name}&apos;s
+            public strategy and Sandton Gate already point the same way.
           </p>
         </Reveal>
 
@@ -28,6 +31,24 @@ export function WhyClient() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="wc-partner">
+          <div className="wc-partner-lead">
+            <span className="eyebrow">You already build with us</span>
+            <h3>This isn&apos;t a cold pitch — it&apos;s the next chapter.</h3>
+            <p>Nedbank already trusts Abcon and its partners with billions in property and residential investment.</p>
+          </div>
+          <div className="timeline">
+            {partnerships.map((p, idx) => (
+              <div className={cn("tl-node", "highlight" in p && p.highlight && "now")} key={p.fund}>
+                <div className="tl-dot" />
+                {idx < partnerships.length - 1 && <div className="tl-line" />}
+                <div className="tl-year">{p.year}</div>
+                <div className="tl-title">{p.fund}</div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

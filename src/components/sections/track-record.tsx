@@ -1,13 +1,14 @@
 import { CountUp } from "@/components/sections/count-up";
 import { Reveal } from "@/components/sections/reveal";
 import { proofItems, proofStats } from "@/content/proposal";
+import { referencesNote } from "@/content/themes";
 
 export function TrackRecord() {
   return (
     <section id="proof">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">Track Record</span>
+          <span className="eyebrow">Track record &amp; references</span>
           <h2>We&apos;ve done this for South Africa&apos;s biggest names.</h2>
           <p>Four decades of delivering landmark commercial space at enterprise scale.</p>
         </Reveal>
@@ -29,6 +30,9 @@ export function TrackRecord() {
             </Reveal>
           ))}
         </div>
+        <Reveal as="p" className="proof-references">
+          {referencesNote}
+        </Reveal>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { CountUp } from "@/components/sections/count-up";
 import { Reveal } from "@/components/sections/reveal";
+import { esgTieIn, sustainabilityPoints, transformation } from "@/content/themes";
 import { scoreboard as s } from "@/content/upgrade";
 
 const fmt = (n: number) => Math.round(n).toLocaleString("en-ZA").replace(/,/g, " ");
@@ -30,15 +31,25 @@ export function Scoreboard() {
     );
 
   return (
-    <section id="scoreboard">
+    <section id="sustainability">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">Your carbon &amp; cost scoreboard</span>
+          <span className="eyebrow">Sustainability &amp; ESG</span>
           <h2>You committed to it. This building delivers it.</h2>
           <p>
-            Nedbank has committed publicly to net-zero by 2050 and carbon-neutral facilities by 2035. Size your
-            footprint and see the annual payoff of moving to a 5-Star, solar-powered building.
+            Nedbank has committed publicly to net-zero by 2050 and carbon-neutral facilities by 2035. Sandton Gate is
+            built to advance that — then size your footprint and see the annual payoff.
           </p>
+        </Reveal>
+
+        <Reveal className="green-points">
+          <ul>
+            {sustainabilityPoints.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
+          <p className="green-tie">{esgTieIn}</p>
+          <p className="green-transform">{transformation}</p>
         </Reveal>
 
         <div className="score-grid">

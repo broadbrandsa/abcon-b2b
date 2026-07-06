@@ -1,12 +1,12 @@
 import { Reveal } from "@/components/sections/reveal";
-import { leaseCost, stayVsMove } from "@/content/upgrade";
+import { availability as a, leaseCost, stayVsMove } from "@/content/upgrade";
 
 export function StayVsMove() {
   return (
     <section id="compare">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">Stay vs move</span>
+          <span className="eyebrow">Why move now</span>
           <h2>The cost of staying put.</h2>
           <p>
             Your lease is up in ~18 months. Renewing feels like the safe option — but a newer, greener building five
@@ -45,6 +45,23 @@ export function StayVsMove() {
         <Reveal className="svm-punch">
           <p>{leaseCost.punch}</p>
           <span>It also outperforms Waterfall and Rosebank on transport, green rating and the partnership you already have with us.</span>
+        </Reveal>
+
+        <Reveal className="movenow-scarcity">
+          <div className="movenow-copy">
+            <span className="eyebrow">And it won&apos;t wait</span>
+            <h3>{a.scarcityTitle}</h3>
+            <p>{a.scarcityBody}</p>
+            <p className="avail-neighbours">{a.neighboursNote}</p>
+          </div>
+          <div className="avail-proof">
+            {a.proofPoints.map((p) => (
+              <div className="avail-point" key={p.k}>
+                <b>{p.k}</b>
+                <span>{p.v}</span>
+              </div>
+            ))}
+          </div>
         </Reveal>
       </div>
     </section>
