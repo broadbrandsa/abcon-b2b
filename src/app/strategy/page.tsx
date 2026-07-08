@@ -13,6 +13,8 @@ import {
   kpis,
   linkedinIntro,
   rationale,
+  reportMetrics,
+  sources,
   strategyClose,
   strategyIntro,
 } from "@/content/strategy";
@@ -62,7 +64,7 @@ export default function StrategyPage() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Why it works</span>
-            <h2>Seven reasons a bespoke microsite beats a proposal PDF.</h2>
+            <h2>Six reasons a bespoke microsite beats a proposal PDF.</h2>
           </Reveal>
           <div className="pt-grid">
             {rationale.map((r, i) => (
@@ -81,14 +83,14 @@ export default function StrategyPage() {
             {conversionStats.map((s, i) => (
               <Reveal className="strat-stat" key={s.label} delay={i * 0.05}>
                 <b>
-                  <CountUp to={s.to} prefix={s.prefix} suffix={s.suffix} />
+                  <CountUp to={s.to} suffix={s.suffix} />
                 </b>
                 <span>{s.label}</span>
               </Reveal>
             ))}
           </div>
           <Reveal as="p" className="sg-disclaimer">
-            Illustrative benchmarks — directional, for discussion.
+            Published third-party industry benchmarks — not Abcon results. Sources below.
           </Reveal>
         </div>
       </section>
@@ -149,6 +151,20 @@ export default function StrategyPage() {
                 </Reveal>
               ))}
             </div>
+            <Reveal as="p" className="sg-disclaimer li-source">
+              LinkedIn platform figures, published by LinkedIn Marketing — not Abcon results.
+            </Reveal>
+
+            <Reveal className="li-report">
+              <span className="li-report-tag">What Broadbrand reports back</span>
+              <div className="li-formats">
+                {reportMetrics.map((m) => (
+                  <span key={m} className="li-chip">
+                    {m}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -173,9 +189,17 @@ export default function StrategyPage() {
             </span>
             <div>Internal · Broadbrand strategy note for Abcon</div>
           </div>
+          <div className="strat-sources">
+            <span className="strat-sources-tag">Sources</span>
+            <ul>
+              {sources.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+          </div>
           <p className="foot-note">
-            Confidential — prepared by Broadbrand for Abcon. Figures are illustrative and directional. Not for external
-            distribution.
+            Confidential — prepared by Broadbrand for Abcon. All numeric figures on this page are published third-party
+            industry benchmarks, cited above — not Abcon results or projections. Not for external distribution.
           </p>
         </div>
       </footer>
