@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const tabs = [
-  { href: "/", label: "Nedbank Proposal" },
-  { href: "/strategy", label: "Broadbrand" },
+  { href: "/", label: "Example Proposal" },
+  { href: "/strategy", label: "Abcon Strategy" },
 ];
 
 /**
