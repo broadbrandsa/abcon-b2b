@@ -18,6 +18,7 @@ import { Masterplan } from "@/components/sections/masterplan";
 import { PowerResilience } from "@/components/sections/power-resilience";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { Scoreboard } from "@/components/sections/scoreboard";
+import { SectionRail } from "@/components/sections/section-rail";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteNav } from "@/components/sections/site-nav";
 import { StayVsMove } from "@/components/sections/stay-vs-move";
@@ -33,6 +34,7 @@ export default function Home() {
   return (
     <div className="sg">
       <SiteNav />
+      <SectionRail />
 
       {/* ACT 1 — THE INVITATION */}
       <Hero />
