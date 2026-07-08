@@ -5510,3 +5510,48 @@ body {
 .strat-close p { font-family: var(--serif); font-size: clamp(20px, 2.6vw, 28px); line-height: 1.4; color: #fff; max-width: 60ch; margin: 0 auto 22px; }
 .strat-close-cta { display: inline-flex; background: var(--gold); color: var(--forest); border-radius: 100px; padding: 14px 26px; font-weight: 600; font-size: 15px; transition: all 0.25s; }
 .strat-close-cta:hover { background: var(--gold-soft); transform: translateY(-2px); }
+
+/* =====================================================================
+   SITE SWITCH — slim bar above the main menu (Proposal <-> Broadbrand)
+   ===================================================================== */
+:root { --switch-h: 40px; }
+.site-switch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--switch-h);
+  z-index: 120;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.switch-inner {
+  max-width: var(--maxw);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.switch-brand {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  font-weight: 600;
+}
+.switch-tabs { display: flex; gap: 4px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 100px; padding: 3px; }
+.switch-tab { font-size: 12.5px; font-weight: 600; color: rgba(246, 243, 236, 0.72); padding: 5px 15px; border-radius: 100px; transition: color 0.2s, background 0.2s; }
+.switch-tab:hover { color: #fff; }
+.switch-tab.on { background: var(--gold); color: var(--forest); }
+@media (max-width: 560px) { .switch-brand { display: none; }
+  .switch-inner { justify-content: center; } }
+
+/* offset the main menus below the switch bar */
+.has-switch .sg-nav { top: var(--switch-h); }
+.has-switch .progress { top: var(--switch-h); }
+.strategy.has-switch { padding-top: var(--switch-h); }
+.strategy .strat-nav { top: var(--switch-h); }

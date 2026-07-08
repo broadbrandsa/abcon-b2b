@@ -21,6 +21,7 @@ import { Scoreboard } from "@/components/sections/scoreboard";
 import { SectionRail } from "@/components/sections/section-rail";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteNav } from "@/components/sections/site-nav";
+import { SiteSwitch } from "@/components/sections/site-switch";
 import { StayVsMove } from "@/components/sections/stay-vs-move";
 import { Team } from "@/components/sections/team";
 import { Technology } from "@/components/sections/technology";
@@ -32,7 +33,8 @@ import { WorkplaceStrategy } from "@/components/sections/workplace-strategy";
 
 export default function Home() {
   return (
-    <div className="sg">
+    <div className="sg has-switch">
+      <SiteSwitch />
       <SiteNav />
       <SectionRail />
 

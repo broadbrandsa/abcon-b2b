@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { CountUp } from "@/components/sections/count-up";
 import { Reveal } from "@/components/sections/reveal";
+import { SiteSwitch } from "@/components/sections/site-switch";
 import {
   adFormats,
   audience,
@@ -24,18 +25,9 @@ export const metadata: Metadata = {
 
 export default function StrategyPage() {
   return (
-    <div className="sg strategy">
-      {/* tier 1 — small menu above the main menu */}
-      <div className="strat-topbar">
-        <div className="wrap strat-topbar-inner">
-          <span className="strat-kicker">Broadbrand · Internal — for Abcon</span>
-          <nav className="strat-toplinks">
-            <Link href="/">The proposal</Link>
-            <a href="#rationale">Rationale</a>
-            <a href="#linkedin">LinkedIn</a>
-          </nav>
-        </div>
-      </div>
+    <div className="sg strategy has-switch">
+      {/* tier 1 — shared switch bar above the main menu */}
+      <SiteSwitch />
 
       {/* tier 2 — main menu */}
       <header className="strat-nav">
