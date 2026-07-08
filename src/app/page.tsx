@@ -4,11 +4,11 @@ import { Diligence } from "@/components/sections/diligence";
 import { Ecosystem } from "@/components/sections/ecosystem";
 import { Enquiry } from "@/components/sections/enquiry";
 import { FloorSpace } from "@/components/sections/floor-space";
+import { Flythrough } from "@/components/sections/flythrough";
 import { Hero } from "@/components/sections/hero";
 import { Investment } from "@/components/sections/investment";
 import { Lifestyle } from "@/components/sections/lifestyle";
 import { Location } from "@/components/sections/location";
-import { OfficeGallery } from "@/components/sections/office-gallery";
 import { PowerResilience } from "@/components/sections/power-resilience";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { Scoreboard } from "@/components/sections/scoreboard";
@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* ACT 1 — THE INVITATION */}
       <Hero />
-      <OfficeGallery />
+      <Flythrough />
       <WhyClient />
 
       {/* ACT 2 — THE BUILDING, BY THEME */}

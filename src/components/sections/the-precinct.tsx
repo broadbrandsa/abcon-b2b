@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { GalleryCarousel } from "@/components/sections/office-gallery";
 import { Reveal } from "@/components/sections/reveal";
 import { precinctComposition, precinctStats } from "@/content/themes";
 
@@ -40,17 +41,11 @@ export function ThePrecinct() {
           </Reveal>
         </div>
 
-        <Reveal className="streetview">
-          <span className="streetview-label">Aerial flythrough</span>
-          <iframe
-            title="Sandton Gate drone flythrough"
-            src="https://www.youtube.com/embed/AZZ08MEVcd4"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-          />
+        <Reveal className="sec-subhead">
+          <h3>Inside the building.</h3>
+          <p>A look at the P-grade office environment — workspace, hospitality and the details in between.</p>
         </Reveal>
+        <GalleryCarousel />
 
         <div className="perf-stats" style={{ marginTop: 56 }}>
           {precinctStats.map((s, i) => (
