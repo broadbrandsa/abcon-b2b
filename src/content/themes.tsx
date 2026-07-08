@@ -103,7 +103,7 @@ export const securityPoints = [
 /* ---------- Sustainability & ESG ---------- */
 export const sustainabilityPoints = [
   "5-Star Green Star (Design) rating from the GBCSA — targeting an As-Built rating",
-  "~45% lower energy use vs a conventional-office baseline; EUI target ~120 kWh/m²/yr",
+  "~45% lower energy than an older comparable office of similar size; EUI target ~120 kWh/m²/yr",
   "~1.2 MWp of on-site solar generation",
   "~40% reduction in potable-water use via recycling and rainwater harvesting",
   "Low-VOC, responsibly-sourced materials",

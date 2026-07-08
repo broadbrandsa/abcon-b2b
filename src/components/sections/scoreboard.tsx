@@ -34,11 +34,12 @@ export function Scoreboard() {
     <section id="sustainability">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">Sustainability &amp; ESG</span>
-          <h2>You committed to it. This building delivers it.</h2>
+          <span className="eyebrow">A supporting benefit</span>
+          <h2>A more sustainable footprint — by design.</h2>
           <p>
-            Nedbank has committed publicly to net-zero by 2050 and carbon-neutral facilities by 2035. Sandton Gate is
-            built to advance that — then size your footprint and see the annual payoff.
+            Alongside the operational case, Sandton Gate also advances the green goals Nedbank already leads on — newer
+            systems and on-site solar that cut running cost first, and carbon second. Size your footprint to see the
+            annual payoff.
           </p>
         </Reveal>
 
@@ -79,26 +80,27 @@ export function Scoreboard() {
 
           <div className="score-outputs">
             <Reveal className="score-card">
-              <span className="sc-label">Energy saved / year</span>
-              <b className="sc-value">{figure(energySaved, "", " kWh")}</b>
-              <span className="sc-sub">≈ {(energySaved / 1_000_000).toFixed(1)} GWh a year</span>
-            </Reveal>
-            <Reveal className="score-card" delay={0.05}>
               <span className="sc-label">Energy cost saved / year</span>
               <b className="sc-value">{figure(costSaved, "R", "")}</b>
               <span className="sc-sub">≈ R{(costSaved / 1_000_000).toFixed(1)}m a year</span>
             </Reveal>
-            <Reveal className="score-card" delay={0.1}>
+            <Reveal className="score-card" delay={0.05}>
+              <span className="sc-label">Energy saved / year</span>
+              <b className="sc-value">{figure(energySaved, "", " kWh")}</b>
+              <span className="sc-sub">≈ {(energySaved / 1_000_000).toFixed(1)} GWh a year</span>
+            </Reveal>
+            <Reveal className="score-card secondary" delay={0.1}>
               <span className="sc-label">CO₂ avoided / year</span>
               <b className="sc-value">{figure(co2, "", " t")}</b>
-              <span className="sc-sub">tonnes of carbon, every year</span>
+              <span className="sc-sub">carbon, as a bonus</span>
             </Reveal>
           </div>
         </div>
 
         <Reveal className="score-headline">
-          Moving here cuts your office carbon by <b>~{fmt(co2)} t/yr</b> and advances your{" "}
-          <b>2035 carbon-neutral-facilities</b> goal — a number you can put in your integrated report.
+          At this footprint, moving here saves <b>~R{(costSaved / 1_000_000).toFixed(1)}m a year</b> in energy — on top
+          of full power &amp; water resilience — and cuts <b>~{fmt(co2)} t CO₂/yr</b> as a bonus that also advances your
+          2035 goals.
         </Reveal>
 
         <Reveal as="div" className="score-assumptions">

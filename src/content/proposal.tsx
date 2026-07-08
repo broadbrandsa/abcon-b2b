@@ -37,17 +37,17 @@ export const navLinks = [
   { href: "#why-client", label: "Why Nedbank" },
   { href: "#building", label: "The Precinct" },
   { href: "#plans", label: "Floor Plans" },
-  { href: "#sustainability", label: "Sustainability" },
+  { href: "#power", label: "Power & Resilience" },
   { href: "#compare", label: "Why Move Now" },
   { href: "#invest", label: "Investment" },
   { href: "/about", label: "About Abcon" },
 ] as const;
 
 export const heroMeta = [
-  { value: "1 partner", label: "The whole value chain" },
-  { value: "15+", label: "Group companies" },
+  { value: "1 partner", label: "Build · power · secure · manage" },
+  { value: "99.9%", label: "Uptime — power & water" },
+  { value: "5 min", label: "From 135 Rivonia" },
   { value: "5-Star", label: "Green Star rating" },
-  { value: "5 min", label: "To Sandton CBD" },
 ] as const;
 
 export const whyCards = [

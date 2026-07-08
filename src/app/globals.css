@@ -5117,3 +5117,7 @@ body {
 
 /* sub-head paragraph legible on dark Precinct */
 #building .sec-subhead p{color:rgba(246,243,236,0.72)}
+
+/* demoted (secondary) carbon tile in the sustainability scoreboard */
+.score-card.secondary{opacity:0.82}
+.score-card.secondary .sc-value{font-size:clamp(20px,2vw,26px);color:var(--gold-soft)}

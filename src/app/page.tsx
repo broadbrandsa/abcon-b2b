@@ -37,9 +37,9 @@ export default function Home() {
       <FloorSpace />
       <PowerResilience />
       <Technology />
-      <Scoreboard />
       <Lifestyle />
       <Ecosystem />
+      <Scoreboard />
 
       {/* ACT 3 — THE CASE & THE CLOSE */}
       <TrackRecord />

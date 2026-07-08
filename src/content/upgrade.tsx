@@ -19,7 +19,7 @@ export const scoreboard = {
   solarMwp: 1.2,
   solarGwh: 2,
   assumptions: [
-    "Conventional office ~220 kWh/m²/yr vs Sandton Gate ~120 kWh/m²/yr (5-Star green) → ~100 kWh/m²/yr saved.",
+    "Benchmarked against an older comparable office of similar size (~220 kWh/m²/yr) vs Sandton Gate ~120 kWh/m²/yr → ~100 kWh/m²/yr saved. Not a comparison to Nedbank's own 5-Star-rated 135 Rivonia HQ.",
     "Electricity ~R2.80/kWh; grid emissions factor ~0.9 kg CO₂/kWh.",
     "On-site solar ~1.2 MWp (via Blume) generating ~2 GWh/yr of clean power.",
   ],
@@ -32,13 +32,14 @@ export const stayVsMove: {
   move: string;
   moveWins: boolean;
 }[] = [
-  { criterion: "Energy efficiency & running cost", stay: "~220 kWh/m²/yr — ageing systems", move: "~120 kWh/m²/yr + on-site solar", moveWins: true },
-  { criterion: "Resilience (backup power & water)", stay: "Retrofit required", move: "N+1 power, 48h fuel, 2-day water", moveWins: true },
-  { criterion: "Green rating & ESG reporting", stay: "Pre-current standards", move: "5-Star Green — board-ready numbers", moveWins: true },
-  { criterion: "Workplace, amenities & talent", stay: "Established but dated", move: "Gym, piazza, river, on-site homes", moveWins: true },
+  { criterion: "Single-owner accountability", stay: "Multiple contractors to coordinate", move: "One group — build, power, secure, manage", moveWins: true },
+  { criterion: "Resilience (backup power & water)", stay: "Retrofit to match", move: "N+1 power, 48h fuel, 2-day water", moveWins: true },
+  { criterion: "Location & continuity", stay: "135 Rivonia — in situ", move: "5 min away — same node, phased move", moveWins: true },
   { criterion: "Flexibility to grow / contract", stay: "Constrained by the existing footprint", move: "Phase 2 + Building A + future phases", moveWins: true },
-  { criterion: "Capital & disruption", stay: "Major refurb capex + occupied-site works", move: "Turnkey, develop-to-suit — no capex", moveWins: true },
-  { criterion: "Location", stay: "135 Rivonia, Sandton", move: "5 min away — same node, no commute disruption", moveWins: true },
+  { criterion: "Capital & disruption", stay: "Refurb capital + occupied-site works", move: "Turnkey, develop-to-suit — no capex", moveWins: true },
+  { criterion: "Workplace, amenities & talent", stay: "Established campus", move: "Gym, piazza, river, on-site homes", moveWins: true },
+  { criterion: "Energy efficiency & running cost", stay: "Older-generation plant", move: "~120 kWh/m²/yr + on-site solar", moveWins: true },
+  { criterion: "Green rating & ESG reporting", stay: "Already 5-Star (135 Rivonia)", move: "Newer 5-Star + on-site solar", moveWins: true },
 ];
 
 export const leaseCost = {
@@ -46,8 +47,8 @@ export const leaseCost = {
   stayLabel: "Stay & refurbish 135 Rivonia",
   moveValue: "≈ R315m",
   stayValue: "≈ R300–360m",
-  basis: "Illustrative whole-of-lease (5 yrs, 15,000 m²): Move = gross rent + parking at 7% escalation, turnkey, no capex. Stay = refurb capital + elevated running costs of ageing stock + occupied-site disruption.",
-  punch: "A newer, greener, resilient building five minutes away can cost less across the lease than refurbishing a 20-year-old campus — while advancing your green identity.",
+  basis: "Illustrative whole-of-lease (5 yrs, 15,000 m²): Move = gross rent + parking at 7% escalation, turnkey, no capex. Stay = refurbishment capital + occupied-site disruption + running costs.",
+  punch: "A fully-run, resilient building five minutes away — power and water that stay on, no capex, and a phased move that never stops the bank — can cost less across the lease than a major refurbishment. And it's greener, too.",
 };
 
 /* ---------- A day in the life ---------- */
