@@ -134,5 +134,163 @@ export const sources = [
   "LinkedIn share of B2B social leads, visitor-to-lead rate, member figures: LinkedIn Marketing.",
 ];
 
+/* ---------- The 90-day rollout ---------- */
+export const rollout: { phase: string; weeks: string; title: string; points: string[]; gate?: string }[] = [
+  {
+    phase: "Phase 1",
+    weeks: "Weeks 1–3",
+    title: "Build the foundation",
+    points: [
+      "Broker landing page + application flow, on Abcon's brand",
+      "Broker vetting criteria & approval workflow agreed with you",
+      "Proposal template productionised (the Nedbank build, made repeatable)",
+      "LinkedIn campaign setup: audiences, creative, tracking & CRM hookup",
+    ],
+  },
+  {
+    phase: "Phase 2",
+    weeks: "Weeks 4–10",
+    title: "Pilot in market",
+    points: [
+      "Campaigns live to Gauteng commercial-property brokers",
+      "First brokers vetted, approved and onboarded",
+      "First bespoke proposals requested and delivered to their clients",
+      "Weekly reporting: cost per broker, proposals requested, engagement",
+    ],
+  },
+  {
+    phase: "Phase 3",
+    weeks: "Weeks 11–13",
+    title: "Review & decide",
+    points: [
+      "Full pilot readout against the scorecard below",
+      "Cost per approved broker and per proposal — actuals, not projections",
+      "Scale, adjust or stop — your call, with real data on the table",
+    ],
+    gate: "Decision gate: nothing scales until the pilot numbers justify it.",
+  },
+];
+
+/* ---------- Who does what ---------- */
+export const split = {
+  broadbrand: {
+    label: "Broadbrand runs",
+    items: [
+      "LinkedIn campaign strategy, creative & daily management",
+      "Broker landing page — build, hosting & optimisation",
+      "Every bespoke proposal microsite, on demand",
+      "Tracking, CRM integration & the reporting dashboard",
+      "Monthly performance review with your team",
+    ],
+  },
+  abcon: {
+    label: "Abcon keeps control of",
+    items: [
+      "Broker vetting & final approval — nobody joins without your sign-off",
+      "Deal facts: spaces, rates, incentives on each proposal",
+      "The viewings and the leases — your team closes",
+      "Brand sign-off on templates and campaign creative",
+      "The kill switch: pause campaigns or revoke a broker any time",
+    ],
+  },
+};
+
+/* ---------- Commercial shape (structure only — pricing tabled separately) ---------- */
+export const commercialShape: { title: string; body: string; note: string }[] = [
+  {
+    title: "Monthly retainer",
+    body: "Covers strategy, creative, campaign management, broker-funnel operations and reporting. Fixed and predictable.",
+    note: "Sized for a pilot, not an enterprise programme",
+  },
+  {
+    title: "Media budget",
+    body: "Your LinkedIn ad spend, paid at cost with no markup. You set the cap; we recommend it, you approve it — and it can pause any day.",
+    note: "100% transparent — you see the ad account",
+  },
+  {
+    title: "Proposal production",
+    body: "A per-microsite fee once a broker's request is approved. The template does the heavy lifting, so each one is fast and consistent.",
+    note: "Only pays when the channel is actually used",
+  },
+];
+
+export const commercialNote =
+  "Rand figures sit in a separate one-page commercial schedule so this decision stays about the model, not the line items. The structure above is the full shape — there are no other fees.";
+
+/* ---------- Risk reversal ---------- */
+export const riskReversal: { title: string; body: string }[] = [
+  {
+    title: "It starts as a pilot",
+    body: "A 90-day pilot with a defined budget and a defined scorecard — not an open-ended programme.",
+  },
+  {
+    title: "No long lock-in",
+    body: "If the pilot doesn't earn the scale-up, it stops. No multi-year commitment to exit.",
+  },
+  {
+    title: "You own everything",
+    body: "The landing page, the proposal template, the broker list, the leads and the data are Abcon's — whoever runs it next.",
+  },
+  {
+    title: "Your brand stays yours",
+    body: "Every template, ad and proposal is signed off by Abcon before it ships. Brokers get access; they never get the keys.",
+  },
+];
+
+/* ---------- Objections / FAQ ---------- */
+export const faqs: { q: string; a: string }[] = [
+  {
+    q: "Won't handing brokers a premium tool cheapen the Abcon brand?",
+    a: "The opposite is the risk today: brokers already pitch your space with their own PDFs and email threads. This puts an Abcon-controlled, Abcon-branded experience in their hands instead — every proposal ships from a template you've signed off, with deal facts you've supplied. Brand control goes up, not down.",
+  },
+  {
+    q: "What stops a broker misusing it or sitting on it?",
+    a: "Access is earned and revocable. Brokers apply, you approve, and every proposal is requested through us — so there's a record of who asked, for which client, and what happened next. A broker who goes quiet or off-brand loses access with one click.",
+  },
+  {
+    q: "Why LinkedIn and not the property portals?",
+    a: "Portals list space; they don't build a broker channel. LinkedIn is where brokers maintain their professional identity, and it's the strongest B2B platform by a distance — LinkedIn's own published research puts 80% of B2B social-media leads on the platform. The two aren't competing: portals keep listing, LinkedIn recruits the people who close.",
+  },
+  {
+    q: "How is this different from just running ads for our buildings?",
+    a: "Ads for buildings chase tenants one campaign at a time, and the asset evaporates when the campaign ends. This builds a durable asset: an approved broker panel that keeps originating deals after the ads stop — each one armed with a proposal experience competitors aren't matching.",
+  },
+  {
+    q: "What does it cost us if it doesn't work?",
+    a: "One pilot's retainer and a media budget you capped — plus you keep the landing page, the proposal template and every broker relationship created along the way. The downside is bounded and mostly recoverable; the upside is a new origination channel.",
+  },
+  {
+    q: "How much of our team's time does this take?",
+    a: "One leasing contact for deal facts and broker sign-offs, a weekly 30-minute check-in, and brand approvals at setup. Broadbrand carries the campaign, the funnel and the production. If it's costing your team more than an hour or two a week, we're doing it wrong.",
+  },
+];
+
+/* ---------- Day-90 scorecard ---------- */
+export const day90 = {
+  title: "What good looks like at day 90",
+  intro:
+    "We agree the targets at kickoff — before a rand is spent — and report against them weekly. At day 90 you'll have actuals for:",
+  measures: [
+    "Approved brokers onboarded (the size of the new channel)",
+    "Cost per approved broker (what the channel costs to build)",
+    "Proposals requested & delivered (is the channel being used?)",
+    "Proposal engagement — opens, dwell, sections read (is it landing?)",
+    "Broker-sourced viewings & enquiries (is it turning into pipeline?)",
+  ],
+  outro: "Those five numbers make the scale / adjust / stop decision for you.",
+};
+
+/* ---------- The decision ---------- */
+export const decision = {
+  title: "Saying yes commits you to exactly four things.",
+  items: [
+    "A kickoff workshop (half a day) to agree vetting criteria & targets",
+    "Brand assets and sign-off on the templates",
+    "One named leasing contact for deal facts",
+    "A pilot budget with a hard cap you set",
+  ],
+  cta: "Approve the 90-day pilot",
+};
+
 export const strategyClose =
   "Two halves of one system: LinkedIn recruits and approves the brokers, and the personalised microsite is the tool we put in their hands. Paid reach builds the channel; the bespoke proposal closes the client. Broadbrand builds and runs both — and reports cost per broker, proposals requested and broker-sourced deals back to you.";
