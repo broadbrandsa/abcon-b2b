@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/sections/reveal";
+import { commute, endOfTrip } from "@/content/deal";
 import { distances, parkingAccess, transport } from "@/content/themes";
 
 export function Location() {
@@ -57,6 +58,35 @@ export function Location() {
             <ul>
               {parkingAccess.map((p) => (
                 <li key={p}>{p}</li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+
+        <div className="loc-lists">
+          <Reveal className="loc-card commute-card">
+            <h3>Staff commute &amp; catchment</h3>
+            <ul className="commute-list">
+              {commute.map((c) => (
+                <li key={c.band}>
+                  <div className="commute-top">
+                    <span className="commute-band">{c.band}</span>
+                    <span className="commute-share">{c.share}%</span>
+                  </div>
+                  <div className="commute-bar">
+                    <span style={{ width: `${c.share}%` }} />
+                  </div>
+                  <span className="commute-label">{c.label}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="sg-disclaimer">Illustrative catchment — modelled on typical Sandton staff distribution.</p>
+          </Reveal>
+          <Reveal className="loc-card" delay={0.05}>
+            <h3>Getting to your desk</h3>
+            <ul>
+              {endOfTrip.map((e) => (
+                <li key={e}>{e}</li>
               ))}
             </ul>
           </Reveal>

@@ -13,6 +13,7 @@ import {
   pricingDisclaimer,
   tiers,
 } from "@/content/commercial";
+import { commercialsVsToday, incentives, leaseScenarios, occupancyBudget } from "@/content/deal";
 import { cn } from "@/lib/utils";
 
 const fmt = (n: number) => Math.round(n).toLocaleString("en-ZA").replace(/,/g, " ");
@@ -152,6 +153,55 @@ export function Investment() {
               </div>
             </div>
           </Reveal>
+        </div>
+
+        {/* line-item occupancy budget + scenarios + incentives */}
+        <div className="comm-extra">
+          <Reveal className="comm-card">
+            <h3>Annual occupancy-cost budget</h3>
+            <ul className="budget-list">
+              {occupancyBudget.map((b) => (
+                <li key={b.item}>
+                  <div className="budget-top">
+                    <span className="budget-item">{b.item}</span>
+                    <span className="budget-share">{b.share}%</span>
+                  </div>
+                  <div className="budget-bar">
+                    <span style={{ width: `${b.share}%` }} />
+                  </div>
+                  <span className="budget-note">{b.note}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="comm-vs">{commercialsVsToday}</p>
+          </Reveal>
+
+          <div className="comm-side">
+            <Reveal className="comm-card">
+              <h3>Lease-term scenarios</h3>
+              <ul className="scenario-list">
+                {leaseScenarios.map((s) => (
+                  <li key={s.term}>
+                    <b>{s.term}</b>
+                    <span className="scenario-esc">{s.escalation}</span>
+                    <span className="scenario-note">{s.note}</span>
+                  </li>
+                ))}
+                <li className="scenario-coown">
+                  <b>Lease vs co-own</b>
+                  <span className="scenario-note">Model rent against an equity stake — see “Ways in”.</span>
+                </li>
+              </ul>
+            </Reveal>
+            <Reveal className="comm-card comm-incentives" delay={0.05}>
+              <h3>Incentive package</h3>
+              <ul>
+                {incentives.map((x) => (
+                  <li key={x}>{x}</li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
         </div>
 
         <Reveal as="p" className="disclaimer">

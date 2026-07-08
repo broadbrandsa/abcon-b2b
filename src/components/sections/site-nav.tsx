@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
  */
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
   const progressRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -30,6 +31,25 @@ export function SiteNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Highlight the nav item for the section currently in view.
+  useEffect(() => {
+    const ids = navLinks.map((l) => l.href).filter((h) => h.startsWith("#"));
+    const sections = ids
+      .map((h) => document.getElementById(h.slice(1)))
+      .filter((el): el is HTMLElement => !!el);
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) setActive(`#${visible[0].target.id}`);
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: [0, 0.25, 0.5, 1] },
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <div className="progress" ref={progressRef} />
@@ -41,7 +61,7 @@ export function SiteNav() {
         </div>
         <div className="navlinks">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href}>
+            <a key={link.href} href={link.href} className={cn(active === link.href && "active")}>
               {link.label}
             </a>
           ))}

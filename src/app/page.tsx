@@ -1,6 +1,11 @@
+import { AtAGlance } from "@/components/sections/at-a-glance";
+import { BrandPiazza } from "@/components/sections/brand-piazza";
+import { CaseStudy } from "@/components/sections/case-study";
+import { ClientEvent } from "@/components/sections/client-event";
 import { Committee } from "@/components/sections/committee";
 import { Cta } from "@/components/sections/cta";
 import { Diligence } from "@/components/sections/diligence";
+import { Documents } from "@/components/sections/documents";
 import { Ecosystem } from "@/components/sections/ecosystem";
 import { Enquiry } from "@/components/sections/enquiry";
 import { FloorSpace } from "@/components/sections/floor-space";
@@ -9,6 +14,7 @@ import { Hero } from "@/components/sections/hero";
 import { Investment } from "@/components/sections/investment";
 import { Lifestyle } from "@/components/sections/lifestyle";
 import { Location } from "@/components/sections/location";
+import { Masterplan } from "@/components/sections/masterplan";
 import { PowerResilience } from "@/components/sections/power-resilience";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { Scoreboard } from "@/components/sections/scoreboard";
@@ -19,7 +25,9 @@ import { Team } from "@/components/sections/team";
 import { Technology } from "@/components/sections/technology";
 import { ThePrecinct } from "@/components/sections/the-precinct";
 import { TrackRecord } from "@/components/sections/track-record";
+import { WaysIn } from "@/components/sections/ways-in";
 import { WhyClient } from "@/components/sections/why-client";
+import { WorkplaceStrategy } from "@/components/sections/workplace-strategy";
 
 export default function Home() {
   return (
@@ -29,25 +37,33 @@ export default function Home() {
       {/* ACT 1 — THE INVITATION */}
       <Hero />
       <Flythrough />
+      <AtAGlance />
       <WhyClient />
 
       {/* ACT 2 — THE BUILDING, BY THEME */}
       <ThePrecinct />
       <Location />
       <FloorSpace />
+      <WorkplaceStrategy />
       <PowerResilience />
       <Technology />
       <Lifestyle />
       <Ecosystem />
       <Scoreboard />
+      <ClientEvent />
+      <BrandPiazza />
+      <Masterplan />
 
       {/* ACT 3 — THE CASE & THE CLOSE */}
-      <TrackRecord />
+      <CaseStudy />
       <StayVsMove />
+      <WaysIn />
+      <Investment />
       <Diligence />
       <Committee />
-      <Investment />
       <ProcessTimeline />
+      <Documents />
+      <TrackRecord />
       <Team />
       <Cta />
       <Enquiry />

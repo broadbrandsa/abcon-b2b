@@ -37,9 +37,9 @@ export const navLinks = [
   { href: "#why-client", label: "Why Nedbank" },
   { href: "#building", label: "The Precinct" },
   { href: "#plans", label: "Floor Plans" },
-  { href: "#power", label: "Power & Resilience" },
-  { href: "#compare", label: "Why Move Now" },
-  { href: "#invest", label: "Investment" },
+  { href: "#ways", label: "Ways In" },
+  { href: "#invest", label: "Commercials" },
+  { href: "#documents", label: "Deal Room" },
   { href: "/about", label: "About Abcon" },
 ] as const;
 
