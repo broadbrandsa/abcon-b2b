@@ -38,13 +38,12 @@ export function WhyClient() {
             <h3>This isn&apos;t a cold pitch — it&apos;s the next chapter.</h3>
             <p>Nedbank already trusts Abcon and its partners with billions in property and residential investment.</p>
           </div>
-          <div className="timeline">
-            {partnerships.map((p, idx) => (
-              <div className={cn("tl-node", "highlight" in p && p.highlight && "now")} key={p.fund}>
-                <div className="tl-dot" />
-                {idx < partnerships.length - 1 && <div className="tl-line" />}
-                <div className="tl-year">{p.year}</div>
-                <div className="tl-title">{p.fund}</div>
+          <div className="wc-proofs">
+            {partnerships.map((p) => (
+              <div className={cn("wc-proof", "highlight" in p && p.highlight && "now")} key={p.fund}>
+                <div className="wc-proof-fund">{p.fund}</div>
+                <div className="wc-proof-partners">{p.partners}</div>
+                <p>{p.body}</p>
               </div>
             ))}
           </div>

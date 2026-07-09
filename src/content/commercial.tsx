@@ -107,15 +107,6 @@ export const team = [
   },
 ];
 
-/* ---------- From yes to keys ---------- */
-export const processSteps = [
-  { when: "Week 0", title: "Letter of intent", body: "LOI signed and space confirmed." },
-  { when: "Weeks 1–3", title: "Heads of terms & lease", body: "Commercial terms agreed and lease drafted." },
-  { when: "Weeks 2–6", title: "Space planning & design", body: "Develop-to-suit fit-out designed to your brief." },
-  { when: "Weeks 6–18", title: "Construction & fit-out", body: "Build and fit-out by Abcon Developments & Grit." },
-  { when: "Week ~20", title: "Beneficial occupation", body: "Handover and move-in.", highlight: true },
-];
-
 /* ---------- Competitive set ---------- */
 export const compColumns = ["Sandton Gate", "Waterfall", "Rosebank", "Current Sandton campus"];
 

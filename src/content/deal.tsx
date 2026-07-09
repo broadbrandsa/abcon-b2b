@@ -103,7 +103,6 @@ export const caseStudy = {
   title: "A head office and a 100,000m² distribution centre — delivered.",
   brief: "A national retailer needed a consolidated head office and a vast, highly-serviced distribution centre — on programme, at enterprise scale.",
   approach: "Abcon developed, built and delivered both under one accountable team — from site and design through construction, fit-out and handover.",
-  timeline: "Programme managed to a fixed development timeline with the group's in-house construction capability.",
   outcome: "A landmark corporate campus plus one of the country's larger DCs — proof Abcon delivers single-tenant builds at Nedbank's scale.",
   quote: "Abcon delivered a complex, business-critical build without the finger-pointing you get from a chain of contractors.",
   attribution: "Illustrative testimonial — reference available on request.",

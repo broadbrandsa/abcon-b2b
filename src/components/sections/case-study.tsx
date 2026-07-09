@@ -16,7 +16,6 @@ export function CaseStudy() {
             {[
               { k: "The brief", v: caseStudy.brief },
               { k: "Abcon's approach", v: caseStudy.approach },
-              { k: "Timeline", v: caseStudy.timeline },
               { k: "Outcome", v: caseStudy.outcome },
             ].map((s) => (
               <div className="cs-step" key={s.k}>

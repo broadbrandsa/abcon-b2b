@@ -12,19 +12,19 @@ export function Masterplan() {
           <p>Sandton Gate is a phased, long-term precinct — so a 5–10 year Nedbank commitment lands on an upward node trajectory, not a standalone building.</p>
         </Reveal>
 
-        <Reveal className="proc masterplan-proc">
+        <div className="mp-grid">
           {masterplan.map((m, i) => (
-            <div className={cn("proc-step", m.now && "now", m.done && "done")} key={m.title}>
-              <div className="proc-marker">
-                <span className="proc-dot" />
-                {i < masterplan.length - 1 && <span className="proc-line" />}
+            <Reveal className={cn("mp-card", m.now && "now", m.done && "done")} key={m.title} delay={(i % 4) * 0.05}>
+              <div className="mp-badge">
+                {m.phase}
+                {m.done && <em>Delivered</em>}
+                {m.now && <em>Your opportunity</em>}
               </div>
-              <div className="proc-when">{m.phase}</div>
-              <div className="proc-title">{m.title}</div>
-              <div className="proc-body">{m.body}</div>
-            </div>
+              <h3>{m.title}</h3>
+              <p>{m.body}</p>
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
 
         <Reveal as="p" className="sg-disclaimer">
           {masterplanNote}

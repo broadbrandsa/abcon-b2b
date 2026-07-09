@@ -92,16 +92,17 @@ export default function StrategyPage() {
           </div>
           <div className="strat-stats">
             {conversionStats.map((s, i) => (
-              <Reveal className="strat-stat" key={s.label} delay={i * 0.05}>
+              <Reveal className="strat-stat" key={s.label} delay={i * 0.06}>
                 <b>
                   <CountUp to={s.to} suffix={s.suffix} />
                 </b>
-                <span>{s.label}</span>
+                <span className="stat-label">{s.label}</span>
+                <cite className="stat-src">{s.source}</cite>
               </Reveal>
             ))}
           </div>
           <Reveal as="p" className="sg-disclaimer">
-            Published third-party industry benchmarks — not Abcon results. Sources below.
+            Published third-party industry benchmarks — not Abcon results. Full citations below.
           </Reveal>
         </div>
       </section>

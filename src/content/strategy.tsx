@@ -53,10 +53,10 @@ export const rationale: { title: string; body: string; icon: ReactNode }[] = [
 
 /** Published third-party benchmarks — see `sources`. Not Abcon results. */
 export const conversionStats = [
-  { to: 2, suffix: "×", label: "More conversions: interactive vs static content" },
-  { to: 71, suffix: "%", label: "of B2B buyers now expect personalised experiences" },
-  { to: 93, suffix: "%", label: "of marketers say interactive content educates buyers best" },
-  { to: 58, suffix: "%", label: "higher lead-to-opportunity from interactive nurture" },
+  { to: 2, suffix: "×", label: "more conversions from interactive content than static", source: "Kapost · CXL Institute" },
+  { to: 71, suffix: "%", label: "of B2B buyers now expect personalised experiences", source: "McKinsey" },
+  { to: 93, suffix: "%", label: "of marketers say interactive content educates buyers best", source: "Content Marketing Institute" },
+  { to: 58, suffix: "%", label: "higher lead-to-opportunity from interactive nurture", source: "Content Marketing Institute" },
 ];
 
 /* ---------- LinkedIn strategy ---------- */

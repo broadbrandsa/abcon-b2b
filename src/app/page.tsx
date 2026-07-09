@@ -16,7 +16,6 @@ import { Lifestyle } from "@/components/sections/lifestyle";
 import { Location } from "@/components/sections/location";
 import { Masterplan } from "@/components/sections/masterplan";
 import { PowerResilience } from "@/components/sections/power-resilience";
-import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { Scoreboard } from "@/components/sections/scoreboard";
 import { SectionRail } from "@/components/sections/section-rail";
 import { SiteFooter } from "@/components/sections/site-footer";
@@ -65,7 +64,6 @@ export default function Home() {
       <Investment />
       <Diligence />
       <Committee />
-      <ProcessTimeline />
       <Documents />
       <TrackRecord />
       <Team />
