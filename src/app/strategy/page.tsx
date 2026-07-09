@@ -372,7 +372,6 @@ export default function StrategyPage() {
               <span className="x">×</span>
               <AbconLogo />
             </span>
-            <div>Internal · Broadbrand strategy note for Abcon</div>
           </div>
           <div className="strat-sources">
             <span className="strat-sources-tag">Sources</span>
