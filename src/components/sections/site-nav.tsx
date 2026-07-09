@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Fixed navigation with a frosted "scrolled" state and a top scroll-progress
- * bar — ports the nav + progress script from the original proposal.
+ * bar, ports the nav + progress script from the original proposal.
  */
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);

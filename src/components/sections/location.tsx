@@ -8,8 +8,8 @@ export function Location() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">Location &amp; access</span>
-          <h2>Central to everything — and five minutes from you.</h2>
-          <p>25 Minerva Avenue, Glenadrienne — between Sandton, Rosebank, Randburg, Bryanston and Hyde Park.</p>
+          <h2>Central to everything, and five minutes from you.</h2>
+          <p>25 Minerva Avenue, Glenadrienne, between Sandton, Rosebank, Randburg, Bryanston and Hyde Park.</p>
         </Reveal>
         <div className="loc-grid">
           <Reveal className="map-card">
@@ -80,7 +80,7 @@ export function Location() {
                 </li>
               ))}
             </ul>
-            <p className="sg-disclaimer">Illustrative catchment — modelled on typical Sandton staff distribution.</p>
+            <p className="sg-disclaimer">Illustrative catchment, modelled on typical Sandton staff distribution.</p>
           </Reveal>
           <Reveal className="loc-card" delay={0.05}>
             <h3>Getting to your desk</h3>

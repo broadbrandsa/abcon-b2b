@@ -131,7 +131,7 @@
 }
 
 /* =====================================================================
-   SANDTON GATE — bespoke proposal design system
+   SANDTON GATE - bespoke proposal design system
    Ported from the original single-file HTML proposal. Brand tokens,
    section layouts and component visuals live here so the React section
    components in src/components/sections stay focused on structure.
@@ -1488,7 +1488,7 @@ body {
   width: 0;
 }
 /* =====================================================================
-   ECOSYSTEM — orbit map, filter grid, animated stats
+   ECOSYSTEM - orbit map, filter grid, animated stats
    ===================================================================== */
 #ecosystem {
   background: var(--cream);
@@ -1760,7 +1760,7 @@ body {
 }
 
 /* =====================================================================
-   PARTNERSHIP — full-bleed banner + timeline
+   PARTNERSHIP - full-bleed banner + timeline
    ===================================================================== */
 #partner {
   padding: 0;
@@ -1837,7 +1837,7 @@ body {
 }
 
 /* =====================================================================
-   OFFICE GALLERY — carousel
+   OFFICE GALLERY - carousel
    ===================================================================== */
 #gallery {
   background: var(--paper);
@@ -1942,7 +1942,7 @@ body {
 }
 
 /* =====================================================================
-   WEAVES — decision-tab company chips, calculator eco panel,
+   WEAVES - decision-tab company chips, calculator eco panel,
    build-your-HQ toggle, CTA one-liner
    ===================================================================== */
 .fit-companies {
@@ -2249,7 +2249,7 @@ body {
 }
 
 /* =====================================================================
-   REDUCED MOTION — honour user preference (accessibility)
+   REDUCED MOTION - honour user preference (accessibility)
    ===================================================================== */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -2467,7 +2467,7 @@ body {
 }
 
 /* =====================================================================
-   INVESTMENT — pricing tiers + calculator + lease terms
+   INVESTMENT - pricing tiers + calculator + lease terms
    ===================================================================== */
 #invest {
   background: var(--cream);
@@ -3151,7 +3151,7 @@ body {
 }
 
 /* =====================================================================
-   ECOSYSTEM REWORK — capabilities flow IN + benefit cards + closing
+   ECOSYSTEM REWORK - capabilities flow IN + benefit cards + closing
    ===================================================================== */
 .flow-line {
   stroke: var(--emerald);
@@ -3273,7 +3273,7 @@ body {
 }
 
 /* =====================================================================
-   WHY CLIENT — commitment → delivery cards
+   WHY CLIENT - commitment → delivery cards
    ===================================================================== */
 #why-client {
   background: var(--paper);
@@ -3403,7 +3403,7 @@ body {
 }
 
 /* =====================================================================
-   OFFERING FLOW — robust "capabilities flow into the building" layout
+   OFFERING FLOW - robust "capabilities flow into the building" layout
    ===================================================================== */
 .flow {
   display: grid;
@@ -3538,7 +3538,7 @@ body {
 }
 
 /* =====================================================================
-   UPGRADE LAYER — image slots, brand reveal, scoreboard, stay-vs-move,
+   UPGRADE LAYER - image slots, brand reveal, scoreboard, stay-vs-move,
    day-in-life, concierge, availability, diligence, team, invest term
    ===================================================================== */
 
@@ -3858,7 +3858,7 @@ body {
   position: relative;
 }
 .score-assumptions li::before {
-  content: "—";
+  content: "-";
   position: absolute;
   left: 0;
   color: var(--gold-soft);
@@ -4464,7 +4464,7 @@ body {
 }
 
 /* =====================================================================
-   RESTRUCTURE — new/merged themed sections
+   RESTRUCTURE - new/merged themed sections
    ===================================================================== */
 
 /* shared bits */
@@ -4495,7 +4495,7 @@ body {
   color: #fff;
 }
 
-/* Why Nedbank + Abcon — partnership block (light) */
+/* Why Nedbank + Abcon - partnership block (light) */
 .wc-partner {
   margin-top: 42px;
   background: var(--forest);
@@ -4788,7 +4788,7 @@ body {
   }
 }
 
-/* Floor plans — space options + specs */
+/* Floor plans - space options + specs */
 .space-options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -4945,7 +4945,7 @@ body {
   }
 }
 
-/* Why move now — scarcity block */
+/* Why move now - scarcity block */
 .movenow-scarcity {
   margin-top: 26px;
   display: grid;
@@ -5022,7 +5022,7 @@ body {
 .score-card.secondary .sc-value{font-size:clamp(20px,2vw,26px);color:var(--gold-soft)}
 
 /* =====================================================================
-   FLAGSHIP EXPANSION — new sections + deal room
+   FLAGSHIP EXPANSION - new sections + deal room
    ===================================================================== */
 
 /* at a glance */
@@ -5203,7 +5203,7 @@ body {
 .foot-private{color:var(--gold-soft);opacity:.85;margin-bottom:8px}
 
 /* =====================================================================
-   LAYOUT VARIETY — accordion, tabs, carousel, section rail
+   LAYOUT VARIETY - accordion, tabs, carousel, section rail
    ===================================================================== */
 .wrap--narrow { max-width: 900px; }
 
@@ -5333,16 +5333,21 @@ body {
 @media (max-width: 1180px) { .section-rail { display: none; } }
 
 /* =====================================================================
-   BROADBRAND × ABCON — internal strategy page (/strategy)
-   All new selectors — does not affect the proposal pages.
+   BROADBRAND × ABCON - internal strategy page (/strategy)
+   All new selectors - does not affect the proposal pages.
    ===================================================================== */
 .strategy .strat-title { font-family: var(--serif); font-size: clamp(34px, 5vw, 58px); line-height: 1.05; color: var(--ink); }
 
-/* tier 2 — main menu (sticky) */
+/* tier 2 - main menu (sticky) */
 .strat-nav { background: rgba(12, 43, 33, 0.88); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); position: sticky; top: 0; z-index: 60; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08); }
 .strat-nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
 .strat-wordmark { font-family: var(--serif); font-size: 20px; color: #fff; letter-spacing: 0.02em; }
 .strat-wordmark span { color: var(--gold-soft); margin: 0 4px; }
+.strat-lockup { display: flex; align-items: center; gap: 12px; }
+.strat-lockup .x { color: rgba(246, 243, 236, 0.5); font-size: 13px; }
+.strat-lockup .broadbrand-logo { height: 20px; width: auto; display: block; }
+.strat-lockup .logo-chip.abcon { padding: 5px 9px; }
+.strat-lockup .logo-chip.abcon .logo-img { height: 16px; }
 .strat-navlinks { display: flex; gap: 26px; align-items: center; }
 .strat-navlinks a { font-size: 14px; font-weight: 500; color: rgba(246, 243, 236, 0.82); transition: color 0.2s; }
 .strat-navlinks a:hover { color: #fff; }
@@ -5352,6 +5357,22 @@ body {
 
 /* sections */
 #strat-hero { background: var(--paper); }
+#model { background: var(--paper); padding-top: 0; }
+.prong-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.prong-card { background: var(--forest); color: var(--cream); border-radius: var(--r); padding: 32px; }
+.prong-card + .prong-card { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+.prong-tag { display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--gold-soft); background: rgba(227, 207, 163, 0.12); border: 1px solid rgba(227, 207, 163, 0.3); border-radius: 100px; padding: 5px 13px; margin-bottom: 16px; }
+.prong-card + .prong-card .prong-tag { color: var(--emerald); background: rgba(10, 107, 77, 0.07); border-color: rgba(10, 107, 77, 0.2); }
+.prong-card h3 { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 26px); line-height: 1.2; color: #fff; margin-bottom: 12px; }
+.prong-card + .prong-card h3 { color: var(--ink); }
+.prong-card > p { font-size: 14.5px; line-height: 1.6; color: rgba(246, 243, 236, 0.82); margin-bottom: 18px; }
+.prong-card + .prong-card > p { color: var(--muted); }
+.prong-card ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.prong-card li { font-size: 13.5px; line-height: 1.5; padding-left: 22px; position: relative; color: rgba(246, 243, 236, 0.9); }
+.prong-card + .prong-card li { color: var(--muted); }
+.prong-card li::before { content: ""; position: absolute; left: 1px; top: 6px; width: 11px; height: 6px; border-left: 2px solid var(--gold-soft); border-bottom: 2px solid var(--gold-soft); transform: rotate(-45deg); }
+.prong-card + .prong-card li::before { border-color: var(--emerald); }
+@media (max-width: 768px) { .prong-grid { grid-template-columns: 1fr; } }
 #rationale { background: var(--cream); }
 .strat-card { position: relative; }
 .strat-ico { width: 42px; height: 42px; border-radius: 11px; background: var(--cream); border: 1px solid var(--line); display: grid; place-items: center; margin-bottom: 14px; }
@@ -5536,7 +5557,7 @@ body {
 .strat-close-alt:hover { color: #fff; }
 
 /* =====================================================================
-   SITE SWITCH — slim glass bar above the main menu (Proposal <-> Strategy)
+   SITE SWITCH - slim glass bar above the main menu (Proposal <-> Strategy)
    ===================================================================== */
 :root { --switch-h: 42px; }
 .site-switch {
@@ -5596,7 +5617,8 @@ body {
   transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
   z-index: 0;
 }
-.switch-tab {
+/* .sg a { color: inherit } outranks a bare class, so scope under .site-switch */
+.site-switch .switch-tab {
   position: relative;
   z-index: 1;
   width: 148px;
@@ -5604,13 +5626,13 @@ body {
   font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.01em;
-  color: rgba(246, 243, 236, 0.66);
+  color: #fff;
   padding: 5px 0;
   border-radius: 100px;
   transition: color 0.25s;
 }
-.switch-tab:hover { color: #fff; }
-.switch-tab.on { color: var(--forest); }
+.site-switch .switch-tab:hover { color: #fff; }
+.site-switch .switch-tab.on { color: var(--forest); }
 @media (max-width: 560px) {
   .switch-brand { display: none; }
   .switch-inner { justify-content: center; }

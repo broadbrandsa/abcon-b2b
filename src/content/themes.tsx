@@ -1,6 +1,6 @@
 /**
  * Thematic content for the restructured, single-theme sections.
- * All figures ILLUSTRATIVE for an example proposal — subject to confirmation.
+ * All figures ILLUSTRATIVE for an example proposal, subject to confirmation.
  */
 
 /* ---------- The Precinct ---------- */
@@ -12,9 +12,9 @@ export const precinctStats = [
 ];
 
 export const precinctComposition = [
-  { k: "Offices", v: "Premium P-grade — Phase 2 towers ~10,000m² + Building A ~13,000m²" },
-  { k: "Retail", v: "12,000m² of curated shopping & dining — Sandton Gate Central" },
-  { k: "Residences", v: "136 luxury apartments — The Terrace" },
+  { k: "Offices", v: "Premium P-grade. Phase 2 towers ~10,000m² + Building A ~13,000m²" },
+  { k: "Retail", v: "12,000m² of curated shopping & dining. Sandton Gate Central" },
+  { k: "Residences", v: "136 luxury apartments. The Terrace" },
   { k: "Wellness", v: "2,500m² flagship Planet Fitness" },
   { k: "Community", v: "~26 established commercial tenants already on site" },
 ];
@@ -35,7 +35,7 @@ export const transport = [
 ];
 
 export const parkingAccess = [
-  "4 bays per 100m² — covered, access-controlled basement",
+  "4 bays per 100m², covered, access-controlled basement",
   "Dedicated visitor bays and EV-charging bays",
   "ANPR (number-plate recognition) entry",
   "End-of-trip: secure bicycle storage, showers & lockers",
@@ -43,10 +43,10 @@ export const parkingAccess = [
 
 /* ---------- Floor plans & space ---------- */
 export const floorPlateSpecs = [
-  "Typical floor plate ~1,250m² — efficient side-core, column-free",
+  "Typical floor plate ~1,250m², efficient side-core, column-free",
   "Floor-to-ceiling glazing, ~2.7m ceilings, abundant daylight",
   "Raised access floors for flexible cabling and services",
-  "Capable of ~1:10 densities — and aligned to Nedbank's current 753–1,986m² plates",
+  "Capable of ~1:10 densities, and aligned to Nedbank's current 753–1,986m² plates",
 ];
 
 export const developToSuit = [
@@ -59,7 +59,7 @@ export const developToSuit = [
 
 /* ---------- Power & resilience ---------- */
 export const powerHeadline =
-  "The precinct runs through prolonged grid outages without interruption — while solar and green-rated efficiency cut your running cost.";
+  "The precinct runs through prolonged grid outages without interruption, while solar and green-rated efficiency cut your running cost.";
 
 export const powerPoints = [
   {
@@ -87,7 +87,7 @@ export const powerPoints = [
 /* ---------- Technology & connectivity ---------- */
 export const connectivity = [
   "Redundant, diverse-route fibre entering the building at two separate points",
-  "Carrier-neutral — multiple national carriers and a meet-me room",
+  "Carrier-neutral, multiple national carriers and a meet-me room",
   "Dedicated comms risers and a cooled, backed-up data-room provision",
   "Gigabit-plus ready; IoT / smart-building ready via the BMS",
 ];
@@ -102,7 +102,7 @@ export const securityPoints = [
 
 /* ---------- Sustainability & ESG ---------- */
 export const sustainabilityPoints = [
-  "5-Star Green Star (Design) rating from the GBCSA — targeting an As-Built rating",
+  "5-Star Green Star (Design) rating from the GBCSA, targeting an As-Built rating",
   "~45% lower energy than an older comparable office of similar size; EUI target ~120 kWh/m²/yr",
   "~1.2 MWp of on-site solar generation",
   "~40% reduction in potable-water use via recycling and rainwater harvesting",

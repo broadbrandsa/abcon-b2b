@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button";
 import { accountManager } from "@/content/proposal";
 
 const interests = [
-  "Full HQ — Phase 2 towers",
-  "Building A — entire building",
+  "Full HQ · Phase 2 towers",
+  "Building A · entire building",
   "Multiple full floors",
   "Flexi Suite / satellite team",
   "Just exploring options",
@@ -32,7 +32,7 @@ export function Enquiry() {
       `${data.get("message") || ""}`,
     ].join("\n");
     const mailto = `mailto:${am.email}?subject=${encodeURIComponent(
-      "Sandton Gate enquiry — Nedbank",
+      "Sandton Gate enquiry: Nedbank",
     )}&body=${encodeURIComponent(body)}`;
     // Open the user's mail client with the enquiry pre-filled.
     window.location.href = mailto;

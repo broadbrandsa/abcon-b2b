@@ -15,7 +15,7 @@ export function Diligence() {
       <div className="wrap wrap--narrow">
         <Reveal className="sec-head">
           <span className="eyebrow">De-risking the move</span>
-          <h2>The questions your team will ask — answered.</h2>
+          <h2>The questions your team will ask, answered.</h2>
           <p>Expand each one. Straight answers to the diligence questions before you even have to raise them.</p>
         </Reveal>
 

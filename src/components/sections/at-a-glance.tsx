@@ -7,7 +7,7 @@ export function AtAGlance() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">The proposal at a glance</span>
-          <h2>Everything Nedbank needs from a headquarters — from one partner.</h2>
+          <h2>Everything Nedbank needs from a headquarters, from one partner.</h2>
           <p>The short version for a busy committee. The detail follows.</p>
         </Reveal>
         <div className="glance-grid">

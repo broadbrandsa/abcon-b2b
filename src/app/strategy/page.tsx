@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { AbconLogo } from "@/components/brand/abcon-logo";
+import { BroadbrandLogo } from "@/components/brand/broadbrand-logo";
 import { CountUp } from "@/components/sections/count-up";
 import { Reveal } from "@/components/sections/reveal";
 import { SiteSwitch } from "@/components/sections/site-switch";
@@ -18,6 +20,7 @@ import {
   funnel,
   kpis,
   linkedinIntro,
+  prongs,
   rationale,
   reportMetrics,
   riskReversal,
@@ -37,14 +40,16 @@ export const metadata: Metadata = {
 export default function StrategyPage() {
   return (
     <div className="sg strategy has-switch">
-      {/* tier 1 — shared switch bar above the main menu */}
+      {/* tier 1, shared switch bar above the main menu */}
       <SiteSwitch />
 
-      {/* tier 2 — main menu */}
+      {/* tier 2, main menu */}
       <header className="strat-nav">
         <div className="wrap strat-nav-inner">
-          <span className="strat-wordmark">
-            Broadbrand <span>×</span> Abcon
+          <span className="strat-lockup">
+            <BroadbrandLogo priority />
+            <span className="x">×</span>
+            <AbconLogo priority />
           </span>
           <nav className="strat-navlinks">
             <a href="#rationale">The case</a>
@@ -67,6 +72,30 @@ export default function StrategyPage() {
             <h1 className="strat-title">{strategyIntro.title}</h1>
             <p>{strategyIntro.lead}</p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* the two-prong model */}
+      <section id="model">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">How it works</span>
+            <h2>One tool, two prongs.</h2>
+          </Reveal>
+          <div className="prong-grid">
+            {prongs.map((p, i) => (
+              <Reveal className="prong-card" key={p.tag} delay={i * 0.08}>
+                <span className="prong-tag">{p.tag}</span>
+                <h3>{p.title}</h3>
+                <p>{p.body}</p>
+                <ul>
+                  {p.points.map((pt) => (
+                    <li key={pt}>{pt}</li>
+                  ))}
+                </ul>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -102,7 +131,7 @@ export default function StrategyPage() {
             ))}
           </div>
           <Reveal as="p" className="sg-disclaimer">
-            Published third-party industry benchmarks — not Abcon results. Full citations below.
+            Published third-party industry benchmarks, not Abcon results. Full citations below.
           </Reveal>
         </div>
       </section>
@@ -164,7 +193,7 @@ export default function StrategyPage() {
               ))}
             </div>
             <Reveal as="p" className="sg-disclaimer li-source">
-              LinkedIn platform figures, published by LinkedIn Marketing — not Abcon results.
+              LinkedIn platform figures, published by LinkedIn Marketing, not Abcon results.
             </Reveal>
 
             <Reveal className="li-report">
@@ -338,8 +367,10 @@ export default function StrategyPage() {
       <footer className="sg-footer strat-footer">
         <div className="wrap">
           <div className="foot">
-            <span className="strat-wordmark">
-              Broadbrand <span>×</span> Abcon
+            <span className="strat-lockup">
+              <BroadbrandLogo />
+              <span className="x">×</span>
+              <AbconLogo />
             </span>
             <div>Internal · Broadbrand strategy note for Abcon</div>
           </div>
@@ -352,8 +383,8 @@ export default function StrategyPage() {
             </ul>
           </div>
           <p className="foot-note">
-            Confidential — prepared by Broadbrand for Abcon. All numeric figures on this page are published third-party
-            industry benchmarks, cited above — not Abcon results or projections. Not for external distribution.
+            Confidential, prepared by Broadbrand for Abcon. All numeric figures on this page are published third-party
+            industry benchmarks, cited above, not Abcon results or projections. Not for external distribution.
           </p>
         </div>
       </footer>

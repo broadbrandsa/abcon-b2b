@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 /**
- * Minimal client-side "sections viewed" tracker stub — logs to the console and
+ * Minimal client-side "sections viewed" tracker stub, logs to the console and
  * an in-memory set only. No external analytics, no network. Useful hook point
  * for a future deal-room read-receipt.
  */

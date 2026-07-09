@@ -15,7 +15,7 @@ export function Documents() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">Documents &amp; resources</span>
-          <h2>The deal room — open, right on the page.</h2>
+          <h2>The deal room: open, right on the page.</h2>
           <p>No downloads to lose. Everything opens here in the browser; email yourself a copy when you&apos;re ready.</p>
         </Reveal>
 

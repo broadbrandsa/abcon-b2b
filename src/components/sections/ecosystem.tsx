@@ -35,7 +35,7 @@ function FlowChip({
       onMouseLeave={() => onActivate(null)}
       onFocus={() => onActivate(offering.id)}
       onClick={() => onActivate(offering.id)}
-      aria-label={`${offering.title} — delivered by ${offering.credit}`}
+      aria-label={`${offering.title}, delivered by ${offering.credit}`}
     >
       <span className="fc-ico">
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -62,7 +62,7 @@ export function Ecosystem() {
         <Reveal className="sec-head">
           <span className="eyebrow">More than a lease</span>
           <h2>
-            Everything your office needs — <em>under one roof.</em>
+            Everything your office needs, <em>under one roof.</em>
           </h2>
           <p>
             A lease gets you a shell. Sandton Gate gives Nedbank a fully-run workplace: built, powered, managed and
@@ -90,7 +90,7 @@ export function Ecosystem() {
             ) : (
               <>
                 <div className="flow-core-name">Your building</div>
-                <div className="flow-core-benefit">Everything here flows in — owned and run by one partner.</div>
+                <div className="flow-core-benefit">Everything here flows in, owned and run by one partner.</div>
               </>
             )}
           </div>
@@ -130,7 +130,7 @@ export function Ecosystem() {
         <Reveal className="sec-subhead">
           <h3>And we&apos;ll handle the whole move.</h3>
           <p>
-            One partner owns design, build, fit-out, the physical relocation, change management and day-one operations —
+            One partner owns design, build, fit-out, the physical relocation, change management and day-one operations,
             phased so the bank keeps running. No hand-offs, no finger-pointing.
           </p>
         </Reveal>

@@ -37,13 +37,13 @@ export default function Home() {
       <SiteNav />
       <SectionRail />
 
-      {/* ACT 1 — THE INVITATION */}
+      {/* ACT 1. THE INVITATION */}
       <Hero />
       <Flythrough />
       <AtAGlance />
       <WhyClient />
 
-      {/* ACT 2 — THE BUILDING, BY THEME */}
+      {/* ACT 2. THE BUILDING, BY THEME */}
       <ThePrecinct />
       <Location />
       <FloorSpace />
@@ -57,7 +57,7 @@ export default function Home() {
       <BrandPiazza />
       <Masterplan />
 
-      {/* ACT 3 — THE CASE & THE CLOSE */}
+      {/* ACT 3. THE CASE & THE CLOSE */}
       <CaseStudy />
       <StayVsMove />
       <WaysIn />

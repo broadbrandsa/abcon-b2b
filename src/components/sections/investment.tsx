@@ -189,7 +189,7 @@ export function Investment() {
                 ))}
                 <li className="scenario-coown">
                   <b>Lease vs co-own</b>
-                  <span className="scenario-note">Model rent against an equity stake — see “Ways in”.</span>
+                  <span className="scenario-note">Model rent against an equity stake, see “Ways in”.</span>
                 </li>
               </ul>
             </Reveal>

@@ -9,7 +9,7 @@ export function Masterplan() {
         <Reveal className="sec-head">
           <span className="eyebrow">A precinct on the rise</span>
           <h2>A masterplan you can commit to.</h2>
-          <p>Sandton Gate is a phased, long-term precinct — so a 5–10 year Nedbank commitment lands on an upward node trajectory, not a standalone building.</p>
+          <p>Sandton Gate is a phased, long-term precinct, so a 5–10 year Nedbank commitment lands on an upward node trajectory, not a standalone building.</p>
         </Reveal>
 
         <div className="mp-grid">

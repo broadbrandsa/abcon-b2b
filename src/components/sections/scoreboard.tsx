@@ -35,9 +35,9 @@ export function Scoreboard() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">A supporting benefit</span>
-          <h2>A more sustainable footprint — by design.</h2>
+          <h2>A more sustainable footprint, by design.</h2>
           <p>
-            Alongside the operational case, Sandton Gate also advances the green goals Nedbank already leads on — newer
+            Alongside the operational case, Sandton Gate also advances the green goals Nedbank already leads on, newer
             systems and on-site solar that cut running cost first, and carbon second. Size your footprint to see the
             annual payoff.
           </p>
@@ -98,8 +98,8 @@ export function Scoreboard() {
         </div>
 
         <Reveal className="score-headline">
-          At this footprint, moving here saves <b>~R{(costSaved / 1_000_000).toFixed(1)}m a year</b> in energy — on top
-          of full power &amp; water resilience — and cuts <b>~{fmt(co2)} t CO₂/yr</b> as a bonus that also advances your
+          At this footprint, moving here saves <b>~R{(costSaved / 1_000_000).toFixed(1)}m a year</b> in energy, on top
+          of full power &amp; water resilience, and cuts <b>~{fmt(co2)} t CO₂/yr</b> as a bonus that also advances your
           2035 goals.
         </Reveal>
 

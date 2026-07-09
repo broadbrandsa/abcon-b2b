@@ -30,7 +30,7 @@ export const accountManager = {
   mobile: "082 555 0143",
   email: "lerato.mokoena@abcondev.co.za",
   image: "/images/account-manager.jpg" as string | null,
-  note: "Your dedicated point of contact for the Sandton Gate proposal — for viewings, fit-out options and commercial terms.",
+  note: "Your dedicated point of contact for the Sandton Gate proposal, for viewings, fit-out options and commercial terms.",
 };
 
 export const navLinks = [
@@ -45,7 +45,7 @@ export const navLinks = [
 
 export const heroMeta = [
   { value: "1 partner", label: "Build · power · secure · manage" },
-  { value: "99.9%", label: "Uptime — power & water" },
+  { value: "99.9%", label: "Uptime, power & water" },
   { value: "5 min", label: "From 135 Rivonia" },
   { value: "5-Star", label: "Green Star rating" },
 ] as const;
@@ -54,7 +54,7 @@ export const whyCards = [
   {
     num: "01",
     title: "40 years, end-to-end",
-    body: "Founded in 1981. Abcon Developments builds it, Strive manages it, and the Group's funds co-invest — a single line of accountability from design to daily operations.",
+    body: "Founded in 1981. Abcon Developments builds it, Strive manages it, and the Group's funds co-invest, a single line of accountability from design to daily operations.",
   },
   {
     num: "02",
@@ -64,7 +64,7 @@ export const whyCards = [
   {
     num: "03",
     title: "Energy security built in",
-    body: "Through its Rise and Blume energy arms (30MW+ solar developed), Abcon delivers genuine green credentials and resilience — not greenwashing.",
+    body: "Through its Rise and Blume energy arms (30MW+ solar developed), Abcon delivers genuine green credentials and resilience, not greenwashing.",
   },
   {
     num: "04",
@@ -74,12 +74,12 @@ export const whyCards = [
   {
     num: "05",
     title: "A long-term owner",
-    body: "Abcon holds and co-invests in its assets. That means a stable landlord with skin in the game for the full lease term — not a developer looking for the next flip.",
+    body: "Abcon holds and co-invests in its assets. That means a stable landlord with skin in the game for the full lease term, not a developer looking for the next flip.",
   },
   {
     num: "06",
     title: "Transformation aligned",
-    body: "The Abcon Group Foundation drives skills, enterprise and supplier development — supporting Nedbank's own B-BBEE and ESG scorecards.",
+    body: "The Abcon Group Foundation drives skills, enterprise and supplier development, supporting Nedbank's own B-BBEE and ESG scorecards.",
   },
 ] as const;
 
@@ -87,7 +87,7 @@ export const buildingFeatures = [
   {
     k: "10 000m²",
     title: "New premium P-grade offices",
-    body: "Two towers of fully customisable space — full floors for an HQ or semi-serviced Flexi Suites for satellite teams.",
+    body: "Two towers of fully customisable space, full floors for an HQ or semi-serviced Flexi Suites for satellite teams.",
   },
   {
     k: "5★",
@@ -102,7 +102,7 @@ export const buildingFeatures = [
   {
     k: "2",
     title: "Gautrain & BRT routes",
-    body: "On both public-transport networks — staff connect from across the city without touching the CBD gridlock.",
+    body: "On both public-transport networks, staff connect from across the city without touching the CBD gridlock.",
   },
 ] as const;
 
@@ -124,11 +124,11 @@ export const fitPanels: FitPanel[] = [
     who: "For operations",
     heading: "Resilience you don't have to think about.",
     intro:
-      "Backup power and water, 24/7 security and a single in-house management team (Strive) mean business continuity is engineered in — not bolted on.",
+      "Backup power and water, 24/7 security and a single in-house management team (Strive) mean business continuity is engineered in, not bolted on.",
     points: [
-      { lead: "Uninterrupted operations", rest: " — full backup power and water across the precinct." },
-      { lead: "One management partner", rest: " — Strive handles maintenance, services and precinct management directly." },
-      { lead: "Secure by design", rest: " — access-controlled basement parking and round-the-clock security." },
+      { lead: "Uninterrupted operations", rest: ", full backup power and water across the precinct." },
+      { lead: "One management partner", rest: ". Strive handles maintenance, services and precinct management directly." },
+      { lead: "Secure by design", rest: ", access-controlled basement parking and round-the-clock security." },
     ],
     companies: ["strive", "ignite"],
   },
@@ -140,9 +140,9 @@ export const fitPanels: FitPanel[] = [
     intro:
       "Scale from full customisable floors to semi-serviced Flexi Suites, and lean on Abcon's solar generation to take the edge off energy costs and load-shedding risk.",
     points: [
-      { lead: "Right-size the footprint", rest: " — full floors or flexible suites, expanding as headcount grows." },
-      { lead: "Lower running costs", rest: " — on-site solar and green-rated efficiency reduce energy spend." },
-      { lead: "Develop-to-suit", rest: " — fit-out aligned to budget on an open-book or fixed-price basis." },
+      { lead: "Right-size the footprint", rest: ", full floors or flexible suites, expanding as headcount grows." },
+      { lead: "Lower running costs", rest: ", on-site solar and green-rated efficiency reduce energy spend." },
+      { lead: "Develop-to-suit", rest: ", fit-out aligned to budget on an open-book or fixed-price basis." },
     ],
     companies: ["blume", "valgro"],
   },
@@ -152,11 +152,11 @@ export const fitPanels: FitPanel[] = [
     who: "For brand & people",
     heading: "A green workplace that wins the talent war.",
     intro:
-      "A 5-Star Green, amenity-rich precinct five minutes from 135 Rivonia — Planet Fitness, dining, a piazza, river-edge green space and on-site homes — that lives Nedbank's 'see money differently' purpose and gives people a reason to come in.",
+      "A 5-Star Green, amenity-rich precinct five minutes from 135 Rivonia. Planet Fitness, dining, a piazza, river-edge green space and on-site homes, that lives Nedbank's 'see money differently' purpose and gives people a reason to come in.",
     points: [
-      { lead: "Values made visible", rest: " — a sustainable HQ that signals what Nedbank stands for." },
-      { lead: "Staff wellbeing", rest: " — gym, dining and walkable green space on the doorstep." },
-      { lead: "Live-work-play", rest: " — Craft Homes & The Terrace residences within the precinct." },
+      { lead: "Values made visible", rest: ", a sustainable HQ that signals what Nedbank stands for." },
+      { lead: "Staff wellbeing", rest: ", gym, dining and walkable green space on the doorstep." },
+      { lead: "Live-work-play", rest: ". Craft Homes & The Terrace residences within the precinct." },
     ],
     companies: ["craft", "terrace"],
   },
@@ -168,9 +168,9 @@ export const fitPanels: FitPanel[] = [
     intro:
       "Sandton Gate maps onto Nedbank's public commitments: a 5-Star Green building and ~1.2 MWp of on-site solar advance your carbon-neutral-facilities-by-2035 and net-zero-by-2050 targets, while the Level-1 Vula fund and Abcon Group Foundation support your transformation scorecard.",
     points: [
-      { lead: "Carbon-neutral by 2035", rest: " — a solar-powered, 5-Star design lowers operational emissions at source." },
-      { lead: "Net-zero aligned", rest: " — a green-rated precinct supports your 2050 commitment, not just offsets." },
-      { lead: "Transformation", rest: " — the Level-1 Vula fund and Abcon Group Foundation strengthen your B-BBEE & ESG scorecard." },
+      { lead: "Carbon-neutral by 2035", rest: ", a solar-powered, 5-Star design lowers operational emissions at source." },
+      { lead: "Net-zero aligned", rest: ", a green-rated precinct supports your 2050 commitment, not just offsets." },
+      { lead: "Transformation", rest: ", the Level-1 Vula fund and Abcon Group Foundation strengthen your B-BBEE & ESG scorecard." },
     ],
     companies: ["rise", "vula", "foundation"],
   },
@@ -198,7 +198,7 @@ export type SpaceOption = {
   name: string;
   building: string;
   sizeLabel: string;
-  /** Usable area in m² this option tops out at — drives the live fit logic. */
+  /** Usable area in m² this option tops out at, drives the live fit logic. */
   maxArea: number;
   blurb: string;
 };
@@ -216,7 +216,7 @@ export const spaceOptions: SpaceOption[] = [
     sizeLabel: "≈ 300 m²",
     maxArea: 300,
     blurb:
-      "Semi-serviced, plug-and-play suite with shared reception and meeting rooms — ideal for a satellite or project team.",
+      "Semi-serviced, plug-and-play suite with shared reception and meeting rooms, ideal for a satellite or project team.",
   },
   {
     id: "floor",
@@ -234,11 +234,11 @@ export const spaceOptions: SpaceOption[] = [
     sizeLabel: "2 floors · ≈ 2 600 m²",
     maxArea: 2600,
     blurb:
-      "Adjoining floors linked by an internal stair — a connected home for a full department.",
+      "Adjoining floors linked by an internal stair, a connected home for a full department.",
   },
   {
     id: "building",
-    name: "Building A — entire",
+    name: "Building A, entire",
     building: "Standalone building",
     sizeLabel: "≈ 13 000 m²",
     maxArea: 13000,
@@ -252,7 +252,7 @@ export const spaceOptions: SpaceOption[] = [
     sizeLabel: "≈ 20 000 m²",
     maxArea: 20000,
     blurb:
-      "Purpose-built, develop-to-suit headquarters campus across two towers — customised to Nedbank's exact brief.",
+      "Purpose-built, develop-to-suit headquarters campus across two towers, customised to Nedbank's exact brief.",
   },
 ];
 
@@ -329,8 +329,8 @@ export const proofItems = [
   { name: "S&J Industrial Estate", body: "250+ hectare estate in Germiston, in partnership with Redefine." },
   { name: "Motorcity & dealerships", body: "100+ motor dealerships developed across the country." },
   { name: "Sandton Gate", body: "The R3-billion precinct co-developed with Tiber that you're considering." },
-  { name: "Blume & Rise Energy", body: "30MW+ of solar developed — real renewable generation, not greenwashing." },
-  { name: "Country Mushrooms", body: "One of South Africa's largest fresh-mushroom producers (~100 tons/week) — group scale beyond property." },
+  { name: "Blume & Rise Energy", body: "30MW+ of solar developed, real renewable generation, not greenwashing." },
+  { name: "Country Mushrooms", body: "One of South Africa's largest fresh-mushroom producers (~100 tons/week), group scale beyond property." },
   { name: "Trakka", body: "Security technology developed in South Africa and deployed globally." },
 ] as const;
 

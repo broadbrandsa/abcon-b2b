@@ -21,7 +21,7 @@ export function TrackRecord() {
           <Reveal className="sec-head">
             <span className="eyebrow">Track record &amp; references</span>
             <h2>We&apos;ve done this for South Africa&apos;s biggest names.</h2>
-            <p>Four decades of landmark commercial space — swipe through the portfolio.</p>
+            <p>Four decades of landmark commercial space, swipe through the portfolio.</p>
           </Reveal>
           <div className="proof-nav" aria-hidden="true">
             <button type="button" onClick={() => scroll(-1)} aria-label="Previous">

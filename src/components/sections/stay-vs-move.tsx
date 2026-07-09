@@ -9,7 +9,7 @@ export function StayVsMove() {
           <span className="eyebrow">Why move now</span>
           <h2>The cost of staying put.</h2>
           <p>
-            Your lease is up in ~18 months. Renewing feels like the safe option — but a newer, greener building five
+            Your lease is up in ~18 months. Renewing feels like the safe option, but a newer, greener building five
             minutes away can cost less across the term than refurbishing an ageing campus. Here&apos;s the honest
             side-by-side. Figures indicative, subject to confirmation.
           </p>

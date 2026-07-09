@@ -9,7 +9,7 @@ export function Technology() {
           <span className="eyebrow">Technology &amp; connectivity</span>
           <h2>Bank-grade connectivity and security.</h2>
           <p>
-            A bank&apos;s two hardest questions — will it stay connected, and is it secure — answered by design.
+            A bank&apos;s two hardest questions: will it stay connected, and is it secure? Answered by design.
             Redundant infrastructure and financial-sector-grade control, backed by the group&apos;s security-technology
             pedigree.
           </p>

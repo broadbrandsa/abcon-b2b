@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 /**
  * The Abcon ecosystem, framed as capabilities that already live inside
- * Nedbank's future building — not a directory of companies. Each entry pairs a
+ * Nedbank's future building, not a directory of companies. Each entry pairs a
  * group company with the one-line benefit it delivers to the tenant, the
  * capability category it belongs to, and the decision-maker personas it sells
  * to (ids match the decision-fit tabs: coo / cfo / brand / esg).
@@ -46,7 +46,7 @@ export const companies: Company[] = [
     id: "grit",
     name: "Grit",
     does: "Commercial fit-out",
-    benefit: "Turnkey fit-out of your floors — workspace delivered, not outsourced.",
+    benefit: "Turnkey fit-out of your floors, workspace delivered, not outsourced.",
     category: "build",
     personas: ["coo", "brand"],
     icon: i("M4 7h16v4H4zM4 14h10v3H4zM17 13l3 3-3 3M20 16h-6"),
@@ -55,7 +55,7 @@ export const companies: Company[] = [
     id: "strive",
     name: "Strive",
     does: "Property & facilities management",
-    benefit: "One in-house team manages your building day-to-day — not a contractor chain.",
+    benefit: "One in-house team manages your building day-to-day, not a contractor chain.",
     category: "run",
     personas: ["coo"],
     icon: i("M4 7h16M4 12h16M4 17h10M18 15l2 2-4 4-2-2z"),
@@ -154,7 +154,7 @@ export const companies: Company[] = [
     id: "vula",
     name: "Vula Fund",
     does: "Investment vehicle",
-    benefit: "Group co-investment vehicle — long-term aligned ownership of the asset.",
+    benefit: "Group co-investment vehicle, long-term aligned ownership of the asset.",
     category: "invest",
     personas: ["cfo"],
     icon: i("M4 20h16M4 16h16M9 16V8l3-4 3 4v8"),
@@ -163,7 +163,7 @@ export const companies: Company[] = [
     id: "foundation",
     name: "Abcon Group Foundation",
     does: "Social impact",
-    benefit: "Skills, enterprise & supplier development — reportable ESG and B-BBEE.",
+    benefit: "Skills, enterprise & supplier development, reportable ESG and B-BBEE.",
     category: "invest",
     personas: ["esg"],
     icon: i("M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"),
@@ -174,7 +174,7 @@ export const companies: Company[] = [
 export const orbitCompanies = companies.filter((c) => !["reso", "pod", "vula"].includes(c.id));
 
 /**
- * Benefit-led office offerings — what Nedbank RECEIVES in their building.
+ * Benefit-led office offerings, what Nedbank RECEIVES in their building.
  * Headline = tenant outcome; how = how it works; credit = the in-house team
  * that delivers it (named only as a small credit, not the headline).
  */
@@ -184,14 +184,14 @@ export const offerings: Offering[] = [
   {
     id: "build",
     title: "A space built entirely around how you work",
-    how: "Develop-to-suit floors designed, built and fitted to Nedbank's brand and headcount — then reconfigured as you grow, by the same team.",
+    how: "Develop-to-suit floors designed, built and fitted to Nedbank's brand and headcount, then reconfigured as you grow, by the same team.",
     credit: "Abcon Developments + Grit",
     icon: i("M3 21h18M6 21V8l6-4 6 4v13M9 12h2M13 12h2M9 16h2M13 16h2"),
   },
   {
     id: "power",
-    title: "Power that stays on — and costs less",
-    how: "On-site solar, battery storage and smart metering, funded with no capex — keeping you operational through grid failure and advancing your carbon-neutral-facilities goal.",
+    title: "Power that stays on, and costs less",
+    how: "On-site solar, battery storage and smart metering, funded with no capex, keeping you operational through grid failure and advancing your carbon-neutral-facilities goal.",
     credit: "Blume Energy",
     icon: i("M13 2 4 14h7l-1 8 9-12h-7z"),
   },
@@ -226,15 +226,15 @@ export const offerings: Offering[] = [
 ];
 
 export const offeringsClosing =
-  "Every one of these is owned and delivered in-house by Abcon. A typical landlord rents you a shell and outsources the rest — leaving you to manage the contractors. Abcon gives Nedbank one integrated, accountable partner across build, power, management, security and service. No other Sandton landlord can match that.";
+  "Every one of these is owned and delivered in-house by Abcon. A typical landlord rents you a shell and outsources the rest, leaving you to manage the contractors. Abcon gives Nedbank one integrated, accountable partner across build, power, management, security and service. No other Sandton landlord can match that.";
 
-/** Existing Abcon × Nedbank ventures — the "we already build together" proof. */
+/** Existing Abcon × Nedbank ventures, the "we already build together" proof. */
 export const partnerships = [
   {
     year: "2013",
     fund: "POD Property Fund",
     partners: "Abcon · Safika · Nedbank",
-    body: "A property investment partnership — Nedbank, alongside Abcon and Safika.",
+    body: "A property investment partnership. Nedbank, alongside Abcon and Safika.",
   },
   {
     year: "2019",
@@ -246,12 +246,12 @@ export const partnerships = [
     year: "2027",
     fund: "Sandton Gate HQ",
     partners: "Abcon · Nedbank",
-    body: "The next chapter — Nedbank's headquarters inside the precinct you already co-invest in.",
+    body: "The next chapter. Nedbank's headquarters inside the precinct you already co-invest in.",
     highlight: true,
   },
 ] as const;
 
-/** Office gallery — illustrative captions for the building image carousel. */
+/** Office gallery, illustrative captions for the building image carousel. */
 export const officeGallery = [
   { src: "/office/yibei-geng--UdYbiywGeg-unsplash.jpg", caption: "Double-volume reception atrium" },
   { src: "/office/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg", caption: "P-grade open-plan workspace" },

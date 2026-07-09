@@ -34,7 +34,7 @@ export function Booking({ triggerClassName, label = "Book a private viewing" }: 
       <DialogContent className="booking-dialog">
         <DialogHeader>
           <DialogTitle className="booking-title">Book a private viewing</DialogTitle>
-          <DialogDescription>Pick a date and time — the Abcon team will confirm by email.</DialogDescription>
+          <DialogDescription>Pick a date and time, the Abcon team will confirm by email.</DialogDescription>
         </DialogHeader>
 
         {submitted ? (
@@ -45,7 +45,7 @@ export function Booking({ triggerClassName, label = "Book a private viewing" }: 
               </svg>
             </span>
             <h3>Request sent.</h3>
-            <p>Thanks — we&apos;ll confirm your viewing{slot ? ` around ${slot}` : ""} shortly.</p>
+            <p>Thanks, we&apos;ll confirm your viewing{slot ? ` around ${slot}` : ""} shortly.</p>
           </div>
         ) : (
           <form className="booking-form" onSubmit={onSubmit}>

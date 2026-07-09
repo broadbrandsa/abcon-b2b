@@ -68,7 +68,7 @@ export function WorkplaceStrategy() {
         </Reveal>
 
         <Reveal as="p" className="sg-disclaimer">
-          Ratios and efficiencies illustrative — confirmed in a Nedbank test-fit.
+          Ratios and efficiencies illustrative, confirmed in a Nedbank test-fit.
         </Reveal>
       </div>
     </section>

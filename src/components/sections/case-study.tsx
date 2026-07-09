@@ -8,7 +8,7 @@ export function CaseStudy() {
         <Reveal className="sec-head">
           <span className="eyebrow">Proof, in depth</span>
           <h2>{caseStudy.title}</h2>
-          <p>Four decades of landmark builds — here&apos;s one, end to end.</p>
+          <p>Four decades of landmark builds. Here&apos;s one, end to end.</p>
         </Reveal>
 
         <div className="cs-grid">
@@ -34,7 +34,7 @@ export function CaseStudy() {
 
         <Reveal className="sec-subhead">
           <h3>{covenant.lead}</h3>
-          <p>Why the landlord will still deliver — and still be here in ten years.</p>
+          <p>Why the landlord will still deliver, and still be here in ten years.</p>
         </Reveal>
         <div className="pt-grid">
           {covenant.points.map((p, i) => (

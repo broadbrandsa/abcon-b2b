@@ -7,7 +7,7 @@ import type { ReactNode } from "react";
  *
  * NOTE ON STATS: every numeric stat on this page is a published third-party
  * industry benchmark with an attributed source (see `sources` below). None are
- * Abcon's own results or projections. Keep it that way — do not invent figures.
+ * Abcon's own results or projections. Keep it that way, do not invent figures.
  */
 
 const ic = (d: string) => <path d={d} />;
@@ -15,18 +15,42 @@ const ic = (d: string) => <path d={d} />;
 export const strategyIntro = {
   eyebrow: "Broadbrand · for Abcon",
   title: "Why a customised proposal converts your B2B audience.",
-  lead: "The Sandton Gate × Nedbank site you've just seen isn't a one-off. It's a repeatable tool we put in the hands of approved brokers — turning a cold enquiry into a warm, qualified conversation — and it plugs straight into a LinkedIn engine we'd run to recruit those brokers in the first place.",
+  lead: "The Sandton Gate × Nedbank site you've just seen isn't a one-off. It's a repeatable sales tool with two jobs: we produce these custom microsite proposals for Abcon's own sales staff to convert their relationships, and we run a LinkedIn campaign that grows your broker network, with approved brokers getting the same proposals for their clients.",
 };
+
+/* ---------- The two-prong model ---------- */
+export const prongs: { tag: string; title: string; body: string; points: string[] }[] = [
+  {
+    tag: "Prong 1 · Your sales team",
+    title: "Custom proposals for Abcon's own relationships.",
+    body: "Your sales staff already hold the relationships that matter. We produce a bespoke microsite proposal, like the Nedbank example, for each serious prospect they're working, so every pitch lands as a premium, personalised experience instead of a PDF.",
+    points: [
+      "Sales staff request a proposal for a named prospect",
+      "Broadbrand produces it from the template within days",
+      "The team pitches with it, tracks engagement and follows up warm",
+    ],
+  },
+  {
+    tag: "Prong 2 · The broker network",
+    title: "A LinkedIn campaign that grows your broker channel.",
+    body: "In parallel, we run LinkedIn ads to commercial-property brokers and drive them to a landing page to join Abcon's broker network. Once a broker is vetted and approved, they can request the same custom proposals to send to their own clients.",
+    points: [
+      "LinkedIn campaign recruits brokers to a sign-up landing page",
+      "Abcon vets and approves who joins the network",
+      "Approved brokers get bespoke proposals for their clients too",
+    ],
+  },
+];
 
 export const rationale: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Personalised to the buyer",
-    body: "The whole experience speaks to one company — their strategy, their campus, their targets. Relevance is the single biggest driver of B2B response.",
+    body: "The whole experience speaks to one company, their strategy, their campus, their targets. Relevance is the single biggest driver of B2B response.",
     icon: ic("M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11zM12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"),
   },
   {
     title: "Interactive, not a static PDF",
-    body: "Calculators, a deal room, a booking flow. Prospects spend minutes exploring — and dwell time correlates directly with intent.",
+    body: "Calculators, a deal room, a booking flow. Prospects spend minutes exploring, and dwell time correlates directly with intent.",
     icon: ic("M4 7h16M4 12h16M4 17h10M18 15l2 2-4 4-2-2z"),
   },
   {
@@ -36,22 +60,22 @@ export const rationale: { title: string; body: string; icon: ReactNode }[] = [
   },
   {
     title: "Shortens the sales cycle",
-    body: "Diligence — cost, resilience, security, transition — is answered up front. Fewer rounds of email, faster to a viewing.",
+    body: "The diligence on cost, resilience, security and transition is answered up front. Fewer rounds of email, faster to a viewing.",
     icon: ic("M9 12l2 2 4-4M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7z"),
   },
   {
     title: "Measurable intent",
-    body: "We can see which sections a prospect opens, so the broker follows up on the accounts that are actually engaged — not the ones going cold.",
+    body: "We can see which sections a prospect opens, so the broker follows up on the accounts that are actually engaged, not the ones going cold.",
     icon: ic("M4 19h16M7 16l4-5 3 3 5-7"),
   },
   {
     title: "Reusable & scalable",
-    body: "One template, a swappable client profile — a bespoke microsite per target account in hours, not weeks. Account-based marketing at scale.",
+    body: "One template, a swappable client profile, a bespoke microsite per target account in hours, not weeks. Account-based marketing at scale.",
     icon: ic("M4 7h16v4H4zM4 14h10v3H4zM17 13l3 3-3 3"),
   },
 ];
 
-/** Published third-party benchmarks — see `sources`. Not Abcon results. */
+/** Published third-party benchmarks, see `sources`. Not Abcon results. */
 export const conversionStats = [
   { to: 2, suffix: "×", label: "more conversions from interactive content than static", source: "Kapost · CXL Institute" },
   { to: 71, suffix: "%", label: "of B2B buyers now expect personalised experiences", source: "McKinsey" },
@@ -61,9 +85,9 @@ export const conversionStats = [
 
 /* ---------- LinkedIn strategy ---------- */
 export const linkedinIntro = {
-  eyebrow: "The engine",
-  title: "A LinkedIn strategy that recruits brokers — then arms them.",
-  lead: "We run paid LinkedIn campaigns to commercial-property brokers and drive them to a landing page to sign up as approved Abcon brokers. Once approved, a broker can request a personalised proposal like Nedbank's to send to their own clients — so every conversation they open is backed by a premium, on-brand pitch.",
+  eyebrow: "The engine behind prong 2",
+  title: "A LinkedIn strategy that recruits brokers, then arms them.",
+  lead: "We run paid LinkedIn campaigns to commercial-property brokers and drive them to a landing page to sign up as approved Abcon brokers. Once approved, a broker can request a personalised proposal like Nedbank's to send to their own clients, so every conversation they open is backed by a premium, on-brand pitch.",
 };
 
 export const audience = [
@@ -77,7 +101,7 @@ export const funnel: { step: string; title: string; body: string; icon: ReactNod
   {
     step: "01",
     title: "Reach",
-    body: "LinkedIn PPC — Sponsored Content, Lead-Gen Forms and Conversation Ads — targeting commercial-property brokers.",
+    body: "LinkedIn PPC: Sponsored Content, Lead-Gen Forms and Conversation Ads targeting commercial-property brokers.",
     icon: ic("M12 3a9 9 0 1 0 9 9M12 3v9l6.4 6.4M12 3a9 9 0 0 1 9 9h-9"),
   },
   {
@@ -101,7 +125,7 @@ export const funnel: { step: string; title: string; body: string; icon: ReactNod
   {
     step: "05",
     title: "Equip & convert",
-    body: "An approved broker requests a personalised microsite — the Nedbank treatment — to pitch their own client, and brings the warm deal back to Abcon.",
+    body: "An approved broker requests a personalised microsite, the Nedbank treatment, to pitch their own client, and brings the warm deal back to Abcon.",
     icon: ic("M20 6 9 17l-5-5"),
   },
 ];
@@ -109,17 +133,17 @@ export const funnel: { step: string; title: string; body: string; icon: ReactNod
 export const adFormats = ["Sponsored content", "Lead-gen forms", "Conversation / message ads", "Document & carousel ads"];
 
 export const brokerPlay =
-  "Brokers already own the tenant relationships. Rather than chase corporates ourselves, we recruit brokers as an approved channel and put a bespoke proposal microsite in each one's hands. Once approved, brokers speak to their own audience — we just make sure they arrive with the best pitch in the market.";
+  "Brokers already own the tenant relationships. Rather than chase corporates ourselves, we recruit brokers as an approved channel and put a bespoke proposal microsite in each one's hands. Once approved, brokers speak to their own audience, we just make sure they arrive with the best pitch in the market.";
 
-/** Published LinkedIn platform figures — see `sources`. Not Abcon results. */
+/** Published LinkedIn platform figures, see `sources`. Not Abcon results. */
 export const kpis = [
   { v: "80%", l: "of B2B social-media leads come from LinkedIn" },
-  { v: "~2.7%", l: "visitor-to-lead rate — roughly 4× Facebook & X" },
+  { v: "~2.7%", l: "visitor-to-lead rate, roughly 4× Facebook & X" },
   { v: "4 of 5", l: "LinkedIn members drive business decisions" },
-  { v: "1B+", l: "members — the largest professional network" },
+  { v: "1B+", l: "members, the largest professional network" },
 ];
 
-/** What Broadbrand reports back — metric names, deliberately not pre-filled numbers. */
+/** What Broadbrand reports back, metric names, deliberately not pre-filled numbers. */
 export const reportMetrics = [
   "Cost per approved broker",
   "Approved brokers (net new channel)",
@@ -164,8 +188,8 @@ export const rollout: { phase: string; weeks: string; title: string; points: str
     title: "Review & decide",
     points: [
       "Full pilot readout against the scorecard below",
-      "Cost per approved broker and per proposal — actuals, not projections",
-      "Scale, adjust or stop — your call, with real data on the table",
+      "Cost per approved broker and per proposal: actuals, not projections",
+      "Scale, adjust or stop: your call, with real data on the table",
     ],
     gate: "Decision gate: nothing scales until the pilot numbers justify it.",
   },
@@ -177,7 +201,7 @@ export const split = {
     label: "Broadbrand runs",
     items: [
       "LinkedIn campaign strategy, creative & daily management",
-      "Broker landing page — build, hosting & optimisation",
+      "Broker landing page: build, hosting & optimisation",
       "Every bespoke proposal microsite, on demand",
       "Tracking, CRM integration & the reporting dashboard",
       "Monthly performance review with your team",
@@ -186,16 +210,16 @@ export const split = {
   abcon: {
     label: "Abcon keeps control of",
     items: [
-      "Broker vetting & final approval — nobody joins without your sign-off",
+      "Broker vetting & final approval: nobody joins without your sign-off",
       "Deal facts: spaces, rates, incentives on each proposal",
-      "The viewings and the leases — your team closes",
+      "The viewings and the leases: your team closes",
       "Brand sign-off on templates and campaign creative",
       "The kill switch: pause campaigns or revoke a broker any time",
     ],
   },
 };
 
-/* ---------- Commercial shape (structure only — pricing tabled separately) ---------- */
+/* ---------- Commercial shape (structure only, pricing tabled separately) ---------- */
 export const commercialShape: { title: string; body: string; note: string }[] = [
   {
     title: "Monthly retainer",
@@ -204,8 +228,8 @@ export const commercialShape: { title: string; body: string; note: string }[] = 
   },
   {
     title: "Media budget",
-    body: "Your LinkedIn ad spend, paid at cost with no markup. You set the cap; we recommend it, you approve it — and it can pause any day.",
-    note: "100% transparent — you see the ad account",
+    body: "Your LinkedIn ad spend, paid at cost with no markup. You set the cap; we recommend it, you approve it, and it can pause any day.",
+    note: "100% transparent, you see the ad account",
   },
   {
     title: "Proposal production",
@@ -215,13 +239,13 @@ export const commercialShape: { title: string; body: string; note: string }[] = 
 ];
 
 export const commercialNote =
-  "Rand figures sit in a separate one-page commercial schedule so this decision stays about the model, not the line items. The structure above is the full shape — there are no other fees.";
+  "Rand figures sit in a separate one-page commercial schedule so this decision stays about the model, not the line items. The structure above is the full shape, there are no other fees.";
 
 /* ---------- Risk reversal ---------- */
 export const riskReversal: { title: string; body: string }[] = [
   {
     title: "It starts as a pilot",
-    body: "A 90-day pilot with a defined budget and a defined scorecard — not an open-ended programme.",
+    body: "A 90-day pilot with a defined budget and a defined scorecard, not an open-ended programme.",
   },
   {
     title: "No long lock-in",
@@ -229,7 +253,7 @@ export const riskReversal: { title: string; body: string }[] = [
   },
   {
     title: "You own everything",
-    body: "The landing page, the proposal template, the broker list, the leads and the data are Abcon's — whoever runs it next.",
+    body: "The landing page, the proposal template, the broker list, the leads and the data are Abcon's, whoever runs it next.",
   },
   {
     title: "Your brand stays yours",
@@ -241,23 +265,23 @@ export const riskReversal: { title: string; body: string }[] = [
 export const faqs: { q: string; a: string }[] = [
   {
     q: "Won't handing brokers a premium tool cheapen the Abcon brand?",
-    a: "The opposite is the risk today: brokers already pitch your space with their own PDFs and email threads. This puts an Abcon-controlled, Abcon-branded experience in their hands instead — every proposal ships from a template you've signed off, with deal facts you've supplied. Brand control goes up, not down.",
+    a: "The opposite is the risk today: brokers already pitch your space with their own PDFs and email threads. This puts an Abcon-controlled, Abcon-branded experience in their hands instead, every proposal ships from a template you've signed off, with deal facts you've supplied. Brand control goes up, not down.",
   },
   {
     q: "What stops a broker misusing it or sitting on it?",
-    a: "Access is earned and revocable. Brokers apply, you approve, and every proposal is requested through us — so there's a record of who asked, for which client, and what happened next. A broker who goes quiet or off-brand loses access with one click.",
+    a: "Access is earned and revocable. Brokers apply, you approve, and every proposal is requested through us, so there's a record of who asked, for which client, and what happened next. A broker who goes quiet or off-brand loses access with one click.",
   },
   {
     q: "Why LinkedIn and not the property portals?",
-    a: "Portals list space; they don't build a broker channel. LinkedIn is where brokers maintain their professional identity, and it's the strongest B2B platform by a distance — LinkedIn's own published research puts 80% of B2B social-media leads on the platform. The two aren't competing: portals keep listing, LinkedIn recruits the people who close.",
+    a: "Portals list space; they don't build a broker channel. LinkedIn is where brokers maintain their professional identity, and it's the strongest B2B platform by a distance. LinkedIn's own published research puts 80% of B2B social-media leads on the platform. The two aren't competing: portals keep listing, LinkedIn recruits the people who close.",
   },
   {
     q: "How is this different from just running ads for our buildings?",
-    a: "Ads for buildings chase tenants one campaign at a time, and the asset evaporates when the campaign ends. This builds a durable asset: an approved broker panel that keeps originating deals after the ads stop — each one armed with a proposal experience competitors aren't matching.",
+    a: "Ads for buildings chase tenants one campaign at a time, and the asset evaporates when the campaign ends. This builds a durable asset: an approved broker panel that keeps originating deals after the ads stop, each one armed with a proposal experience competitors aren't matching.",
   },
   {
     q: "What does it cost us if it doesn't work?",
-    a: "One pilot's retainer and a media budget you capped — plus you keep the landing page, the proposal template and every broker relationship created along the way. The downside is bounded and mostly recoverable; the upside is a new origination channel.",
+    a: "One pilot's retainer and a media budget you capped, plus you keep the landing page, the proposal template and every broker relationship created along the way. The downside is bounded and mostly recoverable; the upside is a new origination channel.",
   },
   {
     q: "How much of our team's time does this take?",
@@ -269,12 +293,12 @@ export const faqs: { q: string; a: string }[] = [
 export const day90 = {
   title: "What good looks like at day 90",
   intro:
-    "We agree the targets at kickoff — before a rand is spent — and report against them weekly. At day 90 you'll have actuals for:",
+    "We agree the targets at kickoff, before a rand is spent, and report against them weekly. At day 90 you'll have actuals for:",
   measures: [
     "Approved brokers onboarded (the size of the new channel)",
     "Cost per approved broker (what the channel costs to build)",
     "Proposals requested & delivered (is the channel being used?)",
-    "Proposal engagement — opens, dwell, sections read (is it landing?)",
+    "Proposal engagement: opens, dwell, sections read (is it landing?)",
     "Broker-sourced viewings & enquiries (is it turning into pipeline?)",
   ],
   outro: "Those five numbers make the scale / adjust / stop decision for you.",
@@ -293,4 +317,4 @@ export const decision = {
 };
 
 export const strategyClose =
-  "Two halves of one system: LinkedIn recruits and approves the brokers, and the personalised microsite is the tool we put in their hands. Paid reach builds the channel; the bespoke proposal closes the client. Broadbrand builds and runs both — and reports cost per broker, proposals requested and broker-sourced deals back to you.";
+  "Two halves of one system: LinkedIn recruits and approves the brokers, and the personalised microsite is the tool we put in their hands. Paid reach builds the channel; the bespoke proposal closes the client. Broadbrand builds and runs both, and reports cost per broker, proposals requested and broker-sourced deals back to you.";

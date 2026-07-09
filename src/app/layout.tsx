@@ -20,7 +20,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Sandton Gate · A Proposal for Nedbank · Abcon",
   description:
-    "A private invitation for Nedbank to anchor Sandton Gate — a R3-billion, 5-Star Green-rated precinct five minutes from the Sandton CBD, developed, built and managed by Abcon.",
+    "A private invitation for Nedbank to anchor Sandton Gate, a R3-billion, 5-Star Green-rated precinct five minutes from the Sandton CBD, developed, built and managed by Abcon.",
   robots: { index: false, follow: false },
 };
 

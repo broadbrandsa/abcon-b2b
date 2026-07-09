@@ -10,7 +10,7 @@ import { abconOverview, abconStats, companyCategories } from "@/content/group-co
 export const metadata: Metadata = {
   title: "About the Abcon Group · Sandton Gate Proposal",
   description:
-    "Who Abcon is and an overview of the companies within the Abcon Group — property development, management, energy, funds, private equity and social impact.",
+    "Who Abcon is and an overview of the companies within the Abcon Group, property development, management, energy, funds, private equity and social impact.",
   robots: { index: false, follow: false },
 };
 
@@ -19,7 +19,7 @@ export default function AboutPage() {
     <div className="sg about">
       {/* Lightweight header */}
       <header className="about-bar">
-        <Link href="/" className="about-home" aria-label="Abcon Group — back to proposal">
+        <Link href="/" className="about-home" aria-label="Abcon Group, back to proposal">
           <AbconLogo priority />
         </Link>
         <Link href="/" className="about-back">
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <span className="eyebrow">The Group companies</span>
             <h2>One group. Many specialists.</h2>
             <p>
-              Each company leads in its own field, yet works as part of a single, accountable group — so a tenant like
+              Each company leads in its own field, yet works as part of a single, accountable group, so a tenant like
               Nedbank taps the whole value chain through one relationship.
             </p>
           </Reveal>

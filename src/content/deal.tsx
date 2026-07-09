@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
  * Deal-layer content: ways-in, brand presence, client/event, workplace
  * strategy, masterplan, case study, commercials extras, location commute,
  * landlord covenant, and the in-app deal-room documents.
- * All figures ILLUSTRATIVE — subject to confirmation.
+ * All figures ILLUSTRATIVE, subject to confirmation.
  */
 
 const ic = (d: string) => <path d={d} />;
@@ -25,7 +25,7 @@ export const waysIn: { id: string; name: string; tag: string; body: string; poin
     id: "lease",
     name: "Lease",
     tag: "Maximum flexibility",
-    body: "A standard tenancy — no capital outlay, the shortest path to occupation, and full flexibility to right-size over the term.",
+    body: "A standard tenancy, no capital outlay, the shortest path to occupation, and full flexibility to right-size over the term.",
     points: ["No capex", "Fastest to occupy", "Expansion & break options"],
     icon: ic("M4 7h16M4 12h16M4 17h10"),
   },
@@ -33,7 +33,7 @@ export const waysIn: { id: string; name: string; tag: string; body: string; poin
     id: "prelet",
     name: "Pre-let + develop-to-suit",
     tag: "Shape the build",
-    body: "Commit early and shape the Phase 2 build to Nedbank's exact brief — layout, brand and systems — and secure anchor naming rights.",
+    body: "Commit early and shape the Phase 2 build to Nedbank's exact brief, layout, brand and systems, and secure anchor naming rights.",
     points: ["Design to your brief", "Anchor naming rights", "Fit-out allowance up to R3,500/m²"],
     icon: ic("M3 21h18M6 21V8l6-4 6 4v13M9 12h2M13 12h2"),
     flag: true,
@@ -42,7 +42,7 @@ export const waysIn: { id: string; name: string; tag: string; body: string; poin
     id: "coown",
     name: "Co-own / co-develop",
     tag: "Rent → balance-sheet asset",
-    body: "Take an equity stake in the building alongside Abcon — as you already do in the POD and Reso funds — turning rent into an owned asset and sharing development upside.",
+    body: "Take an equity stake in the building alongside Abcon, as you already do in the POD and Reso funds, turning rent into an owned asset and sharing development upside.",
     points: ["Illustrative 25–50% JV", "Anchor + co-investor", "Share development upside"],
     icon: ic("M4 20h16M6 20V9M10 20V6M14 20v-8M18 20V4"),
   },
@@ -50,7 +50,7 @@ export const waysIn: { id: string; name: string; tag: string; body: string; poin
 
 export const waysInLead = "You already co-invest with us. Do it with your own headquarters.";
 export const waysInClose =
-  "This is a strategic property partnership, not just a tenancy — choose the structure that fits Nedbank's balance sheet and property strategy.";
+  "This is a strategic property partnership, not just a tenancy, choose the structure that fits Nedbank's balance sheet and property strategy.";
 
 /* ---------- Your brand on the piazza ---------- */
 export const brandPiazza = {
@@ -58,8 +58,8 @@ export const brandPiazza = {
   points: [
     { title: "A branded banking hall", body: "Operate a flagship branch and banking hall within the 12,000m² Sandton Gate Central retail." },
     { title: "ATMs & self-service", body: "Customer-facing ATMs and self-service points across the precinct's busiest routes." },
-    { title: "Tower naming rights", body: "Nedbank identity on the building and precinct signage — visible across the node." },
-    { title: "A captive catchment", body: "Precinct residents, office workers and retail visitors — illustrative daily footfall ~8,000." },
+    { title: "Tower naming rights", body: "Nedbank identity on the building and precinct signage, visible across the node." },
+    { title: "A captive catchment", body: "Precinct residents, office workers and retail visitors, illustrative daily footfall ~8,000." },
   ],
   footfall: 8000,
 };
@@ -77,9 +77,9 @@ export const clientEvent = {
 
 /* ---------- Built around how you work now ---------- */
 export const workplace = {
-  lead: "A workplace strategy — not just amenities. Built for hybrid, activity-based and measurable.",
+  lead: "A workplace strategy, not just amenities. Built for hybrid, activity-based and measurable.",
   points: [
-    { title: "Hybrid by design", body: "Activity-based neighbourhoods, not fixed desks — sized to how your teams actually attend." },
+    { title: "Hybrid by design", body: "Activity-based neighbourhoods, not fixed desks, sized to how your teams actually attend." },
     { title: "~60:40 collaboration:desk", body: "An illustrative ratio weighting collaboration and focus space over rows of desks." },
     { title: "Test-fit at your densities", body: "A no-obligation test-fit modelled at Nedbank's own occupancy densities." },
     { title: "Tech-enabled & measurable", body: "Video-first meeting rooms, town-hall space, and ~85% usable efficiency." },
@@ -88,24 +88,24 @@ export const workplace = {
 
 /* ---------- Precinct masterplan ---------- */
 export const masterplan: { phase: string; title: string; body: string; done?: boolean; now?: boolean }[] = [
-  { phase: "Phase 1", title: "Building A + Sandton Gate Central", body: "P-grade offices and the 12,000m² retail core — occupied and operating.", done: true },
+  { phase: "Phase 1", title: "Building A + Sandton Gate Central", body: "P-grade offices and the 12,000m² retail core, occupied and operating.", done: true },
   { phase: "Phase 1", title: "The Terrace residences", body: "136 luxury apartments established within the precinct.", done: true },
-  { phase: "Phase 2", title: "New HQ office towers", body: "~10,000m² of develop-to-suit P-grade — your opportunity, from Q1 2027.", now: true },
-  { phase: "Future", title: "Further office & mixed-use phases", body: "Additional GLA and amenities as the node matures — room to grow into." },
+  { phase: "Phase 2", title: "New HQ office towers", body: "~10,000m² of develop-to-suit P-grade, your opportunity, from Q1 2027.", now: true },
+  { phase: "Future", title: "Further office & mixed-use phases", body: "Additional GLA and amenities as the node matures, room to grow into." },
 ];
 
 export const masterplanNote =
-  "A R3-billion precinct on an upward node trajectory — reassurance behind a 5–10 year commitment. GLA and value figures illustrative, subject to confirmation.";
+  "A R3-billion precinct on an upward node trajectory, reassurance behind a 5–10 year commitment. GLA and value figures illustrative, subject to confirmation.";
 
 /* ---------- Proof, in depth (case study) ---------- */
 export const caseStudy = {
   client: "Pick n Pay",
-  title: "A head office and a 100,000m² distribution centre — delivered.",
-  brief: "A national retailer needed a consolidated head office and a vast, highly-serviced distribution centre — on programme, at enterprise scale.",
-  approach: "Abcon developed, built and delivered both under one accountable team — from site and design through construction, fit-out and handover.",
-  outcome: "A landmark corporate campus plus one of the country's larger DCs — proof Abcon delivers single-tenant builds at Nedbank's scale.",
+  title: "A head office and a 100,000m² distribution centre, delivered.",
+  brief: "A national retailer needed a consolidated head office and a vast, highly-serviced distribution centre, on programme, at enterprise scale.",
+  approach: "Abcon developed, built and delivered both under one accountable team, from site and design through construction, fit-out and handover.",
+  outcome: "A landmark corporate campus plus one of the country's larger DCs, proof Abcon delivers single-tenant builds at Nedbank's scale.",
   quote: "Abcon delivered a complex, business-critical build without the finger-pointing you get from a chain of contractors.",
-  attribution: "Illustrative testimonial — reference available on request.",
+  attribution: "Illustrative testimonial, reference available on request.",
 };
 
 /* ---------- Commercials extras ---------- */
@@ -118,8 +118,8 @@ export const occupancyBudget = [
 
 export const leaseScenarios = [
   { term: "5-year", escalation: "7% p.a.", note: "Standard term, break option at year 5 of a longer lease" },
-  { term: "7-year", escalation: "7% p.a.", note: "Longer certainty — stronger incentive package" },
-  { term: "10-year", escalation: "7% p.a.", note: "Anchor term — best incentives + naming rights" },
+  { term: "7-year", escalation: "7% p.a.", note: "Longer certainty, stronger incentive package" },
+  { term: "10-year", escalation: "7% p.a.", note: "Anchor term, best incentives + naming rights" },
 ];
 
 export const incentives = [
@@ -130,7 +130,7 @@ export const incentives = [
 ];
 
 export const commercialsVsToday =
-  "We'll model Sandton Gate against Nedbank's current all-in occupancy spend (rent + rates + utilities + parking + facilities) across the full term — not just month one — and against a lease-vs-co-own scenario so the balance-sheet view is clear.";
+  "We'll model Sandton Gate against Nedbank's current all-in occupancy spend (rent + rates + utilities + parking + facilities) across the full term, not just month one, and against a lease-vs-co-own scenario so the balance-sheet view is clear.";
 
 /* ---------- Location: commute & catchment ---------- */
 export const commute = [
@@ -150,10 +150,10 @@ export const endOfTrip = [
 export const covenant = {
   lead: "The landlord will still be here in ten years.",
   points: [
-    { title: "Long-term owner", body: "Abcon holds and co-invests in its assets — it doesn't build to flip. Your landlord has skin in the game for the full term." },
-    { title: "40+ years, unbroken", body: "Founded in 1981, delivering through multiple cycles — a covenant you can underwrite." },
-    { title: "Financial strength", body: "A diversified group (property, energy, funds, private equity) — resilient earnings behind the lease. Financials available under NDA." },
-    { title: "Bank-tested", body: "Nedbank already co-invests with the group via POD and Reso — you've already done the diligence." },
+    { title: "Long-term owner", body: "Abcon holds and co-invests in its assets, it doesn't build to flip. Your landlord has skin in the game for the full term." },
+    { title: "40+ years, unbroken", body: "Founded in 1981, delivering through multiple cycles, a covenant you can underwrite." },
+    { title: "Financial strength", body: "A diversified group (property, energy, funds, private equity), resilient earnings behind the lease. Financials available under NDA." },
+    { title: "Bank-tested", body: "Nedbank already co-invests with the group via POD and Reso, you've already done the diligence." },
   ],
 };
 
@@ -205,7 +205,7 @@ export const dealDocs: DealDoc[] = [
       { h: "Transition", items: ["Phased move, lease-overlap managed", "Timed to your 135 Rivonia exit"] },
       { h: "Delivery certainty", items: ["Fixed programme, completion guarantees", "Owner-developer, not outsourced"] },
       { h: "Security & IT", items: ["24/7 manned, biometric access, CCTV, ANPR", "Segregated tenant networks; financial-sector controls"] },
-      { h: "References", items: ["Blue-chip precinct tenants — on request", "Pick n Pay, Alice Lane, Hazeldean track record"] },
+      { h: "References", items: ["Blue-chip precinct tenants, on request", "Pick n Pay, Alice Lane, Hazeldean track record"] },
     ],
   },
   {

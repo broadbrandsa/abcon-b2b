@@ -9,10 +9,10 @@ export function WhyClient() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">Why {client.name} + Abcon</span>
-          <h2>One accountable partner — across the whole property lifecycle.</h2>
+          <h2>One accountable partner, across the whole property lifecycle.</h2>
           <p>
             Most landlords do one thing. Abcon develops, builds, powers, secures and manages its own buildings, and
-            co-invests in them — so {client.name} deals with one group that owns the outcome. And {client.name}&apos;s
+            co-invests in them, so {client.name} deals with one group that owns the outcome. And {client.name}&apos;s
             public strategy and Sandton Gate already point the same way.
           </p>
         </Reveal>
@@ -35,7 +35,7 @@ export function WhyClient() {
         <Reveal className="wc-partner">
           <div className="wc-partner-lead">
             <span className="eyebrow">You already build with us</span>
-            <h3>This isn&apos;t a cold pitch — it&apos;s the next chapter.</h3>
+            <h3>This isn&apos;t a cold pitch, it&apos;s the next chapter.</h3>
             <p>Nedbank already trusts Abcon and its partners with billions in property and residential investment.</p>
           </div>
           <div className="wc-proofs">

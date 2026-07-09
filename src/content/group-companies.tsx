@@ -1,9 +1,9 @@
 /**
- * ABOUT ABCON — group overview + group-company directory.
+ * ABOUT ABCON, group overview + group-company directory.
  *
  * Content is researched/illustrative and drawn from the public Abcon Group site
  * (https://abcongroup.co.za/group-companies/) and each company's own site.
- * Logos in /public/images/companies are PLACEHOLDER wordmarks — replace with the
+ * Logos in /public/images/companies are PLACEHOLDER wordmarks, replace with the
  * official assets (see that folder's README).
  */
 
@@ -11,10 +11,10 @@ export const abconOverview = {
   eyebrow: "About the Abcon Group",
   title: "Four decades of building, backing and running South Africa's spaces.",
   lead:
-    "For over 40 years the Abcon Group has taken an integrated approach to property development, investment and management. What began in 1981 as a Sandton residential builder has grown into a collaborative group of companies operating well beyond property — across energy, food and agriculture, fuel retail, security technology and private equity.",
+    "For over 40 years the Abcon Group has taken an integrated approach to property development, investment and management. What began in 1981 as a Sandton residential builder has grown into a collaborative group of companies operating well beyond property, across energy, food and agriculture, fuel retail, security technology and private equity.",
   body: [
-    "The Group's model is deliberately different from a typical developer: it develops, builds, manages and co-invests in its own assets, keeping accountability under one roof while giving each company the freedom to lead in its own field. That entrepreneurial spirit — paired with trusted local and global partnerships — is what has propelled the Group forward for more than four decades.",
-    "Today the Abcon Group is headquartered in Bryanston, Johannesburg, with offices in Cape Town and Pretoria and investment interests spanning several continents. It remains a long-term owner of its assets, which is why partners — from blue-chip corporates to co-investing banks — return to build with the Group again and again.",
+    "The Group's model is deliberately different from a typical developer: it develops, builds, manages and co-invests in its own assets, keeping accountability under one roof while giving each company the freedom to lead in its own field. That entrepreneurial spirit, paired with trusted local and global partnerships, is what has propelled the Group forward for more than four decades.",
+    "Today the Abcon Group is headquartered in Bryanston, Johannesburg, with offices in Cape Town and Pretoria and investment interests spanning several continents. It remains a long-term owner of its assets, which is why partners, from blue-chip corporates to co-investing banks, return to build with the Group again and again.",
   ],
   leadership: [
     { name: "Thys Neser", role: "Group Chairman" },
@@ -67,14 +67,14 @@ export const companyCategories: CompanyCategory[] = [
   {
     id: "development",
     title: "Property development & construction",
-    intro: "The Group's origin and backbone — developing and building commercial and residential space at scale.",
+    intro: "The Group's origin and backbone, developing and building commercial and residential space at scale.",
     companies: [
       {
         slug: "abcon-developments",
         name: "Abcon Developments",
         tag: "Commercial developer",
         blurb:
-          "The Group's commercial real-estate developer (formerly Abland), delivering bespoke office, retail, motor and industrial space — and the co-developer, with Tiber, of the Sandton Gate precinct.",
+          "The Group's commercial real-estate developer (formerly Abland), delivering bespoke office, retail, motor and industrial space, and the co-developer, with Tiber, of the Sandton Gate precinct.",
         logo: logo("abcon-developments"),
       },
       {
@@ -82,7 +82,7 @@ export const companyCategories: CompanyCategory[] = [
         name: "Craft Homes",
         tag: "Residential developer & builder",
         blurb:
-          "An established residential developer and builder since 1993 (formerly Sable Homes), with 60+ projects and 7,000+ units sold across the market — from affordable to luxury — spanning development, construction and sales.",
+          "An established residential developer and builder since 1993 (formerly Sable Homes), with 60+ projects and 7,000+ units sold across the market, from affordable to luxury, spanning development, construction and sales.",
         logo: logo("craft-homes"),
       },
       {
@@ -105,7 +105,7 @@ export const companyCategories: CompanyCategory[] = [
         name: "Strive",
         tag: "Property & precinct management",
         blurb:
-          "The Group's property and precinct management arm (formerly Abreal) — facilities management, tenant services, and utilities, water and solar innovations.",
+          "The Group's property and precinct management arm (formerly Abreal): facilities management, tenant services, and utilities, water and solar innovations.",
         logo: logo("strive"),
       },
       {
@@ -121,7 +121,7 @@ export const companyCategories: CompanyCategory[] = [
         name: "Valgro",
         tag: "Alternative revenue",
         blurb:
-          "Identifies and manages alternative revenue streams within property — signage, naming rights and underused assets — sitting on the landlord's side of the table.",
+          "Identifies and manages alternative revenue streams within property: signage, naming rights and underused assets, sitting on the landlord's side of the table.",
         logo: logo("valgro"),
       },
     ],
@@ -129,14 +129,14 @@ export const companyCategories: CompanyCategory[] = [
   {
     id: "energy",
     title: "Energy",
-    intro: "Real renewable generation and energy security — 30MW+ of solar developed and growing.",
+    intro: "Real renewable generation and energy security, 30MW+ of solar developed and growing.",
     companies: [
       {
         slug: "blume-energy",
         name: "Blume Energy",
         tag: "Turnkey energy solutions",
         blurb:
-          "A turnkey solar PV, battery-storage and smart-metering provider that also acts as an energy fund and development partner — 30MW+ of solar developed, 15MW under management — enabling clean power with no capex impact for tenants.",
+          "A turnkey solar PV, battery-storage and smart-metering provider that also acts as an energy fund and development partner, 30MW+ of solar developed, 15MW under management, enabling clean power with no capex impact for tenants.",
         logo: logo("blume-energy"),
       },
       {
@@ -152,7 +152,7 @@ export const companyCategories: CompanyCategory[] = [
   {
     id: "funds",
     title: "Real-estate & energy funds",
-    intro: "Co-investment vehicles, often built with banks and institutional partners — including Nedbank.",
+    intro: "Co-investment vehicles, often built with banks and institutional partners, including Nedbank.",
     companies: [
       {
         slug: "pod-fund",
@@ -206,7 +206,7 @@ export const companyCategories: CompanyCategory[] = [
         name: "Country Mushrooms",
         tag: "Agribusiness",
         blurb:
-          "The Group's first private-equity business — one of South Africa's largest fresh-mushroom producers, having grown from 12 to close to 100 tons per week.",
+          "The Group's first private-equity business, one of South Africa's largest fresh-mushroom producers, having grown from 12 to close to 100 tons per week.",
         logo: logo("country-mushrooms"),
       },
       {
@@ -221,7 +221,7 @@ export const companyCategories: CompanyCategory[] = [
         name: "Trakka Systems",
         tag: "Security & optical technology",
         blurb:
-          "The Group's first international equity investment — an Australia-based designer of high-intensity searchlights and gyro-stabilised camera and optical systems for airborne, ground and maritime use worldwide.",
+          "The Group's first international equity investment, an Australia-based designer of high-intensity searchlights and gyro-stabilised camera and optical systems for airborne, ground and maritime use worldwide.",
         logo: logo("trakka"),
       },
     ],

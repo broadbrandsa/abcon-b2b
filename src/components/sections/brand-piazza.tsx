@@ -8,7 +8,7 @@ export function BrandPiazza() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">Your brand, on the piazza</span>
-          <h2>Not just an office — a customer-facing footprint.</h2>
+          <h2>Not just an office, a customer-facing footprint.</h2>
           <p>{brandPiazza.lead}</p>
         </Reveal>
 
@@ -25,7 +25,7 @@ export function BrandPiazza() {
           <b>
             ~<CountUp to={brandPiazza.footfall} />
           </b>
-          <span>illustrative daily precinct footfall — residents, office workers &amp; retail visitors</span>
+          <span>illustrative daily precinct footfall, residents, office workers &amp; retail visitors</span>
         </Reveal>
       </div>
     </section>

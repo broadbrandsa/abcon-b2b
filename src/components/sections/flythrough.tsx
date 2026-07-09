@@ -7,7 +7,7 @@ export function Flythrough() {
         <Reveal className="sec-head">
           <span className="eyebrow">See it from the air</span>
           <h2>Sandton Gate, from above.</h2>
-          <p>A drone flythrough of the precinct — the towers, the piazza and the green edge along the Braamfontein Spruit.</p>
+          <p>A drone flythrough of the precinct, the towers, the piazza and the green edge along the Braamfontein Spruit.</p>
         </Reveal>
 
         <Reveal className="streetview">

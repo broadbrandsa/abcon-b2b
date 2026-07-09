@@ -14,7 +14,7 @@ export function Lifestyle() {
           <span className="eyebrow">Workplace &amp; lifestyle</span>
           <h2>A workplace people want to come to.</h2>
           <p>
-            A green, amenity-rich, transport-connected HQ is a return-to-office magnet — it makes Nedbank&apos;s values
+            A green, amenity-rich, transport-connected HQ is a return-to-office magnet, it makes Nedbank&apos;s values
             visible to staff and helps win the talent war. There&apos;s even scope for an on-site Nedbank banking hall.
           </p>
         </Reveal>
@@ -35,7 +35,7 @@ export function Lifestyle() {
 
         <Reveal className="sec-subhead">
           <h3>What Tuesday feels like here.</h3>
-          <p>Not a floor plan — a day. From the Gautrain to a walk home at The Terrace.</p>
+          <p>Not a floor plan, a day. From the Gautrain to a walk home at The Terrace.</p>
         </Reveal>
 
         <div className="day-list">

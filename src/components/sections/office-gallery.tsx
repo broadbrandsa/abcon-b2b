@@ -7,7 +7,7 @@ import { Reveal } from "@/components/sections/reveal";
 import { officeGallery } from "@/content/ecosystem";
 import { cn } from "@/lib/utils";
 
-/** The interior image carousel widget (no section wrapper — embed anywhere). */
+/** The interior image carousel widget (no section wrapper, embed anywhere). */
 export function GalleryCarousel() {
   const [index, setIndex] = useState(0);
   const count = officeGallery.length;

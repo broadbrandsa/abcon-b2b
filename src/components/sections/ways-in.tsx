@@ -8,10 +8,10 @@ export function WaysIn() {
       <div className="ways-bleed">
         <div className="wrap">
           <Reveal className="sec-head">
-            <span className="eyebrow">Beyond a lease — ways in</span>
+            <span className="eyebrow">Beyond a lease, ways in</span>
             <h2>{waysInLead}</h2>
             <p>
-              Uniquely for Nedbank: three ways to take Sandton Gate — from a simple lease to co-owning your own
+              Uniquely for Nedbank: three ways to take Sandton Gate, from a simple lease to co-owning your own
               headquarters alongside Abcon.
             </p>
           </Reveal>

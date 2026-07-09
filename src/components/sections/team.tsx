@@ -6,7 +6,7 @@ import { team } from "@/content/commercial";
 
 const lead = team[0];
 const tourMailto = `mailto:${lead.email}?subject=${encodeURIComponent(
-  "Private hard-hat tour — Sandton Gate · Nedbank",
+  "Private hard-hat tour. Sandton Gate · Nedbank",
 )}&body=${encodeURIComponent(
   "Hi Lerato,\n\nWe'd like to arrange a private hard-hat tour of Sandton Gate (and we'll take you up on dinner at the piazza).\n\nPreferred dates:\n\n",
 )}`;
@@ -17,7 +17,7 @@ export function Team() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">A human, not a PDF</span>
-          <h2>Your team — one relationship, end to end.</h2>
+          <h2>Your team, one relationship, end to end.</h2>
           <p>
             Your leasing lead and development director, backed by the group&apos;s in-house teams: Strive for building
             management and Grit for fit-out. No hand-offs, no finger-pointing.
@@ -63,7 +63,7 @@ export function Team() {
         <Reveal className="team-invite">
           <div>
             <h3>Come see it for yourself.</h3>
-            <p>A private hard-hat tour of Phase 2 — then dinner at the piazza. No slides, just the building.</p>
+            <p>A private hard-hat tour of Phase 2, then dinner at the piazza. No slides, just the building.</p>
           </div>
           <Button
             asChild

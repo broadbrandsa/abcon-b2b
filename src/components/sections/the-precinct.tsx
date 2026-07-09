@@ -10,10 +10,10 @@ export function ThePrecinct() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">The Precinct</span>
-          <h2>Sandton Gate — Sandton, but smarter.</h2>
+          <h2>Sandton Gate. Sandton, but smarter.</h2>
           <p>
             A R3-billion, world-class mixed-use precinct co-developed with Tiber, on the banks of the revitalised
-            Braamfontein Spruit. Designed around <em>people, nature and movement</em> — pedestrian walkways, green
+            Braamfontein Spruit. Designed around <em>people, nature and movement</em>: pedestrian walkways, green
             edges and a genuine sense of place, five minutes from the Sandton CBD and central to Rosebank, Randburg,
             Bryanston, Hyde Park and Fourways.
           </p>
@@ -43,7 +43,7 @@ export function ThePrecinct() {
 
         <Reveal className="sec-subhead">
           <h3>Inside the building.</h3>
-          <p>A look at the P-grade office environment — workspace, hospitality and the details in between.</p>
+          <p>A look at the P-grade office environment, workspace, hospitality and the details in between.</p>
         </Reveal>
         <GalleryCarousel />
 
@@ -66,7 +66,7 @@ export function ThePrecinct() {
             Picture your people here, <em>Nedbank.</em>
           </h2>
           <p>
-            You set South Africa&apos;s green-office standard at 135 Rivonia. Sandton Gate is built to it — so this
+            You set South Africa&apos;s green-office standard at 135 Rivonia. Sandton Gate is built to it, so this
             isn&apos;t a compromise, it&apos;s the next expression of who you already are.
           </p>
         </Reveal>
@@ -81,7 +81,7 @@ export function ThePrecinct() {
               height={896}
               sizes="(max-width: 860px) 100vw, 980px"
             />
-            <figcaption className="br-caption">Illustrative render — Nedbank identity at Sandton Gate</figcaption>
+            <figcaption className="br-caption">Illustrative render. Nedbank identity at Sandton Gate</figcaption>
           </figure>
         </Reveal>
       </div>

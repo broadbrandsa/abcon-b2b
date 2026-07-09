@@ -31,14 +31,14 @@ export function FloorSpace() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">Floor plans &amp; your space</span>
-          <h2>Room to move — and room to grow.</h2>
+          <h2>Room to move, and room to grow.</h2>
           <p>
-            Efficient P-grade plates, developed to your brief. From a full HQ campus to a flexible entry suite — sized,
+            Efficient P-grade plates, developed to your brief. From a full HQ campus to a flexible entry suite, sized,
             fitted and reconfigured by the same team as you grow.
           </p>
         </Reveal>
 
-        {/* space options — big first */}
+        {/* space options, big first */}
         <div className="space-options">
           {options.map((o, i) => (
             <Reveal className={cn("space-opt", i === 0 && "flag")} key={o.id} delay={(i % 3) * 0.05}>
@@ -137,7 +137,7 @@ export function FloorSpace() {
                   </g>
                 )}
               </svg>
-              <span className="plate-slot-note">Indicative schematic — architect&apos;s plate to be inserted</span>
+              <span className="plate-slot-note">Indicative schematic, architect&apos;s plate to be inserted</span>
             </div>
 
             <div className="plate-info">

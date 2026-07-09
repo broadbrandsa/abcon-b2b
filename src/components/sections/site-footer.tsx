@@ -16,7 +16,7 @@ export function SiteFooter() {
           <div>Sandton Gate · Confidential proposal · Prepared for Nedbank</div>
         </div>
         <p className="foot-note foot-private">
-          Private &amp; confidential — this is a personalised link prepared for Nedbank and may expire. Please don&apos;t forward.
+          Private &amp; confidential, this is a personalised link prepared for Nedbank and may expire. Please don&apos;t forward.
         </p>
         <p className="foot-note">
           This is an illustrative, co-branded proposal prepared for discussion. Figures, availability and
