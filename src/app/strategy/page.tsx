@@ -263,7 +263,7 @@ export default function StrategyPage() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Commercials</span>
-            <h2>Three lines on an invoice. Nothing hidden.</h2>
+            <h2>Free to start. Commission on close. One flat retainer.</h2>
           </Reveal>
           <div className="shape-grid">
             {commercialShape.map((c, i) => (

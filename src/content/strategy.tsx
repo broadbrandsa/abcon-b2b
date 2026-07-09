@@ -28,6 +28,7 @@ export const prongs: { tag: string; title: string; body: string; points: string[
       "Sales staff request a proposal for a named prospect",
       "Broadbrand produces it from the template within days",
       "The team pitches with it, tracks engagement and follows up warm",
+      "First three proposals free, then commission only when a contract closes",
     ],
   },
   {
@@ -38,6 +39,7 @@ export const prongs: { tag: string; title: string; body: string; points: string[
       "LinkedIn campaign recruits brokers to a sign-up landing page",
       "Abcon vets and approves who joins the network",
       "Approved brokers get bespoke proposals for their clients too",
+      "R20,000 per month retainer: creative, landing page, ads and campaign management included",
     ],
   },
 ];
@@ -219,27 +221,27 @@ export const split = {
   },
 };
 
-/* ---------- Commercial shape (structure only, pricing tabled separately) ---------- */
+/* ---------- Commercial shape: the actual pricing ---------- */
 export const commercialShape: { title: string; body: string; note: string }[] = [
   {
-    title: "Monthly retainer",
-    body: "Covers strategy, creative, campaign management, broker-funnel operations and reporting. Fixed and predictable.",
-    note: "Sized for a pilot, not an enterprise programme",
+    title: "First three proposals: free",
+    body: "We produce the first three bespoke proposal microsites for Abcon's sales team at no charge, so you see the tool win on live deals before spending a rand.",
+    note: "R0 · proposals 1 to 3",
   },
   {
-    title: "Media budget",
-    body: "Your LinkedIn ad spend, paid at cost with no markup. You set the cap; we recommend it, you approve it, and it can pause any day.",
-    note: "100% transparent, you see the ad account",
+    title: "Then commission on close",
+    body: "From there we work on success: an agreed commission only if a contract pitched with one of these proposals actually closes. No close, no fee.",
+    note: "Paid only on closed contracts",
   },
   {
-    title: "Proposal production",
-    body: "A per-microsite fee once a broker's request is approved. The template does the heavy lifting, so each one is fast and consistent.",
-    note: "Only pays when the channel is actually used",
+    title: "LinkedIn engine: R20k / month",
+    body: "One flat retainer covers the whole broker campaign: the creative, the broker landing page, running the ads and managing the campaigns.",
+    note: "All-inclusive monthly retainer",
   },
 ];
 
 export const commercialNote =
-  "Rand figures sit in a separate one-page commercial schedule so this decision stays about the model, not the line items. The structure above is the full shape, there are no other fees.";
+  "That's the whole model: proposals cost nothing until they help close deals, and the broker engine is one predictable monthly line. The commission rate is agreed up front in a one-page schedule before anything starts.";
 
 /* ---------- Risk reversal ---------- */
 export const riskReversal: { title: string; body: string }[] = [
@@ -281,7 +283,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What does it cost us if it doesn't work?",
-    a: "One pilot's retainer and a media budget you capped, plus you keep the landing page, the proposal template and every broker relationship created along the way. The downside is bounded and mostly recoverable; the upside is a new origination channel.",
+    a: "Very little. The first three proposals are free, commission is only due when a contract closes, and the R20,000 monthly LinkedIn retainer can stop at any month-end. You also keep the landing page, the proposal template and every broker relationship created along the way. The downside is bounded; the upside is a new origination channel.",
   },
   {
     q: "How much of our team's time does this take?",
@@ -311,7 +313,7 @@ export const decision = {
     "A kickoff workshop (half a day) to agree vetting criteria & targets",
     "Brand assets and sign-off on the templates",
     "One named leasing contact for deal facts",
-    "A pilot budget with a hard cap you set",
+    "The R20,000 per month LinkedIn retainer, stoppable at month-end",
   ],
   cta: "Approve the 90-day pilot",
 };

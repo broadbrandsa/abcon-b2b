@@ -380,8 +380,12 @@ body {
   color: rgba(246, 243, 236, 0.85);
 }
 @media (max-width: 860px) {
-  .navlinks {
+  /* keep the booking CTA reachable on mobile; hide only the section links */
+  .navlinks a:not(.nav-cta) {
     display: none;
+  }
+  .nav-cta {
+    padding: 12px 18px;
   }
 }
 
@@ -418,7 +422,8 @@ body {
 .hero-inner {
   position: relative;
   z-index: 3;
-  padding: 140px 0 70px;
+  /* keep .wrap's 28px side padding; a bare "140px 0 70px" shorthand wiped it */
+  padding: 140px 28px 70px;
   width: 100%;
 }
 .prepared {
@@ -890,6 +895,7 @@ body {
 }
 .calc-out .o {
   flex: 1;
+  min-width: 0;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
@@ -2568,6 +2574,7 @@ body {
   margin-top: 22px;
 }
 .invest-figures .fig {
+  min-width: 0;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
@@ -2904,6 +2911,7 @@ body {
   margin-bottom: 44px;
 }
 .perf-stat {
+  min-width: 0;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
   padding: 24px;
@@ -5340,7 +5348,7 @@ body {
 
 /* tier 2 - main menu (sticky) */
 .strat-nav { background: rgba(12, 43, 33, 0.88); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); position: sticky; top: 0; z-index: 60; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08); }
-.strat-nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+.strat-nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 15px 28px; }
 .strat-wordmark { font-family: var(--serif); font-size: 20px; color: #fff; letter-spacing: 0.02em; }
 .strat-wordmark span { color: var(--gold-soft); margin: 0 4px; }
 .strat-lockup { display: flex; align-items: center; gap: 12px; }
@@ -5354,6 +5362,11 @@ body {
 .strat-nav-cta { background: var(--gold); color: var(--forest) !important; border-radius: 100px; padding: 9px 18px; font-weight: 600; font-size: 13px; }
 .strat-nav-cta:hover { background: var(--gold-soft); }
 @media (max-width: 768px) { .strat-navlinks a:not(.strat-nav-cta) { display: none; } }
+.strat-nav-cta { white-space: nowrap; }
+@media (max-width: 640px) {
+  .strat-lockup .x,
+  .strat-lockup .logo-chip { display: none; }
+}
 
 /* sections */
 #strat-hero { background: var(--paper); }
