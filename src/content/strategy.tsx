@@ -28,7 +28,7 @@ export const prongs: { tag: string; title: string; body: string; points: string[
       "Sales staff request a proposal for a named prospect",
       "Broadbrand produces it from the template within days",
       "The team pitches with it, tracks engagement and follows up warm",
-      "Flagship build costed in SOW-ABCON-01; repeat proposals take 25 to 35 hours each",
+      "Costed as a package in SOW-ABCON-01: one flagship microsite plus five custom proposals",
     ],
   },
   {
@@ -221,17 +221,17 @@ export const split = {
   },
 };
 
-/* ---------- Commercials: SOW-ABCON-01 costings ---------- */
+/* ---------- Commercials: SOW-ABCON-01 costings (1x microsite + 5x proposals) ---------- */
 export const commercialShape: { title: string; body: string; note: string }[] = [
   {
-    title: "The flagship proposal build",
-    body: "SOW-ABCON-01 covers a bespoke named-account microsite end to end: strategy, copy, design, build, the interactive calculator, QA, two revision rounds and go-live. 158 hours over a 3 to 4 week delivery window.",
-    note: "R139,100 excl VAT · R159,965 incl",
+    title: "1× flagship microsite build",
+    body: "SOW-ABCON-01 covers the bespoke named-account microsite end to end: strategy, copy, design, build, the interactive calculator, QA, two revision rounds and go-live. 158 hours over a 3 to 4 week delivery window.",
+    note: "R139,100 excl VAT · 158 hrs",
   },
   {
-    title: "Repeat proposals thereafter",
-    body: "Once the design system and interactive components exist, each new named-account proposal is a content, imagery and figures swap rather than a rebuild: an estimated 25 to 35 hours at the same rate card.",
-    note: "±25 to 35 hrs per proposal",
+    title: "5× custom proposals included",
+    body: "The package adds five named-account proposals on top: with the design system and interactive components built, each one is a content, imagery and figures swap of roughly 30 hours at the SOW blended rate of about R880 per hour.",
+    note: "±R26,400 each · R132,000 for five",
   },
   {
     title: "LinkedIn engine: R20k / month",
@@ -239,6 +239,20 @@ export const commercialShape: { title: string; body: string; note: string }[] = 
     note: "All-inclusive monthly retainer",
   },
 ];
+
+/* Package totals: flagship (R139,100) + 5 proposals at the 30 hr midpoint of the
+   SOW's 25 to 35 hr estimate, priced at the SOW blended rate (R139,100 / 158 hrs ≈ R880/hr). */
+export const packageSummary = {
+  title: "The package: 1× microsite + 5× custom proposals",
+  lines: [
+    { item: "Flagship microsite build (SOW-ABCON-01, 158 hrs)", cost: "R 139,100" },
+    { item: "5 custom proposals (±30 hrs each at the SOW blended rate)", cost: "R 132,000" },
+  ],
+  fees: "R 271,100",
+  vat: "R 40,665",
+  total: "R 311,765",
+  note: "LinkedIn engine runs alongside at R20,000 per month.",
+};
 
 export const commercialNote =
   "Payment terms on the SOW: 50% deposit on signature to commence, 50% on final delivery and go-live. Two revision rounds are included; further rounds bill at the rate card. Hosting on Vercel; Abcon supplies brand assets and deal facts.";
@@ -315,7 +329,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What does it cost us if it doesn't work?",
-    a: "The exposure is bounded and priced up front. SOW-ABCON-01 fixes the flagship build at R139,100 excl VAT on 50/50 payment terms, repeat proposals drop to 25 to 35 hours each once the system exists, and the R20,000 monthly LinkedIn retainer can stop at any month-end. You also keep the landing page, the proposal template and every broker relationship created along the way.",
+    a: "The exposure is bounded and priced up front. The package (one flagship microsite plus five custom proposals) is R271,100 excl VAT on 50/50 payment terms, and the R20,000 monthly LinkedIn retainer can stop at any month-end. You also keep the landing page, the proposal template and every broker relationship created along the way.",
   },
   {
     q: "How much of our team's time does this take?",

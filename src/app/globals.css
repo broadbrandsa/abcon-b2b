@@ -5549,6 +5549,19 @@ body {
 .sow-chip b { color: var(--emerald); font-weight: 700; margin-left: 4px; }
 @media (max-width: 560px) { .sow-card { padding: 20px; } }
 
+/* package summary (1x microsite + 5x proposals) */
+.package-card { margin-top: 18px; background: var(--forest); color: var(--cream); border-radius: var(--r); padding: 32px; box-shadow: var(--shadow); }
+.package-tag { display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--forest); background: var(--gold); border-radius: 100px; padding: 5px 13px; margin-bottom: 14px; }
+.package-card h3 { font-family: var(--serif); font-size: clamp(20px, 2.4vw, 26px); color: #fff; margin-bottom: 18px; }
+.package-lines { list-style: none; max-width: 620px; }
+.package-lines li { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.12); font-size: 14px; color: rgba(246, 243, 236, 0.85); }
+.package-lines li b { font-variant-numeric: tabular-nums; white-space: nowrap; color: #fff; font-weight: 600; }
+.package-lines .package-sub { color: rgba(246, 243, 236, 0.65); font-size: 13px; }
+.package-lines .package-total { border-bottom: none; padding-top: 14px; font-size: 15px; color: #fff; font-weight: 600; }
+.package-lines .package-total b { font-family: var(--serif); font-size: 26px; color: var(--gold-soft); }
+.package-note { margin-top: 14px; font-size: 13px; color: rgba(246, 243, 236, 0.65); }
+@media (max-width: 560px) { .package-card { padding: 24px; } }
+
 /* risk reversal */
 .rr-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
 .rr-card { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }

@@ -20,6 +20,7 @@ import {
   funnel,
   kpis,
   linkedinIntro,
+  packageSummary,
   prongs,
   rationale,
   reportMetrics,
@@ -334,6 +335,32 @@ export default function StrategyPage() {
                 ))}
               </div>
             </div>
+          </Reveal>
+
+          <Reveal className="package-card">
+            <span className="package-tag">The package</span>
+            <h3>{packageSummary.title}</h3>
+            <ul className="package-lines">
+              {packageSummary.lines.map((l) => (
+                <li key={l.item}>
+                  <span>{l.item}</span>
+                  <b>{l.cost}</b>
+                </li>
+              ))}
+              <li className="package-sub">
+                <span>Professional fees</span>
+                <b>{packageSummary.fees}</b>
+              </li>
+              <li className="package-sub">
+                <span>VAT (15%)</span>
+                <b>{packageSummary.vat}</b>
+              </li>
+              <li className="package-total">
+                <span>Total package cost</span>
+                <b>{packageSummary.total}</b>
+              </li>
+            </ul>
+            <p className="package-note">{packageSummary.note}</p>
           </Reveal>
 
           <Reveal as="p" className="shape-footnote">
