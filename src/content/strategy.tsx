@@ -28,7 +28,7 @@ export const prongs: { tag: string; title: string; body: string; points: string[
       "Sales staff request a proposal for a named prospect",
       "Broadbrand produces it from the template within days",
       "The team pitches with it, tracks engagement and follows up warm",
-      "Five builds a month inside the R50,000 production retainer, plus commission you set on closes",
+      "Production your way: a R50,000 monthly retainer (5 builds) or commission only, at a rate you set",
     ],
   },
   {
@@ -221,40 +221,38 @@ export const split = {
   },
 };
 
-/* ---------- Commercials: two retainers + success commission ---------- */
+/* ---------- Commercials: production is retainer OR commission; LinkedIn separate ---------- */
 export const commercialShape: { title: string; body: string; note: string }[] = [
   {
-    title: "Production retainer: R50k / month",
+    title: "Option A · R50k monthly retainer",
     body: "Five builds a month, each one a custom proposal or a full microsite, whichever the deal needs. Strategy, copy, design, build and QA included, produced from the proven Nedbank system.",
-    note: "5× builds included monthly",
+    note: "5× builds included · R50,000 / month",
   },
   {
-    title: "Plus commission on close",
-    body: "When a deal closes off one of these proposals or microsites, Broadbrand earns a success commission. You tell us the rate you're comfortable paying and we write it into the agreement.",
-    note: "You name the rate",
+    title: "Option B · Commission only",
+    body: "No production retainer. We build the proposals and microsites, and earn a success commission only when a deal closes off one of them. You tell us the rate you're comfortable paying and we write it into the agreement.",
+    note: "R0 fixed · you name the rate",
   },
   {
     title: "LinkedIn engine: R20k / month",
-    body: "One flat retainer covers the whole broker campaign: the creative, the broker landing page, running the ads and managing the campaigns.",
+    body: "Separate from production, whichever option you choose. One flat retainer covers the whole broker campaign: the creative, the broker landing page, running the ads and managing the campaigns.",
     note: "All-inclusive monthly retainer",
   },
 ];
 
-/* Monthly summary: both retainers, with commission on top at a rate Abcon proposes. */
+/* Summary: pick a production model; LinkedIn is its own line either way. */
 export const packageSummary = {
-  title: "One monthly number, plus commission you set",
+  title: "Pick a production model. LinkedIn is its own line.",
   lines: [
-    { item: "Production retainer (5 builds a month, proposals or microsites)", cost: "R 50,000" },
-    { item: "LinkedIn engine (creative, landing page, ads, campaign management)", cost: "R 20,000" },
+    { item: "Option A · Production retainer, 5 builds a month", cost: "R 50,000 / month" },
+    { item: "Option B · Commission only, on deals that close", cost: "R0 fixed + your rate" },
+    { item: "LinkedIn engine, either way", cost: "R 20,000 / month" },
   ],
-  fees: "R 70,000 / month",
-  vat: "R 10,500",
-  total: "R 80,500 / month",
-  note: "Success commission on closed deals sits on top, at a rate Abcon proposes. Both retainers can stop at month-end.",
+  note: "Figures excl VAT. With Option A the monthly total is R70,000 excl VAT (R80,500 incl); with Option B it's R20,000 plus commission on closes. Retainers stop at month-end.",
 };
 
 export const commercialNote =
-  "Retainers bill monthly and can stop at month-end. The success commission applies only to deals closed off a proposal or microsite: name the rate you're comfortable paying and it goes into the agreement. Hosting on Vercel; Abcon supplies brand assets and deal facts.";
+  "Retainers bill monthly and can stop at month-end. On the commission model nothing is due until a deal closes off a proposal or microsite: name the rate you're comfortable paying and it goes into the agreement. Hosting on Vercel; Abcon supplies brand assets and deal facts.";
 
 /* ---------- SOW-ABCON-01 breakdown ---------- */
 export const sow = {
@@ -328,7 +326,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What does it cost us if it doesn't work?",
-    a: "The exposure is bounded and priced up front: R70,000 a month excl VAT for both retainers, stoppable at any month-end, and commission is only ever due when a deal actually closes, at a rate you set yourself. You also keep the landing page, the proposal template and every broker relationship created along the way.",
+    a: "The exposure is bounded and priced up front. LinkedIn is R20,000 a month, stoppable at month-end. Production is your choice: a R50,000 monthly retainer with five builds, or commission only, where nothing is due until a deal actually closes, at a rate you set yourself. You also keep the landing page, the proposal template and every broker relationship created along the way.",
   },
   {
     q: "How much of our team's time does this take?",
@@ -358,7 +356,7 @@ export const decision = {
     "A kickoff workshop (half a day) to agree vetting criteria & targets",
     "Brand assets and sign-off on the templates",
     "One named leasing contact for deal facts",
-    "The two retainers (R70,000 per month all-in) and your proposed commission rate",
+    "Your production model (R50k retainer or commission, with your rate) plus the LinkedIn retainer",
   ],
   cta: "Approve the 90-day pilot",
 };

@@ -265,8 +265,8 @@ export default function StrategyPage() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Commercials</span>
-            <h2>Two retainers. Five builds a month. Commission you set.</h2>
-            <p>Two flat monthly lines plus a success commission at a rate Abcon proposes. SOW-ABCON-01 below shows what a single flagship build is worth at rate-card prices.</p>
+            <h2>Retainer or commission: you choose. LinkedIn runs alongside.</h2>
+            <p>Production is one of two models: a flat R50,000 monthly retainer, or commission only at a rate Abcon proposes. The LinkedIn engine is its own R20,000 monthly line either way. SOW-ABCON-01 below shows what a single flagship build is worth at rate-card prices.</p>
           </Reveal>
           <div className="shape-grid">
             {commercialShape.map((c, i) => (
@@ -348,18 +348,6 @@ export default function StrategyPage() {
                   <b>{l.cost}</b>
                 </li>
               ))}
-              <li className="package-sub">
-                <span>Retainers, monthly total</span>
-                <b>{packageSummary.fees}</b>
-              </li>
-              <li className="package-sub">
-                <span>VAT (15%)</span>
-                <b>{packageSummary.vat}</b>
-              </li>
-              <li className="package-total">
-                <span>Monthly total incl VAT</span>
-                <b>{packageSummary.total}</b>
-              </li>
             </ul>
             <p className="package-note">{packageSummary.note}</p>
           </Reveal>
