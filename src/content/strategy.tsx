@@ -28,7 +28,7 @@ export const prongs: { tag: string; title: string; body: string; points: string[
       "Sales staff request a proposal for a named prospect",
       "Broadbrand produces it from the template within days",
       "The team pitches with it, tracks engagement and follows up warm",
-      "First three proposals free, then commission only when a contract closes",
+      "Flagship build costed in SOW-ABCON-01; repeat proposals take 25 to 35 hours each",
     ],
   },
   {
@@ -221,27 +221,59 @@ export const split = {
   },
 };
 
-/* ---------- Commercial shape: the actual pricing ---------- */
+/* ---------- Commercials: SOW-ABCON-01 costings ---------- */
 export const commercialShape: { title: string; body: string; note: string }[] = [
   {
-    title: "First three proposals: free",
-    body: "We produce the first three bespoke proposal microsites for Abcon's sales team at no charge, so you see the tool win on live deals before spending a rand.",
-    note: "R0 · proposals 1 to 3",
+    title: "The flagship proposal build",
+    body: "SOW-ABCON-01 covers a bespoke named-account microsite end to end: strategy, copy, design, build, the interactive calculator, QA, two revision rounds and go-live. 158 hours over a 3 to 4 week delivery window.",
+    note: "R139,100 excl VAT · R159,965 incl",
   },
   {
-    title: "Then commission on close",
-    body: "From there we work on success: an agreed commission only if a contract pitched with one of these proposals actually closes. No close, no fee.",
-    note: "Paid only on closed contracts",
+    title: "Repeat proposals thereafter",
+    body: "Once the design system and interactive components exist, each new named-account proposal is a content, imagery and figures swap rather than a rebuild: an estimated 25 to 35 hours at the same rate card.",
+    note: "±25 to 35 hrs per proposal",
   },
   {
     title: "LinkedIn engine: R20k / month",
-    body: "One flat retainer covers the whole broker campaign: the creative, the broker landing page, running the ads and managing the campaigns.",
+    body: "One flat retainer covers the whole broker campaign: the creative, the broker landing page, running the ads and managing the campaigns. Paid media sits outside the SOW as its own monthly line.",
     note: "All-inclusive monthly retainer",
   },
 ];
 
 export const commercialNote =
-  "That's the whole model: proposals cost nothing until they help close deals, and the broker engine is one predictable monthly line. The commission rate is agreed up front in a one-page schedule before anything starts.";
+  "Payment terms on the SOW: 50% deposit on signature to commence, 50% on final delivery and go-live. Two revision rounds are included; further rounds bill at the rate card. Hosting on Vercel; Abcon supplies brand assets and deal facts.";
+
+/* ---------- SOW-ABCON-01 breakdown ---------- */
+export const sow = {
+  ref: "SOW-ABCON-01",
+  title: "Custom B2B proposal microsite (commercial leasing)",
+  phases: [
+    { phase: "Discovery & account strategy", role: "Account Director", hrs: 8, cost: "R 9,600" },
+    { phase: "Copywriting & messaging", role: "Senior Copywriter", hrs: 16, cost: "R 12,000" },
+    { phase: "UX / visual design", role: "Senior Designer", hrs: 24, cost: "R 20,400" },
+    { phase: "Core frontend build", role: "Senior Developer", hrs: 60, cost: "R 57,000" },
+    { phase: "Interactive investment calculator", role: "Senior Developer", hrs: 12, cost: "R 11,400" },
+    { phase: "Asset sourcing & integration", role: "Senior Designer", hrs: 8, cost: "R 6,800" },
+    { phase: "QA & cross-device testing", role: "Developer / QA", hrs: 8, cost: "R 5,600" },
+    { phase: "Client revisions (2 rounds)", role: "Copy + Design", hrs: 8, cost: "R 6,000" },
+    { phase: "Deployment & handover", role: "Senior Developer", hrs: 4, cost: "R 3,800" },
+    { phase: "Project management", role: "Project Manager", hrs: 10, cost: "R 6,500" },
+  ],
+  totals: {
+    hrs: 158,
+    fees: "R 139,100",
+    vat: "R 20,865",
+    total: "R 159,965",
+  },
+  rateCard: [
+    { role: "Account Director / Strategy", rate: "R 1,200 / hr" },
+    { role: "Senior Developer", rate: "R 950 / hr" },
+    { role: "Senior Designer", rate: "R 850 / hr" },
+    { role: "Senior Copywriter", rate: "R 750 / hr" },
+    { role: "Developer / QA", rate: "R 700 / hr" },
+    { role: "Project Manager", rate: "R 650 / hr" },
+  ],
+};
 
 /* ---------- Risk reversal ---------- */
 export const riskReversal: { title: string; body: string }[] = [
@@ -283,7 +315,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What does it cost us if it doesn't work?",
-    a: "Very little. The first three proposals are free, commission is only due when a contract closes, and the R20,000 monthly LinkedIn retainer can stop at any month-end. You also keep the landing page, the proposal template and every broker relationship created along the way. The downside is bounded; the upside is a new origination channel.",
+    a: "The exposure is bounded and priced up front. SOW-ABCON-01 fixes the flagship build at R139,100 excl VAT on 50/50 payment terms, repeat proposals drop to 25 to 35 hours each once the system exists, and the R20,000 monthly LinkedIn retainer can stop at any month-end. You also keep the landing page, the proposal template and every broker relationship created along the way.",
   },
   {
     q: "How much of our team's time does this take?",
@@ -313,7 +345,7 @@ export const decision = {
     "A kickoff workshop (half a day) to agree vetting criteria & targets",
     "Brand assets and sign-off on the templates",
     "One named leasing contact for deal facts",
-    "The R20,000 per month LinkedIn retainer, stoppable at month-end",
+    "SOW-ABCON-01 signature with the 50% deposit to commence",
   ],
   cta: "Approve the 90-day pilot",
 };

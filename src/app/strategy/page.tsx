@@ -26,6 +26,7 @@ import {
   riskReversal,
   rollout,
   sources,
+  sow,
   split,
   strategyClose,
   strategyIntro,
@@ -263,7 +264,8 @@ export default function StrategyPage() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Commercials</span>
-            <h2>Free to start. Commission on close. One flat retainer.</h2>
+            <h2>Costed to the hour, straight from the SOW.</h2>
+            <p>Every rand below comes from SOW-ABCON-01. No estimates-to-be-confirmed, no hidden lines.</p>
           </Reveal>
           <div className="shape-grid">
             {commercialShape.map((c, i) => (
@@ -275,6 +277,65 @@ export default function StrategyPage() {
               </Reveal>
             ))}
           </div>
+          <Reveal className="sow-card">
+            <div className="sow-head">
+              <span className="sow-ref">{sow.ref}</span>
+              <h3>{sow.title}</h3>
+            </div>
+            <div className="sow-scroll">
+              <table className="sow-table">
+                <thead>
+                  <tr>
+                    <th>Phase</th>
+                    <th>Role</th>
+                    <th className="num">Hrs</th>
+                    <th className="num">Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sow.phases.map((p) => (
+                    <tr key={p.phase}>
+                      <td>{p.phase}</td>
+                      <td>{p.role}</td>
+                      <td className="num">{p.hrs}</td>
+                      <td className="num">{p.cost}</td>
+                    </tr>
+                  ))}
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Professional fees</td>
+                    <td />
+                    <td className="num">{sow.totals.hrs}</td>
+                    <td className="num">{sow.totals.fees}</td>
+                  </tr>
+                  <tr>
+                    <td>VAT (15%)</td>
+                    <td />
+                    <td />
+                    <td className="num">{sow.totals.vat}</td>
+                  </tr>
+                  <tr className="sow-total">
+                    <td>Total project cost</td>
+                    <td />
+                    <td />
+                    <td className="num">{sow.totals.total}</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div className="sow-rates">
+              <span className="sow-rates-tag">Rate card · excl VAT</span>
+              <div className="sow-rate-chips">
+                {sow.rateCard.map((r) => (
+                  <span className="sow-chip" key={r.role}>
+                    {r.role} <b>{r.rate}</b>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
           <Reveal as="p" className="shape-footnote">
             {commercialNote}
           </Reveal>
@@ -353,7 +414,7 @@ export default function StrategyPage() {
               </ul>
             </div>
             <div className="decide-ctas">
-              <a href="mailto:mikee@dsg.co.za?subject=Abcon%20%C3%97%20Broadbrand%20%E2%80%94%20approve%20the%2090-day%20pilot" className="strat-close-cta">
+              <a href="mailto:mikee@dsg.co.za?subject=Abcon%20%C3%97%20Broadbrand%3A%20approve%20the%2090-day%20pilot" className="strat-close-cta">
                 {decision.cta}
               </a>
               <Link href="/" className="strat-close-alt">
