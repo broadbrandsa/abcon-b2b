@@ -248,43 +248,11 @@ export const packageSummary = {
     { item: "Option B · Commission only, on deals that close", cost: "R0 fixed + your rate" },
     { item: "LinkedIn engine, either way", cost: "R 20,000 / month" },
   ],
-  note: "Figures excl VAT. With Option A the monthly total is R70,000 excl VAT (R80,500 incl); with Option B it's R20,000 plus commission on closes. Retainers stop at month-end.",
+  note: "With Option A the monthly total is R70,000; with Option B it's R20,000 plus commission on closes. Retainers stop at month-end.",
 };
 
 export const commercialNote =
   "Retainers bill monthly and can stop at month-end. On the commission model nothing is due until a deal closes off a proposal or microsite: name the rate you're comfortable paying and it goes into the agreement. Hosting on Vercel; Abcon supplies brand assets and deal facts.";
-
-/* ---------- SOW-ABCON-01 breakdown ---------- */
-export const sow = {
-  ref: "SOW-ABCON-01",
-  title: "Custom B2B proposal microsite (commercial leasing)",
-  phases: [
-    { phase: "Discovery & account strategy", role: "Account Director", hrs: 8, cost: "R 9,600" },
-    { phase: "Copywriting & messaging", role: "Senior Copywriter", hrs: 16, cost: "R 12,000" },
-    { phase: "UX / visual design", role: "Senior Designer", hrs: 24, cost: "R 20,400" },
-    { phase: "Core frontend build", role: "Senior Developer", hrs: 60, cost: "R 57,000" },
-    { phase: "Interactive investment calculator", role: "Senior Developer", hrs: 12, cost: "R 11,400" },
-    { phase: "Asset sourcing & integration", role: "Senior Designer", hrs: 8, cost: "R 6,800" },
-    { phase: "QA & cross-device testing", role: "Developer / QA", hrs: 8, cost: "R 5,600" },
-    { phase: "Client revisions (2 rounds)", role: "Copy + Design", hrs: 8, cost: "R 6,000" },
-    { phase: "Deployment & handover", role: "Senior Developer", hrs: 4, cost: "R 3,800" },
-    { phase: "Project management", role: "Project Manager", hrs: 10, cost: "R 6,500" },
-  ],
-  totals: {
-    hrs: 158,
-    fees: "R 139,100",
-    vat: "R 20,865",
-    total: "R 159,965",
-  },
-  rateCard: [
-    { role: "Account Director / Strategy", rate: "R 1,200 / hr" },
-    { role: "Senior Developer", rate: "R 950 / hr" },
-    { role: "Senior Designer", rate: "R 850 / hr" },
-    { role: "Senior Copywriter", rate: "R 750 / hr" },
-    { role: "Developer / QA", rate: "R 700 / hr" },
-    { role: "Project Manager", rate: "R 650 / hr" },
-  ],
-};
 
 /* ---------- Risk reversal ---------- */
 export const riskReversal: { title: string; body: string }[] = [

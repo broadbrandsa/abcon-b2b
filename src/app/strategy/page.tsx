@@ -27,7 +27,6 @@ import {
   riskReversal,
   rollout,
   sources,
-  sow,
   split,
   strategyClose,
   strategyIntro,
@@ -266,7 +265,7 @@ export default function StrategyPage() {
           <Reveal className="sec-head">
             <span className="eyebrow">Commercials</span>
             <h2>Retainer or commission: you choose. LinkedIn runs alongside.</h2>
-            <p>Production is one of two models: a flat R50,000 monthly retainer, or commission only at a rate Abcon proposes. The LinkedIn engine is its own R20,000 monthly line either way. SOW-ABCON-01 below shows what a single flagship build is worth at rate-card prices.</p>
+            <p>Production is one of two models: a flat R50,000 monthly retainer, or commission only at a rate Abcon proposes. The LinkedIn engine is its own R20,000 monthly line either way.</p>
           </Reveal>
           <div className="shape-grid">
             {commercialShape.map((c, i) => (
@@ -278,66 +277,6 @@ export default function StrategyPage() {
               </Reveal>
             ))}
           </div>
-          <Reveal className="sow-card">
-            <div className="sow-head">
-              <span className="sow-ref">{sow.ref}</span>
-              <h3>{sow.title}</h3>
-              <span className="sow-benchmark">The value benchmark: what one flagship build costs at rate-card prices, before the retainer discount</span>
-            </div>
-            <div className="sow-scroll">
-              <table className="sow-table">
-                <thead>
-                  <tr>
-                    <th>Phase</th>
-                    <th>Role</th>
-                    <th className="num">Hrs</th>
-                    <th className="num">Cost</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {sow.phases.map((p) => (
-                    <tr key={p.phase}>
-                      <td>{p.phase}</td>
-                      <td>{p.role}</td>
-                      <td className="num">{p.hrs}</td>
-                      <td className="num">{p.cost}</td>
-                    </tr>
-                  ))}
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td>Professional fees</td>
-                    <td />
-                    <td className="num">{sow.totals.hrs}</td>
-                    <td className="num">{sow.totals.fees}</td>
-                  </tr>
-                  <tr>
-                    <td>VAT (15%)</td>
-                    <td />
-                    <td />
-                    <td className="num">{sow.totals.vat}</td>
-                  </tr>
-                  <tr className="sow-total">
-                    <td>Total project cost</td>
-                    <td />
-                    <td />
-                    <td className="num">{sow.totals.total}</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-            <div className="sow-rates">
-              <span className="sow-rates-tag">Rate card · excl VAT</span>
-              <div className="sow-rate-chips">
-                {sow.rateCard.map((r) => (
-                  <span className="sow-chip" key={r.role}>
-                    {r.role} <b>{r.rate}</b>
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-
           <Reveal className="package-card">
             <span className="package-tag">The package</span>
             <h3>{packageSummary.title}</h3>

@@ -5527,29 +5527,6 @@ body {
 .shape-footnote { font-size: 13.5px; color: var(--muted); max-width: 68ch; margin: 22px auto 0; text-align: center; line-height: 1.6; }
 @media (max-width: 860px) { .shape-grid { grid-template-columns: 1fr; } }
 
-/* SOW breakdown */
-.sow-card { margin-top: 18px; background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 28px; }
-.sow-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
-.sow-ref { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--emerald); background: rgba(10, 107, 77, 0.08); border: 1px solid rgba(10, 107, 77, 0.2); border-radius: 100px; padding: 5px 13px; }
-.sow-head h3 { font-family: var(--serif); font-size: 19px; color: var(--ink); }
-.sow-benchmark { flex-basis: 100%; font-size: 12.5px; color: var(--muted); }
-.sow-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
-.sow-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 13.5px; }
-.sow-table th { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 700; text-align: left; padding: 12px 16px; background: var(--cream); border-bottom: 1px solid var(--line); }
-.sow-table td { padding: 11px 16px; border-bottom: 1px solid var(--line); color: var(--muted); }
-.sow-table td:first-child { color: var(--ink); font-weight: 500; }
-.sow-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.sow-table tbody tr:hover td { background: var(--paper); }
-.sow-table tfoot td { background: var(--cream); font-weight: 600; color: var(--ink); }
-.sow-table .sow-total td { background: var(--forest); color: #fff; border-bottom: none; }
-.sow-table .sow-total td.num { color: var(--gold-soft); font-family: var(--serif); font-size: 16px; }
-.sow-rates { margin-top: 18px; }
-.sow-rates-tag { display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--muted); margin-bottom: 10px; }
-.sow-rate-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.sow-chip { font-size: 12px; font-weight: 500; color: var(--muted); background: var(--paper); border: 1px solid var(--line); border-radius: 100px; padding: 6px 12px; }
-.sow-chip b { color: var(--emerald); font-weight: 700; margin-left: 4px; }
-@media (max-width: 560px) { .sow-card { padding: 20px; } }
-
 /* package summary (1x microsite + 5x proposals) */
 .package-card { margin-top: 18px; background: var(--forest); color: var(--cream); border-radius: var(--r); padding: 32px; box-shadow: var(--shadow); }
 .package-tag { display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--forest); background: var(--gold); border-radius: 100px; padding: 5px 13px; margin-bottom: 14px; }
