@@ -28,7 +28,7 @@ export const prongs: { tag: string; title: string; body: string; points: string[
       "Sales staff request a proposal for a named prospect",
       "Broadbrand produces it from the template within days",
       "The team pitches with it, tracks engagement and follows up warm",
-      "Costed as a package in SOW-ABCON-01: one flagship microsite plus five custom proposals",
+      "Five builds a month inside the R50,000 production retainer, plus commission you set on closes",
     ],
   },
   {
@@ -221,41 +221,40 @@ export const split = {
   },
 };
 
-/* ---------- Commercials: SOW-ABCON-01 costings (1x microsite + 5x proposals) ---------- */
+/* ---------- Commercials: two retainers + success commission ---------- */
 export const commercialShape: { title: string; body: string; note: string }[] = [
   {
-    title: "1× flagship microsite build",
-    body: "SOW-ABCON-01 covers the bespoke named-account microsite end to end: strategy, copy, design, build, the interactive calculator, QA, two revision rounds and go-live. 158 hours over a 3 to 4 week delivery window.",
-    note: "R139,100 excl VAT · 158 hrs",
+    title: "Production retainer: R50k / month",
+    body: "Five builds a month, each one a custom proposal or a full microsite, whichever the deal needs. Strategy, copy, design, build and QA included, produced from the proven Nedbank system.",
+    note: "5× builds included monthly",
   },
   {
-    title: "5× custom proposals included",
-    body: "The package adds five named-account proposals on top: with the design system and interactive components built, each one is a content, imagery and figures swap of roughly 30 hours at the SOW blended rate of about R880 per hour.",
-    note: "±R26,400 each · R132,000 for five",
+    title: "Plus commission on close",
+    body: "When a deal closes off one of these proposals or microsites, Broadbrand earns a success commission. You tell us the rate you're comfortable paying and we write it into the agreement.",
+    note: "You name the rate",
   },
   {
     title: "LinkedIn engine: R20k / month",
-    body: "One flat retainer covers the whole broker campaign: the creative, the broker landing page, running the ads and managing the campaigns. Paid media sits outside the SOW as its own monthly line.",
+    body: "One flat retainer covers the whole broker campaign: the creative, the broker landing page, running the ads and managing the campaigns.",
     note: "All-inclusive monthly retainer",
   },
 ];
 
-/* Package totals: flagship (R139,100) + 5 proposals at the 30 hr midpoint of the
-   SOW's 25 to 35 hr estimate, priced at the SOW blended rate (R139,100 / 158 hrs ≈ R880/hr). */
+/* Monthly summary: both retainers, with commission on top at a rate Abcon proposes. */
 export const packageSummary = {
-  title: "The package: 1× microsite + 5× custom proposals",
+  title: "One monthly number, plus commission you set",
   lines: [
-    { item: "Flagship microsite build (SOW-ABCON-01, 158 hrs)", cost: "R 139,100" },
-    { item: "5 custom proposals (±30 hrs each at the SOW blended rate)", cost: "R 132,000" },
+    { item: "Production retainer (5 builds a month, proposals or microsites)", cost: "R 50,000" },
+    { item: "LinkedIn engine (creative, landing page, ads, campaign management)", cost: "R 20,000" },
   ],
-  fees: "R 271,100",
-  vat: "R 40,665",
-  total: "R 311,765",
-  note: "LinkedIn engine runs alongside at R20,000 per month.",
+  fees: "R 70,000 / month",
+  vat: "R 10,500",
+  total: "R 80,500 / month",
+  note: "Success commission on closed deals sits on top, at a rate Abcon proposes. Both retainers can stop at month-end.",
 };
 
 export const commercialNote =
-  "Payment terms on the SOW: 50% deposit on signature to commence, 50% on final delivery and go-live. Two revision rounds are included; further rounds bill at the rate card. Hosting on Vercel; Abcon supplies brand assets and deal facts.";
+  "Retainers bill monthly and can stop at month-end. The success commission applies only to deals closed off a proposal or microsite: name the rate you're comfortable paying and it goes into the agreement. Hosting on Vercel; Abcon supplies brand assets and deal facts.";
 
 /* ---------- SOW-ABCON-01 breakdown ---------- */
 export const sow = {
@@ -329,7 +328,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What does it cost us if it doesn't work?",
-    a: "The exposure is bounded and priced up front. The package (one flagship microsite plus five custom proposals) is R271,100 excl VAT on 50/50 payment terms, and the R20,000 monthly LinkedIn retainer can stop at any month-end. You also keep the landing page, the proposal template and every broker relationship created along the way.",
+    a: "The exposure is bounded and priced up front: R70,000 a month excl VAT for both retainers, stoppable at any month-end, and commission is only ever due when a deal actually closes, at a rate you set yourself. You also keep the landing page, the proposal template and every broker relationship created along the way.",
   },
   {
     q: "How much of our team's time does this take?",
@@ -359,7 +358,7 @@ export const decision = {
     "A kickoff workshop (half a day) to agree vetting criteria & targets",
     "Brand assets and sign-off on the templates",
     "One named leasing contact for deal facts",
-    "SOW-ABCON-01 signature with the 50% deposit to commence",
+    "The two retainers (R70,000 per month all-in) and your proposed commission rate",
   ],
   cta: "Approve the 90-day pilot",
 };

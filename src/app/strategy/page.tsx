@@ -265,8 +265,8 @@ export default function StrategyPage() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Commercials</span>
-            <h2>Costed to the hour, straight from the SOW.</h2>
-            <p>Every rand below comes from SOW-ABCON-01. No estimates-to-be-confirmed, no hidden lines.</p>
+            <h2>Two retainers. Five builds a month. Commission you set.</h2>
+            <p>Two flat monthly lines plus a success commission at a rate Abcon proposes. SOW-ABCON-01 below shows what a single flagship build is worth at rate-card prices.</p>
           </Reveal>
           <div className="shape-grid">
             {commercialShape.map((c, i) => (
@@ -282,6 +282,7 @@ export default function StrategyPage() {
             <div className="sow-head">
               <span className="sow-ref">{sow.ref}</span>
               <h3>{sow.title}</h3>
+              <span className="sow-benchmark">The value benchmark: what one flagship build costs at rate-card prices, before the retainer discount</span>
             </div>
             <div className="sow-scroll">
               <table className="sow-table">
@@ -348,7 +349,7 @@ export default function StrategyPage() {
                 </li>
               ))}
               <li className="package-sub">
-                <span>Professional fees</span>
+                <span>Retainers, monthly total</span>
                 <b>{packageSummary.fees}</b>
               </li>
               <li className="package-sub">
@@ -356,7 +357,7 @@ export default function StrategyPage() {
                 <b>{packageSummary.vat}</b>
               </li>
               <li className="package-total">
-                <span>Total package cost</span>
+                <span>Monthly total incl VAT</span>
                 <b>{packageSummary.total}</b>
               </li>
             </ul>
